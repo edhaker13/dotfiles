@@ -23,11 +23,15 @@ Installation
 ------------
 
 ``` bash
-cd 
-git clone git@github.com:edhaker13/dotfiles.git
+# clone repo placint it home
+git clone git@github.com:edhaker13/dotfiles.git ~/dotfiles
+# change into repo
 cd dotfiles
+# make executables and run
 chmod a+x mklinks.sh
 ./mklinks.sh
 chmod a+x mkln.sh
 sudo ./mkln.sh
+# to update an already existing repo do
+cd ~/dotfiles && git pull origin master
 ```
