@@ -1,0 +1,33 @@
+##!/bin/bash
+# Call this script with the filename of video
+# sh snap video.mkv
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC="Make a photo of a video"
+NAME=snap
+SCRIPTNAME=/usr/bin/snap
+PIDFILE=/tmp/$NAME.pid
+FILE=$1
+RES=1280X720
+
+if [ -f ${PIDFILE} ]; then
+   # verify if the process is actually still running under this pid
+   OLDPID=`cat ${PIDFILE}`
+   RESULT=`ps -ef | grep ${OLDPID} | grep ${SCRIPTNAME}`  
+
+   if [ -n "${RESULT}" ]; then
+     echo "Script already running! Exiting"
+     exit 255
+   fi
+
+fi
+# grab pid of this process and update the pid file with it
+PID=`ps -ef | grep ${SCRIPTNAME} | head -n1 |  awk ' {print $2;} '`
+echo ${PID} > ${PIDFILE}
+
+# and at the end
+if [ -f ${PIDFILE} ]; then
+    rm ${PIDFILE}
+fi
+
+avconv -itsoffset -6 -i $FILE -vcodec mjpeg -vframes 1 -an -f rawvideo -s $RES $FILE.png
