@@ -8,9 +8,7 @@
 
 dir=~/dotfiles # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
-files="bashrc vimrc vim screen ssh private" # list of files/folders to symlink in homedir
-nginx="nginx.conf sites-available sites" # need linkin to nginx
-
+files="bashrc vimrc screenrc private ssh" # list of files/folders to symlink in homedir
 ##########
 
 # create dotfiles_old in homedir
@@ -31,21 +29,8 @@ echo "Moving any existing dotfiles from ~ to $olddir"
     ln -s $dir/$file ~/.$file
 done
 
-# set permissions to group rw, for nginx and link.
-for file in $nginx; do
-echo "Setting group r+w"
-  mv /etc/ningx/$file ~/nginx_old/
-  chmod 775 $dir/$file
-  echo "Now linking to /etc/ningx/"
-  ln -fs $dir/$file /etc/nignx/
-  echo "Linked $file"
-done
-
-# Individual files linking, flexget config,
-echo "Now SymLinking Individual files"
-ln -fs $dir/config.yml /var/lib/deluge/.flexget/
-echo "Flexget config linked"
-chmod a+x $dir/snap
-ln -fs $dir/snap $HOME/bin/
-echo "linked snapshot script"
-
+# reset permsions of ssh folder , keys dont like my methods
+chmod 755 ~/.ssh
+chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_dsa
+## EOF

@@ -1,5 +1,4 @@
 *.bak
-*.~
-*log
-*tmp
-*pid
+private
+ssh/id_rsa*
+ssh/id_dsa*
