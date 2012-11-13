@@ -102,10 +102,8 @@ presets:
     # List of feed to use already filtered to show TV and 720p
     inputs:
       - rss: { url: 'http://ezrss.it/search/index.php?&quality=720p&mode=rss', silent: yes }
-      - rss: { url: 'https://torrentz.eu/feed_verifiedP?q=added%3A1d', silent: yes }
       - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }
       - rss: { url: 'http://kat.ph/tv/?rss=1', silent: yes}
-      - rss: { url: 'http://feeds.feedburner.com/tpb/HDshows', silent: yes }
     # Check for downloaded or downloading
     exists_series:
       - '/srv/dl/'
@@ -123,10 +121,10 @@ presets:
       - Supernatural
       - How I Met Your Mother
 tasks:
-  TV:
-    preset: tv
-    notifymyandroid:
-      event: New TV Episode
+  # TV:
+    # preset: tv
+    # notifymyandroid:
+      # event: New TV Episode
   anime:
     preset: anime
     notifymyandroid:
