@@ -34,4 +34,9 @@ chmod a+x mkln.sh
 sudo ./mkln.sh
 # to update an already existing repo do
 cd ~/dotfiles && git pull origin master
+# if you want it to pull update every so often just make a cronjob or 
+# use post-receive hook (this I don't know how in github)
+crontab -e
+# Paste this line, the */5 means every five mins, change this to what you want
+*/5 * * * * cd ~/dotfiles && /usr/local/bin/git -q pull origin master
 ```
