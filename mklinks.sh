@@ -30,7 +30,7 @@ echo "Moving any existing dotfiles from ~ to $olddir"
 done
 
 # reset permsions of ssh folder , keys dont like my methods
-chmod 755 ~/.ssh
+chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_dsa
 ## EOF
