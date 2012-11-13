@@ -16,6 +16,5 @@ identityfile ~/.ssh/id_rsa
 
 # For github.com
 host github.com
-user git
 PreferredAuthentications publickey
 identityfile ~/.ssh/id_rsa
