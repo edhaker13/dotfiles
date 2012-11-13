@@ -8,7 +8,7 @@
 
 dir=~/dotfiles # dotfiles directory
 olddir=~/dotfiles_old # old dotfiles backup directory
-files="bashrc vimrc screenrc irssi ssh" # list of files/folders to symlink in homedir
+files="bashrc vimrc screenrc irssi" # list of files/folders to symlink in homedir
 ##########
 
 # create dotfiles_old in homedir
@@ -28,8 +28,10 @@ echo "Moving any existing dotfiles from ~ to $olddir"
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+# link sshconfig to .ssh/config
+ln-s $dir/sshconfig ~/.ssh/config
 
-# reset permsions of ssh folder , keys dont like my methods
+# reset permsions of ssh folder , keys don't like linking
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_dsa
