@@ -38,5 +38,5 @@ cd ~/dotfiles && git pull origin master
 # use post-receive hook (this I don't know how in github)
 crontab -e
 # Paste this line, the */5 means every five mins, change this to what you want
-*/5 * * * * cd ~/dotfiles && /usr/local/bin/git -q pull origin master
+*/5 * * * * cd ~/dotfiles && git -q pull origin master
 ```
