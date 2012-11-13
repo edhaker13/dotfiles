@@ -1,0 +1,1 @@
+/home/edhaker13/.irssi/scripts/hilightwin.pl
