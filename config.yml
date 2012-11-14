@@ -28,9 +28,9 @@ presets:
       # Symbols need to be quoted
     # Set the options of downloaded torrent in deluge
     set:
-      # Path results /srv/complete/anime/Show_Name/
+      # Path results /srv/complete/anime/ShowName/
       movedone: >
-        /srv/complete/{{task}}/{{series_name|replace(' ', '_')}}
+        /srv/complete/{{task}}/{{series_name|replace(' ', '')}}
       # Set label to the name of show : fringe, fairy_tail. Makes it manageable
       label: "{{series_name}}"
       # Only download the main file = >90% of total
@@ -61,7 +61,6 @@ presets:
     content_size:
       max: 800
       min: 50
-      
     content_filter:
       require:
         - '*.mkv'
@@ -99,8 +98,7 @@ presets:
       - Zetsuen no Tempest
        # Output would be -> Show Name 02[720p 10bit].mkv
     set:
-      content_filename: >
-        {{{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}]|replace(' ','')}}
+      content_filename: {{{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}]|replace(' ','')}}
   # # Preset for all TV related settings and list of shows, just for show now
   # tv:
     # # Reject rar/packs
@@ -129,11 +127,11 @@ presets:
       # - Supernatural
       # - How I Met Your Mother
 tasks:
-  # TV:
-    # preset: tv
-    # notifymyandroid:
-      # event: New TV Episode
   anime:
     preset: anime
     notifymyandroid:
       event: Moar Animu!!
+  # TV:
+    # preset: tv
+    # notifymyandroid:
+      # event: New TV Episode
