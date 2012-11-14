@@ -20,8 +20,8 @@ presets:
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
     # Set the quality lower limits by disallowing since fansubs often dont include quality on their release if its 720p
-    quality: 720p|unknown
-      # 1080p is normally a waste of badwitdh since most realese are hardly good quality 1080p
+    quality: 720p
+      # 1080p is normally a waste of bandwitdh since most realese are hardly good quality 1080p
       # Symbols need to be quoted
     # Set the options of downloaded torrent in deluge
     set:
@@ -34,7 +34,7 @@ presets:
       main_file_only: yes
        # Output would be -> Show Name 02[720p10bit].mkv
       content_filename: >
-        "{{series_name|replace(' ','')}}.{{series_id|pad(2)}}[{{quality|replace(' ','')|replace('unknown','720p')}}]"
+        "{{series_name|replace(' ','')}}.{{series_id|pad(2)}}[{{quality|replace(' ','-')|replace('unknown','720p')}}]"
     # Limit the frequency of requests to domains so they don't complain about using a bot
     domain_delay:
       tokyotosho.info: 6 seconds
