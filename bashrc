@@ -221,6 +221,12 @@ function corename()   # Get name of app that created a corefile.
     done 
 }
 
+function get() { printf "\033]0;__pw:"`pwd`"\007" ;
+for file in $* ; do printf "\033]0;__rv:"${file}"\007" ; done ;
+printf "\033]0;__ti\007" ; }
+
+function winscp() { echo -ne \"\\033];__ws:${PWD}\\007\"; }
+
 # Locale and editor
 export LANG='en_GB.UTF-8'
 export LANGUAGE='en_GB.UTF-8'

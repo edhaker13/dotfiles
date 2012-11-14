@@ -8,6 +8,24 @@ include "/usr/share/nano/perl.nanorc"
 include "/usr/share/nano/php.nanorc"
 include "/usr/share/nano/python.nanorc"
 include "/usr/share/nano/sh.nanorc"
+
+set autoindent
+unset nowordwrap
+set brackets ""')>]}"
+set fill -5
+set historylog
+set mouse
+unset noconvert
+set nonewlines
+set operatingdir ""
+set punct "!.?"
+set smarthome
+set smooth
+set tabsize 4
+set tabstospaces
+set tempfile
+set softwrap
+
 ## Sample initialization file for GNU nano.
 ##
 ## Please note that you must have configured nano with --enable-nanorc
@@ -64,7 +82,7 @@ include "/usr/share/nano/sh.nanorc"
 # set fill -8
 
 ## Enable ~/.nano_history for saving and reading search/replace strings.
-set historylog
+# set historylog
 
 ## The opening and closing brackets that can be found by bracket
 ## searches.  They cannot contain blank characters.  The former set must

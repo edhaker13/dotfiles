@@ -15,6 +15,8 @@ presets:
       space: 5000
     # Make filename Windows Safe (for samba)
     pathscrub: windows
+    # Reject magnets since they don't allow scraping, file size or content filtering
+    magnets:no
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
     # Set the quality lower limits by disallowing since fansubs often dont include quality on their release if its 720p
@@ -57,8 +59,14 @@ presets:
       - rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
     # Set some reasonable size limits also ensures no packs
     content_size:
-      max: 700
-      min: 20
+      max: 800
+      min: 50
+      
+    content_filter:
+      require:
+        - '*.mkv'
+        - '*.mp4'
+      reject: '*.wmv'
     # Prevent from downloading files that were downloaded manually or are downloading
     exists_series:
       - '/srv/dl/'
@@ -89,37 +97,37 @@ presets:
       - Tonari no Kaibutsu Kun
       - The World God Only Knows
       - Zetsuen no Tempest
+       # Output would be -> Show Name 02[720p 10bit].mkv
     set:
-      # Output would be -> Show Name 02[720p 10bit].mkv
       content_filename: >
-        {{{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}]|replace(' ',''}}
-  # Preset for all TV related settings and list of shows
-  tv:
-    # Reject rar/packs
-    regexp:
-      reject: 
-        - \.rar|\.r\d\d|password.txt
-    # List of feed to use already filtered to show TV and 720p
-    inputs:
-      - rss: { url: 'http://ezrss.it/search/index.php?&quality=720p&mode=rss', silent: yes }
-      - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }
-      - rss: { url: 'http://kat.ph/tv/?rss=1', silent: yes}
-    # Check for downloaded or downloading
-    exists_series:
-      - '/srv/dl/'
-      - '/srv/complete/TV/'
-    # List of show to watch in case there are some missing from Trakt
-    series:
-      - 2 Broke Girls
-      - Arrow
-      - Alphas
-      - Big Bang Theory
-      - Dexter
-      - Doctor Who
-      - Fringe
-      - Rules of Engament
-      - Supernatural
-      - How I Met Your Mother
+        {{{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}]|replace(' ','')}}
+  # # Preset for all TV related settings and list of shows, just for show now
+  # tv:
+    # # Reject rar/packs
+    # regexp:
+      # reject: 
+        # - \.rar|\.r\d\d|password.txt
+    # # List of feed to use already filtered to show TV and 720p
+    # inputs:
+      # - rss: { url: 'http://ezrss.it/search/index.php?&quality=720p&mode=rss', silent: yes }
+      # - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }
+      # - rss: { url: 'http://kat.ph/tv/?rss=1', silent: yes}
+    # # Check for downloaded or downloading
+    # exists_series:
+      # - '/srv/dl/'
+      # - '/srv/complete/TV/'
+    # # List of show to watch in case there are some missing from Trakt
+    # series:
+      # - 2 Broke Girls
+      # - Arrow
+      # - Alphas
+      # - Big Bang Theory
+      # - Dexter
+      # - Doctor Who
+      # - Fringe
+      # - Rules of Engament
+      # - Supernatural
+      # - How I Met Your Mother
 tasks:
   # TV:
     # preset: tv
