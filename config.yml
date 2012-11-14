@@ -37,7 +37,7 @@ presets:
       main_file_only: yes
        # Output would be -> Show Name 02[720p10bit].mkv
       content_filename: >
-        "{{series_name|replace(' ','')}}.{{series_id|pad(2)}}[{{quality|replace(' ','')|replace('unknown','720p'}}]"
+        "{{series_name|replace(' ','')}}.{{series_id|pad(2)}}[{{quality|replace(' ','')|replace('unknown','720p')}}]"
     # Limit the frequency of requests to domains so they don't complain about using a bot
     domain_delay:
       tokyotosho.info: 6 seconds
