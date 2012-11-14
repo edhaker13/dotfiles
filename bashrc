@@ -37,10 +37,15 @@ shopt -s histappend histreedit histverify
 # Disable options:
 shopt -u mailwarn
 
+# put some colors in ls
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxCxegedabagacad
+
 # Aliases
 alias ls='ls -h --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
+alias lla='ls -la'
 alias l='ls -CF'
 alias svim='sudo vim'
 alias snano='sudo nano'
@@ -80,6 +85,10 @@ WHITE="\[\033[1;37m\]"
 PS1="${LPURPLE}\u${LGREEN}@${GREEN}\H${CYAN}[${YELLOW}\w${CYAN}]${LGRAY}>${WHITE}"
 PS2="${GREEN}->"
 PS3="${LPURPLE}*?"
+export PS1
+export PS2
+export PS3
+
 # Paths
 PATH=$PATH:${HOME}/bin:/usr/lib/wine/bin:/sbin:/usr/sbin
 export PATH=$PATH:/usr/local/bin
@@ -182,7 +191,7 @@ function ii()   # Get current host related info.
 # Misc utilities:
 #-------------------------------------------------------------
 # print a fortune cookie
-  if [ which fortune >/dev/null -a ! echo $SHELL == /usr/share/gitolite/gl-auth-command ]; then
+  if [ [ which fortune >/dev/null ] -a [ ! echo $SHELL == /usr/share/gitolite/gl-auth-command ] ]; then
       echo -en '\033[0;36m'
       fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
       echo -en '\033[0;37m'
@@ -213,7 +222,6 @@ function corename()   # Get name of app that created a corefile.
 # Locale and editor
 export LANG='en_GB.UTF-8'
 export LANGUAGE='en_GB.UTF-8'
-export LC_ALL='en_GB.UTF-8'
 export EDITOR='nano'
 
 # Sudo replacement alias
