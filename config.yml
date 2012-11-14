@@ -35,6 +35,9 @@ presets:
       label: "{{series_name}}"
       # Only download the main file = >90% of total
       main_file_only: yes
+       # Output would be -> Show Name 02[720p10bit].mkv
+      content_filename: >
+        "{{series_name|replace(' ','')}}.{{series_id|pad(2)}}.{{quality|replace(' ', '')}}"
     # Limit the frequency of requests to domains so they don't complain about using a bot
     domain_delay:
       tokyotosho.info: 6 seconds
@@ -96,9 +99,6 @@ presets:
       - Tonari no Kaibutsu Kun
       - The World God Only Knows
       - Zetsuen no Tempest
-       # Output would be -> Show Name 02[720p10bit].mkv
-    set:
-      content_filename: '{{series_name|replace(' ','')}}.{{series_id|pad(2)}}.{{quality|replace(' ', '')}}'
   # # Preset for all TV related settings and list of shows, just for show now
   # tv:
     # # Reject rar/packs
