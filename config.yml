@@ -16,7 +16,7 @@ presets:
     # Make filename Windows Safe (for samba)
     pathscrub: windows
     # Reject magnets since they don't allow scraping, file size or content filtering
-    magnets:no
+    magnets: no
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
     # Set the quality lower limits by disallowing since fansubs often dont include quality on their release if its 720p
