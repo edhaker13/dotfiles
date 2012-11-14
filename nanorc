@@ -7,7 +7,8 @@ include "/usr/share/nano/nanorc.nanorc"
 include "/usr/share/nano/perl.nanorc"
 include "/usr/share/nano/php.nanorc"
 include "/usr/share/nano/python.nanorc"
-include "/usr/share/nano/sh.nanorc"## Sample initialization file for GNU nano.
+include "/usr/share/nano/sh.nanorc"
+## Sample initialization file for GNU nano.
 ##
 ## Please note that you must have configured nano with --enable-nanorc
 ## for this file to be read!  Also note that this file should not be in
