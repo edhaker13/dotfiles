@@ -20,10 +20,7 @@ presets:
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
     # Set the quality lower limits by disallowing since fansubs often dont include quality on their release if its 720p
-    quality:
-      - '!360p'
-      - '!480p'
-      - '!1080p'
+    quality: 720p|unknown
       # 1080p is normally a waste of badwitdh since most realese are hardly good quality 1080p
       # Symbols need to be quoted
     # Set the options of downloaded torrent in deluge
