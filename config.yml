@@ -98,7 +98,7 @@ presets:
       - Zetsuen no Tempest
        # Output would be -> Show Name 02[720p 10bit].mkv
     set:
-      content_filename: {{series_name|replace(' ','')}}.{{series_id|pad(2)}}'['{{quality|replace('unknown','720p')|replace(' ', '')}}']'
+      content_filename: '{{series_name|replace(' ','')}}.{{series_id|pad(2)}}.{{quality|replace(' ', '')|replace('unknown','720p')}}'
   # # Preset for all TV related settings and list of shows, just for show now
   # tv:
     # # Reject rar/packs
