@@ -23,7 +23,7 @@ set smarthome
 set smooth
 set tabsize 4
 set tabstospaces
-set tempfile
+unset tempfile
 set softwrap
 
 ## Sample initialization file for GNU nano.
