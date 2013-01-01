@@ -51,12 +51,16 @@ presets:
   anime:
     # Set to reject or cache entries with only magnets since it can't scrape, file size or content filter it
     magnets: no
-    # RSS feeds for anime, ascii force on because of the janapese charactes simetimes cause errors
+    # RSS feeds for anime, ascii force on because of the janapese charactes sometimes cause errors
     inputs:
       # Nyaa shows only english anime and is sorted by seeds
       - rss: { url: 'http://www.nyaa.eu/?page=rss&cats=1_37&filter=1&sort=3', silent: yes, ascii: yes } 
       # Tokyotosho filtered for anime only
       - rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
+    import_series:
+      from:
+        myanimelist:
+          username: 'edhaker13'
     # Set some reasonable size limits also ensures no packs
     content_size:
       max: 800
