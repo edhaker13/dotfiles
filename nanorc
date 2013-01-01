@@ -17,7 +17,6 @@ set historylog
 set mouse
 unset noconvert
 set nonewlines
-set operatingdir ""
 set punct "!.?"
 set smarthome
 set smooth

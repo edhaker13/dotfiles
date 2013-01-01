@@ -191,8 +191,8 @@ function ii()   # Get current host related info.
 # Misc utilities:
 #-------------------------------------------------------------
 # print a fortune cookie
-  if which fortune >/dev/null; then
-    if [ echo $SHELL == /bin/bash ]; then
+  if echo $SHELL == /bin/bash; then
+    if which fortune >/dev/null; then
       echo -en '\033[0;36m'
       fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
       echo -en '\033[0;37m'
