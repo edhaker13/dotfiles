@@ -26,13 +26,8 @@ for file in $files; do
 echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    ln -s $dir/$file.sh ~/.$file
 done
 # link sshconfig to .ssh/config
-ln-s $dir/sshconfig ~/.ssh/config
-
-# reset permsions of ssh folder , keys don't like linking
-chmod 700 ~/.ssh
-chmod 600 ~/.ssh/id_rsa
-chmod 600 ~/.ssh/id_dsa
+ln-s $dir/sshconfig.sh ~/.ssh/config
 ## EOF

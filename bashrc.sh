@@ -245,9 +245,15 @@ alias apt-get='sudo apt-get'
 alias dpkg='sudo dpkg'
 alias aptitude='sudo aptitude'
 alias cps='sudo cp'
+alias update="sudo aptitude update"
+alias install="sudo aptitude install"
+alias upgrade="sudo aptitude safe-upgrade"
+alias remove="sudo aptitude remove"
 
 # Server/Users specific aliases and functions
 alias flex='sudo -H -u deluge flexget'
 alias res='screen -dr tty'
 alias sirc='screen -dmS ircs irssi -c Rizon'
 alias irc='screen -rD ircs'
+alias free="free -m"
+alias l2r="sudo service lighttpd restart"

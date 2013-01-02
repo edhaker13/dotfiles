@@ -2,7 +2,7 @@
 ############################
 # sudoln.sh
 # This script creates symlinks from the their respective directories to any desired dotfiles in ~/dotfiles.
-# Recommended to run as root
+# Wouldnt work kept for historical purposes
 ############################
 ########## Variables
 
