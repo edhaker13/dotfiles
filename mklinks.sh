@@ -29,5 +29,5 @@ echo "Moving any existing dotfiles from ~ to $olddir"
     ln -s $dir/$file.sh ~/.$file
 done
 # link sshconfig to .ssh/config
-ln-s $dir/sshconfig.sh ~/.ssh/config
+ln -s $dir/sshconfig.sh ~/.ssh/config
 ## EOF
