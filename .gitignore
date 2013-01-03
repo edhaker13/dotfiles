@@ -4,3 +4,4 @@ ssh/id_rsa*
 ssh/id_dsa*
 *.key
 *.pem
+*.old
