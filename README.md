@@ -40,6 +40,8 @@ crontab -e
 Configurations for...
 ---------------------
 I have configuration files for different programs like nano, bash or irssi.
+List:
+
 1. IRSSI: scripts, themes, and settings.
 2. Bash: user configuration, functions, aliases, etc.
 3. Flexget: config file, additional plugins. Files need to be manually linked.
