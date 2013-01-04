@@ -40,7 +40,8 @@ crontab -e
 Configurations for...
 ---------------------
 I have configuration files for different programs like nano, bash or irssi.
-List:
+
+Here is a full list:
 
 1. IRSSI: scripts, themes, and settings.
 2. Bash: user configuration, functions, aliases, etc.
