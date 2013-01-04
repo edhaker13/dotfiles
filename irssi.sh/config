@@ -305,6 +305,10 @@ settings = {
     awl_display_key_active = "$Q%K|$N%n $H%U$C%n$S";
     awl_display_nokey = "[$N]$H$C$S";
   };
+  proxy = {
+    irssiproxy_password = "checacorp";
+    irssiproxy_ports = "Rizon=1113 IRCnet=1114 Reddit=1115";
+  };
 };
 hilights = ( { text = "edhaker13"; nick = "no"; word = "yes"; } );
 windows = {
