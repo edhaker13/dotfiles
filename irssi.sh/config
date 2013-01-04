@@ -26,7 +26,7 @@ servers = (
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
   {
     address = "irc.snoonet.com";
-    chatnet = "reddit";
+    chatnet = "Reddit";
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
@@ -98,18 +98,17 @@ chatnets = {
   };
   SILC = { type = "SILC"; };
   Ubuntu = { type = "IRC"; };
-  reddit = {
+  Reddit = {
     type = "IRC";
-    autosendcmd = "/^m NicksServ indentify sonia1993;wait 2000";
+    autosendcmd = "/^m NicksServ identify sonia1993;wait 2000";
   };
 };
 
 channels = (
-  { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
-  { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#bakabt"; chatnet = "Rizon"; autojoin = "yes"; },
   { name = "#horriblesubs"; chatnet = "Rizon"; autojoin = "yes"; },
-  { name = "#fringe"; chatnet = "reddit"; autojoin = "yes"; }
+  { name = "#irssi"; chatnet = "IRCnet"; autojoin = "yes"; },
+  { name = "#fringe"; chatnet = "Reddit"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -313,16 +312,7 @@ settings = {
 hilights = ( { text = "edhaker13"; nick = "no"; word = "yes"; } );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
-  2 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#bakabt";
-        tag = "Rizon";
-      }
-    );
-  };
+  2 = { name = "hilight"; sticky = "yes"; };
   3 = {
     items = (
       {
@@ -332,21 +322,46 @@ windows = {
         tag = "Rizon";
       }
     );
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#bakabt";
+        tag = "Rizon";
+      }
+    );
+  5 = {
+	items = (
+		type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#irssi";
+        tag = "IRCnet";
+      }
+    );
+  6 = {
+	items = (
+		type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#fringe";
+        tag = "Reddit";
+      }
+    );
   };
-  4 = { name = "hilight"; sticky = "yes"; };
+  };
 };
 mainwindows = {
   1 = { first_line = "4"; lines = "52"; };
-  4 = { first_line = "1"; lines = "3"; };
+  2 = { first_line = "1"; lines = "3"; };
 };
 ignores = (
   {
-    level = "CRAP MSGS NOTICES SNOTES CTCPS JOINS PARTS QUITS KICKS MODES TOPICS WALLOPS INVITES NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS";
+    level = "CRAP MSGS NOTICES SNOTES CTCPS JOINS QUITS PARTS KICKS MODES TOPICS WALLOPS INVITES NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS";
     channels = ( "##channelname" );
   },
   { 
-    level = "CRAP JOINS PARTS QUITS";
+    level = "CRAP JOINS PARTS";
     channels = ( "#horriblesubs" );
   },
-  { level = "CRAP JOINS PARTS QUITS"; channels = ( "#bakabt" ); }
+  { level = "CRAP JOINS PARTS "; channels = ( "#bakabt" ); }
 );
