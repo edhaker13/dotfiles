@@ -322,6 +322,7 @@ windows = {
         tag = "Rizon";
       }
     );
+  };
   4 = {
     items = (
       {
@@ -331,6 +332,7 @@ windows = {
         tag = "Rizon";
       }
     );
+  };
   5 = {
 	items = (
 		type = "CHANNEL";
@@ -339,6 +341,7 @@ windows = {
         tag = "IRCnet";
       }
     );
+  };
   6 = {
 	items = (
 		type = "CHANNEL";
@@ -347,7 +350,6 @@ windows = {
         tag = "Reddit";
       }
     );
-  };
   };
 };
 mainwindows = {
