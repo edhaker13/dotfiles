@@ -76,16 +76,16 @@ presets:
       reject: 
         - raw|ost|manga|soundtrack|song|\[ED\]|\[OP\]|(4|7)00(p|x): {from: title} 
     # List of shows I want to see, from MAL and Manual
-    import_series:
-      from:
-        myanimelist:
-          username: 'edhaker13'
+    #import_series:
+    #  from:
+    #    myanimelist:
+    #      username: 'edhaker13'
     # Paid for Crunchy this month by accident
     series:
       - CODE Breaker 
       # OVAS
       #- Girls und Panzer #On Crunchy
-      - Little Busters
+      #- Little Busters #On Crunchy
       - Magi
       - Maoyuu Maou Yuusha
       - Psycho Pass
