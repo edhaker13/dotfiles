@@ -7,14 +7,16 @@ fi
 [ -z '$PS1' ] && return
 
 # Basic options
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoredups:ignorespace:ignoreboth
 export COLORFGBG='default;default'
 # leave some commands out of history log
 export HISTIGNORE='&:??:[ ]*:clear:exit:logout'
 export TIMEFORMAT=$'\nreal %3R\tuser %3U\tsys %3S\tpcpu %P\n'
 export HISTTIMEFORMAT='%H:%M > '
 export HISTIGNORE='&:bg:fg:ll:h'
-
+# Sets up history length
+export HISTSIZE=10000
+export HISTFILESIZE=50000
 #-------------------------------------------------------------
 # Some settings
 #-------------------------------------------------------------
@@ -43,12 +45,9 @@ export LSCOLORS=ExFxCxDxCxegedabagacad
 
 # Aliases
 alias ls='ls -h --color=auto'
-alias ll='ls -l'
+alias ll='ls -la'
 alias la='ls -A'
-alias lla='ls -la'
 alias l='ls -CF'
-alias svim='sudo vim'
-alias snano='sudo nano'
 alias h='cd'
 alias ..='cd ..'
 alias cd..='cd ..'
@@ -58,6 +57,8 @@ alias su='sudo su'
 alias grep='grep --color=auto'
 alias dfh='df -h'
 alias bye='exit'
+# Automatically determines filename
+alias wget="wget --content-disposition"
 
 # handy file conversion tools
 alias dos2unix="perl -pi -e 's/\r\n/\n/;'"
@@ -120,6 +121,7 @@ export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 
 alias cs='cd'
 alias vf='cd'
+alias vd='cd'
 alias moer='more'
 alias moew='more'
 alias kk='ll'
@@ -232,7 +234,10 @@ export LANG='en_GB.UTF-8'
 export LANGUAGE='en_GB.UTF-8'
 export EDITOR='nano'
 
-# Sudo replacement alias
+# Sudo replacement aliases
+alias sudo='sudo -E'
+alias svim='sudo vim'
+alias snano='sudo nano'
 alias ipt='sudo iptables'
 alias iptables='sudo iptables'
 alias runlevel='sudo /sbin/init'
