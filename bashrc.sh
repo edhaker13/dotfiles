@@ -6,6 +6,11 @@ if [ -f /etc/bashrc ]; then
 fi
 [ -z '$PS1' ] && return
 
+# message too long fix
+if [ ${TERM} != "dumb" ]; then
+ test -s ~/.bashrc-local && . ~/.bashrc-local
+fi
+
 # Basic options
 export HISTCONTROL=ignoredups:ignorespace:ignoreboth
 export COLORFGBG='default;default'
