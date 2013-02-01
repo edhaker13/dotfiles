@@ -4,12 +4,13 @@
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-[ -z '$PS1' ] && return
 
 # message too long fix
 if [ ${TERM} != "dumb" ]; then
  test -s ~/.bashrc-local && . ~/.bashrc-local
 fi
+
+[ -z '$PS1' ] && return
 
 # Basic options
 export HISTCONTROL=ignoredups:ignorespace:ignoreboth
@@ -190,14 +191,7 @@ function ii()   # Get current host related info.
 #-------------------------------------------------------------
 # Misc utilities:
 #-------------------------------------------------------------
-# print a fortune cookie
-  if echo $SHELL == '/bin/bash' >/dev/null; then
-    if which fortune >/dev/null; then
-      echo -en '\033[0;36m'
-      fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
-      echo -en '\033[0;37m'
-    fi
-  fi
+
 function repeat()       # Repeat n times command.
 {
     local i max
