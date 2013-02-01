@@ -102,7 +102,7 @@ presets:
     # List of feed to use already filtered to show TV and 720p
     inputs:
       - rss: { url: 'http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1', silent: yes }
-      - rss: { url: 'www.dailytvtorrents.org/rss/combined/3c3469abb94f9ebf1e2c0617198619d56a78ae91e8a6d9ffbadbab4d70a066ed347823ce53d515907b8ea9d31bb7659afe1325d375c8dbb1?only=720&norar=yes&single=yes', silent: yes }
+      - rss: { url: 'http://feeds.feedburner.com/dailytvtorrents', silent: yes }
     # Check for downloaded or downloading
     exists_series:
       - '/srv/dl/'
