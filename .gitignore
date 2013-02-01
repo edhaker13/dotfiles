@@ -2,7 +2,5 @@
 private
 id_rsa*
 id_dsa*
-*.key
-*.pem
 *.old
 *~
