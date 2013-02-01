@@ -83,7 +83,7 @@ CYAN="\[\033[0;36m\]"
 LCYAN="\[\033[1;36m\]"
 LGRAY="\[\033[0;37m\]"
 WHITE="\[\033[1;37m\]"
-PS1="${LPURPLE}\u${LGREEN}@${GREEN}\H${CYAN}[${YELLOW}\w${CYAN}]${LGRAY}>${WHITE}"
+PS1="${LPURPLE}\u${LGREEN}@${LRED}\H${CYAN}[${YELLOW}\w${CYAN}]${LGRAY}>${WHITE}"
 PS2="${GREEN}->"
 PS3="${LPURPLE}*?"
 export PS1
@@ -91,17 +91,11 @@ export PS2
 export PS3
 
 # Paths
-PATH=$PATH:${HOME}/bin:/usr/lib/wine/bin:/sbin:/usr/sbin
-export PATH=$PATH:/usr/local/bin
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+export PATH=$PATH
 
-# X Terminal titles
-case '$TERM' in
-xterm*|rxvt*)
-	PROMPT_COMMAND='echo -ne '\033]0;${USER}@${HOSTNAME}: ${PWD}\007''
-	;;
-*)
-	;;
-esac
 #-------------------------------------------------------------
 # tailoring 'less'
 #-------------------------------------------------------------
@@ -125,7 +119,6 @@ alias vd='cd'
 alias moer='more'
 alias moew='more'
 alias kk='ll'
-
 
 #-------------------------------------------------------------
 # A few fun ones
@@ -193,7 +186,7 @@ function ii()   # Get current host related info.
 # Misc utilities:
 #-------------------------------------------------------------
 # print a fortune cookie
-  if echo $SHELL == '/bin/bash' > /dev/null; then
+  if echo $SHELL == '/bin/bash' >/dev/null; then
     if which fortune >/dev/null; then
       echo -en '\033[0;36m'
       fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)

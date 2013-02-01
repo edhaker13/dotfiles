@@ -21,7 +21,7 @@ presets:
     private_torrents: no
     # Set the quality lower limits by disallowing since fansubs often dont include quality on their release if its 720p
     quality: 720p
-      # 1080p is normally a waste of bandwitdh since most realese are hardly good quality 1080p
+      # 1080p is normally a waste of bandwitdh since most releases are hardly good quality 1080p
       # Symbols need to be quoted
     # Set the options of downloaded torrent in deluge
     set:
@@ -80,7 +80,7 @@ presets:
     #  from:
     #    myanimelist:
     #      username: 'edhaker13'
-    # Paid for Crunchy this month by accident
+    # Paid for Crunchy this month by accident again
     series:
       - CODE Breaker 
       # OVAS
@@ -98,27 +98,28 @@ presets:
     # Reject rar/packs
     regexp:
       reject: 
-        - \.rar|\.r\d\d|password.txt
+        - \.rar|\.r\d\d|password.txt|\.zip
     # List of feed to use already filtered to show TV and 720p
     inputs:
-      - rss: { url: 'http://ezrss.it/search/index.php?&quality=720p&mode=rss', silent: yes }
-      - rss: { url: 'http://rss.bt-chat.com/?group=3', silent: yes }
-      - rss: { url: 'http://kat.ph/tv/?rss=1', silent: yes}
+      - rss: { url: 'http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1', silent: yes }
+      - rss: { url: 'www.dailytvtorrents.org/rss/combined/3c3469abb94f9ebf1e2c0617198619d56a78ae91e8a6d9ffbadbab4d70a066ed347823ce53d515907b8ea9d31bb7659afe1325d375c8dbb1?only=720&norar=yes&single=yes', silent: yes }
     # Check for downloaded or downloading
     exists_series:
       - '/srv/dl/'
       - '/srv/complete/TV/'
-    # List of show to watch in case there are some missing from Trakt
+    # List of shows to watch
     series:
       - 2 Broke Girls
       - Arrow
+      - Bones
       - Big Bang Theory
       - Dexter
-      - Doctor Who
-      - Fringe
-      - Rules of Engagement
-      - Supernatural
+      - Doctor Who 2005
+      - Doctor Who Confidential
       - How I Met Your Mother
+      - Misfits
+      - Supernatural
+# This show finished :'(      - Fringe
 tasks:
   anime:
     preset: anime
