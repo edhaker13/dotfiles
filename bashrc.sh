@@ -89,7 +89,7 @@ CYAN="\[\033[0;36m\]"
 LCYAN="\[\033[1;36m\]"
 LGRAY="\[\033[0;37m\]"
 WHITE="\[\033[1;37m\]"
-PS1="${LPURPLE}\u${LGREEN}@${LRED}\H${CYAN}[${YELLOW}\w${CYAN}]${LGRAY}>${WHITE}"
+PS1="${LGREEN}\u${LPURPLE}@${LRED}\H${CYAN}[${YELLOW}\w${CYAN}]${LGRAY}>${WHITE}"
 PS2="${GREEN}->"
 PS3="${LPURPLE}*?"
 export PS1
