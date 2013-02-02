@@ -1,0 +1,182 @@
+﻿# Flexget Configuration File
+# http://www.fleget.com
+# Created by: Luis Checa <edhaker13@gmail.com>
+# Inspired by the cofiguration file from atlanta800's git
+# https://github.com/atlanta800/dotfiles/blob/master/flexget/config.yml
+# and other examples/information from the wiki
+# http://flexget.com/wiki/Plugins
+
+presets:
+# This preset will be applied to all tasks unless no_global preset is included
+  global:
+    # Make sure there's at least 5GB free space
+    free_space:
+      path: /srv
+      space: 5000
+    # Make filename Windows Safe (for samba)
+    pathscrub: windows
+    # Reject magnets since they don't allow scraping, size or content filtering
+    magnets: no
+    # Reject private torrents since I'm not on any private trackers for now
+    private_torrents: no
+    # Make an rss with succesful entries for archives
+    make_rss:
+      file: /srv/www/edsurf/flexget.rss
+      days: -1
+      items: -1
+      encoding: utf-8
+    make_html:
+      file: /srv/complete/flexget.html
+    # Set some reasonable size limits also ensures no packs
+    content_size:
+      max: 1500
+      min: 50
+    # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
+    quality: 720p
+    # Only download mkv or mp4
+    content_filter:
+      require:
+        - '*.mkv'
+        - '*.mp4'
+    # Reject common torrent trash
+    regexp:
+      reject:# Block any subbed/dubbed/etc videos
+        - (s|d)ub(s|bed)?\b: {from: title}
+        # Block series, only accept one at a time
+        - \b(duo|tri|quadri|tetra|penta)logy\b: {from: title}
+        # I don't have any 3D displays
+        - \b3-?D\b: {from: title}
+        # I've gotten a few trailers that matched as movies. VERY annoying
+        - \btrailer\b: {from: title}
+        # The following are poor quality types that somehow got through the quality
+        - \bR5\b: {from: title}
+        # usually due to the title including a keyword like "720p" as well
+        - \bWEBSCR\b: {from: title}
+        # bad quality sources, just in case
+        - \bscreener\b: {from: title}
+        - \bTS\b: {from: title}
+        - \bCam\b: {from: title}
+        - \bRAW\b: {from: title}
+        # Reject rar/packs/password
+        - \.rar|\.r\d\d|password.txt|\.zip
+    # Set the options of downloaded torrent in deluge
+    set:
+      # Path results /srv/complete/anime/ShowName/
+      movedone: >
+        /srv/complete/{{task}}/{{series_name|replace(' ', '')}}
+      # Set label to the name of show : fringe, fairy_tail. Makes it manageable
+      label: "{{series_name}}"
+       # Output would be -> Show Name 02[720p10bit].mkv
+      content_filename: >
+        "{{series_name|replace(' ','')}}.{{series_id|pad(2)}}[{{quality|replace(' ','-')|replace('unknown','720p')}}]"
+    # Limit the frequency of requests to domains so they don't complain about using a bot
+    domain_delay:
+      tokyotosho.info: 15 seconds
+      nyaa.eu: 15 seconds
+      kamorra.info: 15 seconds
+      feedburner.info: 15 seconds
+    # Set api key and app name for NMA http://www.notifymyandroid.com/
+    notifymyandroid:
+      apikey: aed0c8f91cb1c539f24f900a56c12f07e382710b958a6eec
+    # Set the deluge port since I have mine changed
+    deluge:
+      # Only download the main file = >90% of total
+      main_file_only: yes
+      port: 5555
+
+  # This preset has all the anime related settings
+  anime:
+    # Remove CRC and assume 720p on entries
+    manipulate:
+      - title:
+          replace:
+            regexp: '(-|_)'
+            format: ' '
+          replace:
+            regexp: ' {2,5}'
+            format: ''
+      - quality:
+          replace:
+            regexp: 'unknown'
+            format: '720p'
+    # RSS feeds for anime, force ascii:the japanese charactes can cause errors
+    inputs:
+      # Shows only english anime and is sorted by seeds
+      - rss: { url: 'http://www.nyaa.eu/?page=rss&cats=1_37&filter=1&sort=3', silent: yes, ascii: yes }
+      # Filtered for anime only
+      - rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
+    # Prevent from downloading files that are or have been downloaded
+    exists_series:
+      - '/srv/dl/'
+      - '/srv/complete/anime/'
+    # Filter any raws, OST , manga that may have fallen through the rss filters
+    regexp:
+      reject:
+        - raw|ost|manga|soundtrack|song|\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
+    # List of shows I want to see, from MAL and Manual
+    #import_series:
+    #  from:
+    #    myanimelist:
+    #      username: 'edhaker13'
+    # Paid for Crunchy this month by accident again
+    series:
+      - CODE Breaker
+      # OVAS
+      #- Girls und Panzer #On Crunchy
+      #- Little Busters #On Crunchy
+      - Magi
+      - Maoyuu Maou Yuusha
+      - Psycho Pass
+      - Robotics;Notes
+      #- Sakurasou no Pet na Kanojo #On Crunchy
+      #- Shin Sekai Yori #On Crunchy
+      #- Zetsuen no Tempest #On Crunchy
+  # Preset for all TV related settings and list of shows, just for show now
+  tv:
+    # Some torrents links are invalid https
+    verify_ssl_certificates: no
+    # List of feeds to use already filtered for shows and 720p
+    inputs:
+      - rss: { url: 'http://feeds.feedburner.com/dailytvtorrents', silent: yes }
+      - rss: { url: 'http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1', silent: yes }
+    # Check for downloaded or downloading
+    exists_series:
+      - '/srv/dl/'
+      - '/srv/complete/TV/'
+    # List of shows to watch
+    series:
+      - 2 Broke Girls
+      - Arrow
+      - Bones
+      - Big Bang Theory
+      - Dexter
+      - Doctor Who 2005
+      - Doctor Who Confidential
+      - How I Met Your Mother
+      - Misfits
+      - Supernatural
+# This show finished :'(      - Fringe
+tasks:
+  anime:
+    preset: anime
+    notifymyandroid:
+      event: Moar Animu!!
+  TV:
+    preset: tv
+    notifymyandroid:
+      event: New TV Episode
+  email:
+    interval: 1 day
+    rss: { url: /srv/www/edsurf/flexget.rss }
+    disable_builtins: [seen]
+    accept_all: yes
+    email:
+      from: flexget@edhaker.info
+      to: edhaker13@gmail.com
+      subject: '[flexget] Archive as of {{date}}'
+      smtp_host: smtp.gmail.com
+      smtp_port: 25
+      smtp_username: edhaker13
+      smtp_password: $0N1a.1993!
+      stmp_tls: no
+      stmp_ssl: no
