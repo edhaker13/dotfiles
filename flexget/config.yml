@@ -167,7 +167,7 @@ tasks:
     preset: tv
     notifymyandroid:
       event: New TV Episode
-  email:
+  Email:
     interval: 1 day
     rss: { url: /srv/www/edsurf/flexget.rss }
     disable_builtins: [seen]

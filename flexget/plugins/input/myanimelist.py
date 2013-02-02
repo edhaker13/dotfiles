@@ -19,14 +19,12 @@ class MyAnimeList(object):
     myanimelist:
       username: <value>
 
-    Example:
+  Example:
 
-      presets:
-        animeseries:
-          import_series:
-            from:
-              myanimelist:
-                username: 'your username'
+      import_series:
+        from:
+          myanimelist:
+            username: 'your username'
 
     Option username are required. Anime list must be public.
     """
