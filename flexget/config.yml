@@ -116,10 +116,10 @@ presets:
       reject:
         - raw|ost|manga|soundtrack|song|\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
     # List of shows I want to see, from MAL and Manual
-    import_series:
-      from:
-        myanimelist:
-          username: 'edhaker13'
+    #import_series:
+      #from:
+        #myanimelist:
+          #username: 'edhaker13'
     # Paid for Crunchy this month by accident again
     series:
       - CODE Breaker
@@ -169,14 +169,14 @@ tasks:
       event: New TV Episode
   Email:
     interval: 1 day
-    rss: { url: /srv/www/edsurf/flexget.rss }
+    rss: { url: file:///srv/www/edsurf/flexget.rss }
     disable_builtins: [seen]
     accept_all: yes
     email:
       from: flexget@edhaker.info
       to: edhaker13@gmail.com
-      subject: '[flexget] Archive as of {{date}}'
+      subject: '[flexget] Archive'
       smtp_username: flexget
       smtp_password: h395vw5Nj41UQ0VaxPO8
-      stmp_tls: no
-      stmp_ssl: yes
+      smtp_tls: no
+      smtp_ssl: yes
