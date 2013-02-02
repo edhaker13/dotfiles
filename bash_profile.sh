@@ -15,7 +15,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 # Looks best on a terminal with black background.....
-echo -e "Welcome Edhaker... We've been expecting you\n"
+echo -e "Welcome Edhaker... We've been expecting you"
 date
 # Print awesomeness
 if which fortune >/dev/null; then
