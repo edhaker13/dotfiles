@@ -40,7 +40,8 @@ presets:
         - '*.mp4'
     # Reject common torrent trash
     regexp:
-      reject:# Block any subbed/dubbed/etc videos
+      reject:
+        # Block any subbed/dubbed/etc videos
         - (s|d)ub(s|bed)?\b: {from: title}
         # Block series, only accept one at a time
         - \b(duo|tri|quadri|tetra|penta)logy\b: {from: title}
@@ -92,6 +93,7 @@ presets:
           replace:
             regexp: '(-|_)'
             format: ' '
+      - title:
           replace:
             regexp: ' {2,5}'
             format: ''
@@ -114,10 +116,10 @@ presets:
       reject:
         - raw|ost|manga|soundtrack|song|\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
     # List of shows I want to see, from MAL and Manual
-    #import_series:
-    #  from:
-    #    myanimelist:
-    #      username: 'edhaker13'
+    import_series:
+      from:
+        myanimelist:
+          username: 'edhaker13'
     # Paid for Crunchy this month by accident again
     series:
       - CODE Breaker
@@ -174,9 +176,7 @@ tasks:
       from: flexget@edhaker.info
       to: edhaker13@gmail.com
       subject: '[flexget] Archive as of {{date}}'
-      smtp_host: smtp.gmail.com
-      smtp_port: 25
-      smtp_username: edhaker13
-      smtp_password: $0N1a.1993!
+      smtp_username: flexget
+      smtp_password: h395vw5Nj41UQ0VaxPO8
       stmp_tls: no
-      stmp_ssl: no
+      stmp_ssl: yes
