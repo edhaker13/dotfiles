@@ -2,7 +2,7 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # message too long fix
@@ -41,7 +41,7 @@ shopt -s checkwinsize
 shopt -s sourcepath
 shopt -s no_empty_cmd_completion
 shopt -s cmdhist
-shopt -s histappend histreedit histverify    
+shopt -s histappend histreedit histverify
 # Disable options:
 shopt -u mailwarn
 
@@ -97,10 +97,10 @@ export PS2
 export PS3
 
 # Paths
-if [ -d "$HOME/bin" ] ; then
+#if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
-fi
-export PATH=$PATH
+#fi
+#export PATH=$PATH
 
 #-------------------------------------------------------------
 # tailoring 'less'
@@ -136,7 +136,7 @@ function xtitle()      # Adds some text in the terminal frame.
     case '$TERM' in
         *term | rxvt)
             echo -n -e '\033]0;$*\007' ;;
-        *)  
+        *)
             ;;
     esac
 }
@@ -209,10 +209,10 @@ function ask()          # See 'killps' for example of use.
     esac
 }
 function corename()   # Get name of app that created a corefile.
-{ 
+{
     for file ; do
         echo -n $file : ; gdb --core=$file --batch | head -1
-    done 
+    done
 }
 
 function get() { printf "\033]0;__pw:"`pwd`"\007" ;
@@ -227,7 +227,6 @@ export LANGUAGE='en_GB.UTF-8'
 export EDITOR='nano'
 
 # Sudo replacement aliases
-alias sudo='sudo -E'
 alias svim='sudo vim'
 alias snano='sudo nano'
 alias ipt='sudo iptables'
@@ -249,7 +248,7 @@ alias remove="sudo aptitude remove"
 alias purge='sudo aptitude purge'
 
 # Server/Users specific aliases and functions
-alias flex='sudo -H -u deluge flexget'
+alias flex='~/Flexget/bin/flexget'
 alias res='screen -dr tty'
 alias sirc='screen -dmS ircs irssi'
 alias irc='screen -rD ircs'

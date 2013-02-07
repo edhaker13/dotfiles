@@ -30,6 +30,13 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
+  },
+  {
+    address = "chat.freenode.net";
+    chatnet = "freenode";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
   }
 );
 
@@ -102,6 +109,7 @@ chatnets = {
     type = "IRC";
     autosendcmd = "/^m NicksServ indentify sonia1993;wait 2000";
   };
+  freenode = { type = "IRC"; };
 };
 
 channels = (
@@ -109,7 +117,8 @@ channels = (
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#bakabt"; chatnet = "Rizon"; autojoin = "yes"; },
   { name = "#horriblesubs"; chatnet = "Rizon"; autojoin = "yes"; },
-  { name = "#fringe"; chatnet = "reddit"; autojoin = "yes"; }
+  { name = "#fringe"; chatnet = "reddit"; autojoin = "yes"; },
+  { name = "#flexget"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -287,6 +296,7 @@ settings = {
     user_name = "edhaker13";
     nick = "edhaker13";
     resolve_prefer_ipv6 = "yes";
+    proxy_password = "  ";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "irc/core" = { alternate_nick = "edhacker13"; };
@@ -304,10 +314,11 @@ settings = {
     awl_display_key = "$Q%K|$N%n $H$C$S";
     awl_display_key_active = "$Q%K|$N%n $H%U$C%n$S";
     awl_display_nokey = "[$N]$H$C$S";
+    crapbuster_levels = "JOINS PARTS QUITS NICKS CLIENTCRAP CRAP MODE TOPICS KICKS";
   };
   proxy = {
     irssiproxy_password = "checacorp";
-    irssiproxy_ports = "Rizon=1113 IRCnet=1114 Reddit=1115";
+    irssiproxy_ports = "Rizon=1111 freenode=1112";
   };
 };
 hilights = ( { text = "edhaker13"; nick = "no"; word = "yes"; } );

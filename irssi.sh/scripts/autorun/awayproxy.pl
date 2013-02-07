@@ -69,7 +69,7 @@ $VERSION = "0.2d";
 );
 
 # After how much seconds we can check if there are any messages to send?
-$config{check_interval} = 45;
+$config{check_interval} = 10;
 # this setting controls that when this amout of clients are connected to the 
 # proxy module script sets you away. If you set this to 0 you are set away when
 # no clients are connected to the proxy module. If you set this to lets say 5 
@@ -81,11 +81,11 @@ $config{away_level} = 0;
 #  0 - off
 #  line - line counting
 #  time - time counting
-$config{expansion_mode} = 'time';
+$config{expansion_mode} = 'line';
 # How many lines include after start line?
-$config{expansion_lines} = 12;
+$config{expansion_lines} = 20;
 # After how many seconds stop gathering msgs?
-$config{expansion_timeout} = 90;
+$config{expansion_timeout} = 180;
 # script operation mode:
 #  0 - to send messages both to email and when you get back to proxy
 #  1 - only email
@@ -99,9 +99,9 @@ $config{sendmail} = '/usr/sbin/sendmail';
 # who is the sender of the email
 $config{emailfrom} = 'irssi@edhaker.info';
 # Subject of email
-$config{emailsubject} = '[irssi-proxy]';
+$config{emailsubject} = '[irssi-proxy] away log';
 # and the awayreason setting (Thanx Wulf)
-$config{awayreason} = 'Auto-away because client has disconnected from proxy.';
+$config{awayreason} = 'Auto-away, client has disconnected from proxy.';
 # Debugging mode
 $config{debug} = 0;
 
