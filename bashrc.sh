@@ -67,7 +67,7 @@ alias bye='exit'
 alias wget="wget --content-disposition"
 
 # handy file conversion tools
-alias dos2unix="perl -pi -e 's/\r\n/\n/;'"
+#alias dos2unix="perl -pi -e 's/\r\n/\n/;'"
 alias unix2dos="perl -pi -e 's/\n/\r\n/;'"
 alias bomstrip="sed -i -s -e '1s/^\xef\xbb\xbf//'"
 
@@ -97,11 +97,12 @@ export PS2
 export PS3
 
 # Paths
-#if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-#fi
-#export PATH=$PATH
-
+if [ -d "$HOME/python27/bin" ]; then
+    PATH="$HOME/python27/bin:$PATH"
+fi
+if [ -d "$HOME/env/bin" ]; then
+    PATH="$HOME/env/bin:$PATH"
+fi
 #-------------------------------------------------------------
 # tailoring 'less'
 #-------------------------------------------------------------
@@ -224,7 +225,7 @@ function winscp() { echo -ne \"\\033];__ws:${PWD}\\007\"; }
 # Locale and editor
 export LANG='en_GB.UTF-8'
 export LANGUAGE='en_GB.UTF-8'
-export EDITOR='nano'
+export EDITOR='vim'
 
 # Sudo replacement aliases
 alias svim='sudo vim'
@@ -246,6 +247,7 @@ alias install="sudo aptitude install"
 alias upgrade="sudo aptitude safe-upgrade"
 alias remove="sudo aptitude remove"
 alias purge='sudo aptitude purge'
+#alias pip='sudo pip'
 
 # Server/Users specific aliases and functions
 alias flex='~/Flexget/bin/flexget'
@@ -254,3 +256,5 @@ alias sirc='screen -dmS ircs irssi'
 alias irc='screen -rD ircs'
 alias free="free -m"
 alias l2r="sudo service lighttpd reload"
+alias nr="sudo service nginx reload"
+
