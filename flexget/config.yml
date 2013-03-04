@@ -19,7 +19,7 @@ presets:
     magnets: no
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
-    # Make an rss with succesful entries for archives
+    # Make an rss with successful entries for archives
     make_rss:
       file: /home/edhaker13/domains/edhaker.info/public_html/flexget.rss
       days: -1
@@ -29,8 +29,11 @@ presets:
     content_size:
       max: 1500
       min: 50
+    # Minimum seeds to consider.
+    torrent_alive: 10
     # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
-    quality: 720p
+    # But since I'm gonna dl from Home => 1080p
+    quality: 1080p
     # Only download mkv or mp4
     content_filter:
       require:
@@ -61,13 +64,12 @@ presets:
     # Set the options of downloaded torrent in deluge
     set:
       # Path results /media/anime/ShowName/
-      movedone: >
-        /media/{{task}}/{{series_name}}
+      # movedone: >
+      #  /media/{{task}}/{{series_name}}
       # Set label to the name of shows : fringe, fairy_tail. Makes it manageable
-      #label: "{{series_name}}"
+      # label: "{{series_name}}"
       # Output would be -> Show Name 02[720p10bit].mkv
-      filename: >
-        "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent"
+      filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent"
     # Limit the frequency of requests to domains so they don't complain about using a bot
     domain_delay:
       tokyotosho.info: 15 seconds
@@ -80,6 +82,7 @@ presets:
     # Set download path to rsync from home
     download: /media/torrents/
     # Set the deluge port since I have mine changed
+    # It was cool to have a seedbox but with no private trackers...
     #deluge:
       # Only download the main file = >90% of total
       #main_file_only: yes
@@ -99,11 +102,7 @@ presets:
           replace:
             regexp: ' {2,5}'
             format: ' '
-      #- quality:
-       #   replace:
-        #    regexp: 'unknown'
-         #   format: '720p'
-    # RSS feeds for anime, force ascii:the japanese charactes can cause errors
+    # RSS feeds for Anime, force ascii:the japanese characters can cause errors
     inputs:
       # Shows only english anime and is sorted by seeds
       - rss: { url: 'http://www.nyaa.eu/?page=rss&cats=1_37&filter=1&sort=3', silent: yes, ascii: yes }
@@ -147,6 +146,13 @@ presets:
       - '/media/torrents/'
       - '/media/TV/'
     # List of shows to watch
+    import_series:
+      from:
+        trakt_list:
+          username: edhaker13
+          api_key: 5da393943021a1fef3c9ea151a4b16fc
+          series: watchlist
+          strip_dates: yes
     series:
       - 2 Broke Girls
       - Arrow
@@ -158,7 +164,7 @@ presets:
       - How I Met Your Mother
       - Misfits
       - Supernatural
-# This show finished :'(      - Fringe
+    # This show finished :'(      - Fringe
 tasks:
   anime:
     preset: anime
@@ -168,7 +174,13 @@ tasks:
     preset: tv
     notifymyandroid:
       event: New TV Episode
+    trakt_acquired:
+      username: edhaker13
+      password: ARsuIc%'xO-3wO`z7Mk
+      api_key: 5da393943021a1fef3c9ea151a4b16fc
+      type: series
   Email:
+    verify_ssl_certificates: no
     preset: no_global
     interval: 1 days
     rss:
@@ -179,11 +191,9 @@ tasks:
       from: flexget@checacorp.com
       to: edhaker13@gmail.com
       subject: '[Flexget] Daily Archive'
-      smtp_login: true
-      smtp_host: smtp.zoho.com
+      smtp_host: smtp.checacorp.com
       smtp_port: 465
       smtp_username: flexget@checacorp.com
       smtp_password: PQELbr6Arv4gLcdZCFF8
       smtp_tls: no
       smtp_ssl: yes
-      
