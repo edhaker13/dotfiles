@@ -25,6 +25,16 @@ presets:
       days: -1
       items: -1
       encoding: utf-8
+    make_html:
+      file: /home/edhaker13/domains/edhaker.info/public_html/flexget.html
+    email:
+      from: flexget@checacorp.com
+      to: edhaker13@gmail.com
+      smtp_host: smtp.checacorp.com
+      smtp_port: 465
+      smtp_ssl: yes
+      smtp_username: flexget@checacorp.com
+      smtp_password: 
     # Set some reasonable size limits also ensures no packs
     content_size:
       max: 1500
@@ -179,21 +189,3 @@ tasks:
       password: ARsuIc%'xO-3wO`z7Mk
       api_key: 5da393943021a1fef3c9ea151a4b16fc
       type: series
-  Email:
-    verify_ssl_certificates: no
-    preset: no_global
-    interval: 1 days
-    rss:
-      url: /home/edhaker13/domains/edhaker.info/public_html/flexget.rss
-    disable_builtins: [seen]
-    accept_all: yes
-    email:
-      from: flexget@checacorp.com
-      to: edhaker13@gmail.com
-      subject: '[Flexget] Daily Archive'
-      smtp_host: smtp.checacorp.com
-      smtp_port: 465
-      smtp_username: flexget@checacorp.com
-      smtp_password: PQELbr6Arv4gLcdZCFF8
-      smtp_tls: no
-      smtp_ssl: yes
