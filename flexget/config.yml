@@ -89,7 +89,7 @@ presets:
     download: /media/torrents/
     # Set the options of downloaded torrent in deluge
     set:
-      filename: {{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent
+      filename: {{series_name}}.{{series_id|pad(2)}}.{{quality|replace('unknown','720p')}}.torrent
     # It was cool to have a seedbox but with no private trackers...
       # Path results /media/anime/ShowName/
       # movedone: >
