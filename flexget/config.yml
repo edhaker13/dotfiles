@@ -19,22 +19,27 @@ presets:
     magnets: no
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
-    # Make an rss with successful entries for archives
+    # Some torrents links are invalid https
+    verify_ssl_certificates: no
+    # Make a rss with successful entries for ease of access
     make_rss:
       file: /home/edhaker13/domains/edhaker.info/public_html/flexget.rss
       days: -1
       items: -1
       encoding: utf-8
+    # Make a html file for record keeping
     make_html:
       file: /home/edhaker13/domains/edhaker.info/public_html/flexget.html
+    # Notifies me via email, sometime I just forget to check NMA
     email:
       from: flexget@checacorp.com
       to: edhaker13@gmail.com
+      template: accepted
       smtp_host: smtp.checacorp.com
       smtp_port: 465
       smtp_ssl: yes
       smtp_username: flexget@checacorp.com
-      smtp_password: 
+      smtp_password: PQELbr6Arv4gLcdZCFF8
     # Set some reasonable size limits also ensures no packs
     content_size:
       max: 1500
@@ -71,15 +76,6 @@ presets:
         - \bRAW\b: {from: title}
         # Reject rar/packs/password
         - \.rar|\.r\d\d|password.txt|\.zip
-    # Set the options of downloaded torrent in deluge
-    set:
-      # Path results /media/anime/ShowName/
-      # movedone: >
-      #  /media/{{task}}/{{series_name}}
-      # Set label to the name of shows : fringe, fairy_tail. Makes it manageable
-      # label: "{{series_name}}"
-      # Output would be -> Show Name 02[720p10bit].mkv
-      filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent"
     # Limit the frequency of requests to domains so they don't complain about using a bot
     domain_delay:
       tokyotosho.info: 15 seconds
@@ -91,8 +87,17 @@ presets:
       apikey: aed0c8f91cb1c539f24f900a56c12f07e382710b958a6eec
     # Set download path to rsync from home
     download: /media/torrents/
-    # Set the deluge port since I have mine changed
+    # Set the options of downloaded torrent in deluge
+    set:
+      filename: {{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent
     # It was cool to have a seedbox but with no private trackers...
+      # Path results /media/anime/ShowName/
+      # movedone: >
+      #  /media/{{task}}/{{series_name}}
+      # Set label to the name of shows : fringe, fairy_tail. Makes it manageable
+      # label: "{{series_name}}"
+      # Output would be -> Show Name 02[720p10bit].mkv
+    # Set the deluge port since I have mine changed.
     #deluge:
       # Only download the main file = >90% of total
       #main_file_only: yes
@@ -102,7 +107,7 @@ presets:
 
   # This preset has all the anime related settings
   anime:
-    # Remove CRC and assume 720p on entries
+    # Remove score/underscores and multiple spaces
     manipulate:
       - title:
           replace:
@@ -112,7 +117,7 @@ presets:
           replace:
             regexp: ' {2,5}'
             format: ' '
-    # RSS feeds for Anime, force ascii:the japanese characters can cause errors
+    # RSS feeds for Anime, force ascii: the japanese characters can cause errors
     inputs:
       # Shows only english anime and is sorted by seeds
       - rss: { url: 'http://www.nyaa.eu/?page=rss&cats=1_37&filter=1&sort=3', silent: yes, ascii: yes }
@@ -125,28 +130,26 @@ presets:
     # Filter any raws, OST , manga that may have fallen through the rss filters
     regexp:
       reject:
-        - raw|ost|manga|soundtrack|song|\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
-    # List of shows I want to see, from MAL and Manual
+        -  raw | ost | manga | soundtrack | song |\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
+    # List of shows I want to see, from MAL and manually set
     import_series:
       from:
         myanimelist:
           username: 'edhaker13'
-    # Paid for Crunchy this month by accident again!
+    # Watching again from PC, crunchy is horrible on linux
     series:
       - CODE Breaker
-      #- Girls und Panzer #On Crunchy
-      #- Little Busters #On Crunchy
+      - Girls und Panzer
+      - Little Busters
       - Magi
       - Maoyuu Maou Yuusha
       - Psycho Pass
       - Robotics;Notes
-      - Sakurasou no Pet na Kanojo #On Crunchy
-      - Shin Sekai Yori #On Crunchy
-      - Zetsuen no Tempest #On Crunchy
+      - Sakurasou no Pet na Kanojo 
+      - Shin Sekai Yori
+      - Zetsuen no Tempest
   # Preset for all TV related settings and list of shows, just for show now
   tv:
-    # Some torrents links are invalid https
-    verify_ssl_certificates: no
     # List of feeds to use already filtered for shows and 720p
     inputs:
       - rss: { url: 'http://feeds.feedburner.com/dailytvtorrents', silent: yes }
@@ -174,7 +177,6 @@ presets:
       - How I Met Your Mother
       - Misfits
       - Supernatural
-    # This show finished :'(      - Fringe
 tasks:
   anime:
     preset: anime
