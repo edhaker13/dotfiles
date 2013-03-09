@@ -299,8 +299,9 @@ settings = {
     real_name = "Luis Checa";
     user_name = "edhaker13";
     nick = "edhaker13";
-    resolve_prefer_ipv6 = "yes";
+    resolve_prefer_ipv6 = "no";
     proxy_password = "  ";
+    recode = "yes";
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "irc/core" = { alternate_nick = "edhacker13"; };

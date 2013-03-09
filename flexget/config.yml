@@ -33,7 +33,7 @@ presets:
     torrent_alive: 10
     # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
     # But since I'm gonna dl from Home => 1080p
-    quality: 1080p
+    quality: 720p
     # Only download mkv or mp4
     content_filter:
       require:
