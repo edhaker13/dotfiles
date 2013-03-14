@@ -47,8 +47,8 @@ presets:
     # Minimum seeds to consider.
     torrent_alive: 10
     # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
-    # But since I'm gonna dl from Home => 1080p
-    quality: 720p
+    # But since I'm gonna dl from Home => 720p+
+    quality: 720p+
     # Only download mkv or mp4
     content_filter:
       require:
@@ -138,14 +138,18 @@ presets:
           username: 'edhaker13'
     # Watching again from PC, crunchy is horrible on linux
     series:
+      - Bakuman S3
       - CODE Breaker
+      - Chihayafuru S2
       - Girls und Panzer
+      - Kotoura san
       - Little Busters
       - Magi
       - Maoyuu Maou Yuusha
+      - OreShura
       - Psycho Pass
       - Robotics;Notes
-      - Sakurasou no Pet na Kanojo 
+      - Sakurasou no Pet na Kanojo
       - Shin Sekai Yori
       - Zetsuen no Tempest
   # Preset for all TV related settings and list of shows, just for show now
