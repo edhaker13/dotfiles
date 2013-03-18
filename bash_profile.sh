@@ -23,3 +23,7 @@ if which fortune >/dev/null; then
           fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
           echo -en '\033[0;37m'
 fi
+#Start SSH Agent
+if which ssh-agent >/dev/null; then
+    ssh-agent bash
+fi
