@@ -42,8 +42,7 @@ shopt -s sourcepath
 shopt -s no_empty_cmd_completion
 shopt -s cmdhist
 shopt -s histappend histreedit histverify
-# Disable options:
-shopt -u mailwarn
+shopt -s mailwarn
 
 # put some colors in ls
 export CLICOLOR=1
@@ -231,6 +230,7 @@ export EDITOR='vim'
 alias svim='sudo vim'
 alias snano='sudo nano'
 alias ipt='sudo iptables'
+alias ip6t='sudo ip6tables'
 alias iptables='sudo iptables'
 alias runlevel='sudo /sbin/init'
 alias yum='sudo yum'
@@ -244,6 +244,7 @@ alias aptitude='sudo aptitude'
 alias cps='sudo cp'
 alias update="sudo aptitude update"
 alias install="sudo aptitude install"
+alias reinstall="sudo aptitude reinstall"
 alias upgrade="sudo aptitude safe-upgrade"
 alias remove="sudo aptitude remove"
 alias purge='sudo aptitude purge'
@@ -252,9 +253,8 @@ alias purge='sudo aptitude purge'
 # Server/Users specific aliases and functions
 alias flex='~/Flexget/bin/flexget'
 alias res='screen -dr tty'
-alias sirc='screen -dmS ircs irssi'
+alias sirssi='screen -dmS ircs irssi'
 alias irc='screen -rD ircs'
 alias free="free -m"
-alias l2r="sudo service lighttpd reload"
 alias nr="sudo service nginx reload"
 

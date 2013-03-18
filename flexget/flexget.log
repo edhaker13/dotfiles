@@ -288,3 +288,545 @@
 2013-03-14 21:47 VERBOSE  verbose       anime           UNDECIDED: `[Critter Subs] Jewelpet Kira Deco! 48 (1280x720 H264)[1C4E0D2B].mkv`
 2013-03-14 21:47 VERBOSE  verbose       anime           Undecided entries have not been accepted or rejected. If you expected these to reach output, you must set up filter plugin(s) to accept them.
 2013-03-14 21:47 VERBOSE  make_rss                      Writing output rss to /home/edhaker13/domains/edhaker.info/public_html/flexget.rss
+2013-03-14 21:52 VERBOSE  input_cache   anime           Restored 20 entries from db cache
+2013-03-14 21:52 VERBOSE  series        anime           Series Sakurasou no Pet na Kanojo is already configured in series plugin
+2013-03-14 21:52 VERBOSE  series        anime           Series Girls und Panzer is already configured in series plugin
+2013-03-14 21:52 VERBOSE  series        anime           Series Maoyuu Maou Yuusha is already configured in series plugin
+2013-03-14 21:52 VERBOSE  series        anime           Series Little Busters is already configured in series plugin
+2013-03-14 21:52 VERBOSE  series        anime           Series Zetsuen no Tempest is already configured in series plugin
+2013-03-14 21:53 VERBOSE  details       anime           Produced 180 entries.
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] PSYCHO PASS   21 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] PSYCHO PASS 21 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Zetsuen no Tempest   22 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Zetsuen no Tempest 22 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden   304 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden 304 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Kotoura san   10 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Kotoura san 10 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden   304 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden 304 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Robotics;Notes   20 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Robotics;Notes 20 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Zetsuen no Tempest   22 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Zetsuen no Tempest 22 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] PSYCHO PASS   21 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] PSYCHO PASS 21 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden   304 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden 304 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Kotoura san   10 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Kotoura san 10 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Zetsuen no Tempest   22 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Zetsuen no Tempest 22 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Rizlim] Queen's Blade ~Rebellion~ Vol.1 6 [BD 1280x720 H.264 FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Hakkenden   Eight Dogs of the East   10 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Hakkenden Eight Dogs of the East 10 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Kotoura san   10 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Kotoura san 10 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws][Puella Magi Madoka Magica][01 12+SP+CD][BDRIP][Hi10P FLAC][1920X1080][dual audio][v2]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `One Piece Collection 001 557`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Bleach 1 366 + Movies + Specials`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Mazui] Tamako Market   10 [84082B73].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Mazui] Tamako Market 10 [84082B73].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Nutbladder] THERMAE ROMAE   SP`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Nutbladder] THERMAE ROMAE SP`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Gintama   263 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Gintama 263 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[gg] Magi   22 [15098FED].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[gg] Magi 22 [15098FED].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Rizlim] Queen's Blade ~Rebellion~ Vol.1 6 [BD 1920x1080 H.264 FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws][Ouran High School Host Club][01 26+SP+CD][BDRIP(JP+US)][10bit][dual Audio]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Kamigami Raws] Space Battleship Yamato 2199 episode 11 14 [BD 1920x1080 x264 FLAC Sub Eng]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws][Sengoku Basara][01 13+SP+CD][BDRIP][Hi10P FLAC][1920X1080][dual audio]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Robotics;Notes   20 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Robotics;Notes 20 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Anime Keep] Whistle   01 20`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Anime Keep] Whistle 01 20`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Coalgirls] Fullmetal Alchemist Brotherhood (1280x720 Blu ray FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Hatsuyuki Tsuki] Fairy Tail the Movie   Priestess of the Phoenix [DVD][1024x576 10bit x264 AC3 2ch][BFA74341].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Hatsuyuki Tsuki] Fairy Tail the Movie Priestess of the Phoenix [DVD][1024x576 10bit x264 AC3 2ch][BFA74341].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Dragonball.Kai.720p.1 97.Complete`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws][Sengoku Basara the MOVIE: The Last Party][movie+SP][dual audio]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Pokemon [Season 1 14][Ep.1 710]+[14 movies]+[all specials]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Coalgirls] Soul Eater (1280x720 Blu ray FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Cowboy Bebop Complete Series [BDRip 1080 Hi10P DTS HD FLAC AC3]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Final8]Hellsing Ultimate I X + The Dawn I III (BD 10 bit 1920x1080 x264 FLAC 5.1)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Kyuubi] Fairy Tail 99 150 [720p][BATCH]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero   14 25 + Specials [BD][h264 720p AC3]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero 14 25 + Specials [BD][h264 720p AC3]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Chibiki] Puchimas!   54 [360p][A2E6E431].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Chibiki] Puchimas! 54 [360p][A2E6E431].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Polar Bear Cafe   48 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Polar Bear Cafe 48 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero   14 25 + Specials [BD][h264 1080p FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero 14 25 + Specials [BD][h264 1080p FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[QTS] OVA Mobile Suit Gundam Unicorn Vol.1 5 + Eizou Tokuten + Subtitles (BD H264 1920x1080 FLAC Dolby TrueHD AC3 5.1+2.0J + 5.1+2.0E SUP)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Kyuubi] Fairy Tail 01 48 [720p][BATCH]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Tamako Market   10 [EF38329D].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Tamako Market 10 [EF38329D].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Kateikyoushi Hitman REBORN! [Complete Episodes 1   203]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Kateikyoushi Hitman REBORN! [Complete Episodes 1 203]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Gintama   263 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Gintama 263 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[rori] Sakurasou no Pet na Kanojo   22 [A814ADA2].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[rori] Sakurasou no Pet na Kanojo 22 [A814ADA2].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Monsuno 01 26 [English Dub]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `One Piece Ep 001 584`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden   303 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden 303 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Dragon Ball Z [Complete] 01 291 + 13Movie + 2Sp + 4OVA`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden   303 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Naruto Shippuuden 303 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Saint Seiya Omega   48 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Saint Seiya Omega 48 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Spriggan [GerJapEngIta Dub][GerEngIta Dub][1080p][DTS][AC3][THORA][Remuxx]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Kyuubi] Fairy Tail 49 98 [720p][BATCH]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Detective Conan Archive (001   616) + all the Movies and OVAs`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Detective Conan Archive (001 616) + all the Movies and OVAs`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] GJ bu   10 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] GJ bu 10 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Kamigami] Toki wo Kakeru Shoujo   Movie [BD x264 1920x1080 FLAC(5.1ch,Man,Can,Jap,Eng) Sub(GB,Big5,Jap,Eng)].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Kamigami] Toki wo Kakeru Shoujo Movie [BD x264 1920x1080 FLAC(5.1ch,Man,Can,Jap,Eng) Sub(GB,Big5,Jap,Eng)].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero   01 13 + Specials [BD][h264 1080p FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero 01 13 + Specials [BD][h264 1080p FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Rizlim] Queen's Blade ~Rebellion~ Vol.1 6 [BD 848x480 H.264 AAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Gintama   263 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Gintama 263 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Ayumi] Kurenai 1080p (10 bit BD FLAC)(Complete)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[RUELL Raws] Blood C: The Last Dark (BD 1920x1080 x264 FLAC 5.1ch 24bit ENSub(Anime Koi))`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DGz] Hellsing Ultimate OVA [720p][h264 AAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws][Chaos;Head][01 12+SP+CD][BDRIP][Hi10P FLAC][1920X1080][10bit][dual audio]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Hakkenden   Eight Dogs of the East   10 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Hakkenden Eight Dogs of the East 10 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws]][Inuyasha: The Final Act][01 26 Fin][BDRIP][1080p][10bit][three audio]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[AHQ] Vision of Escaflowne [1 26]+movie Dual Audio[English,Japanese]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Saint Young Men OVA   01 [DVD 576p AAC] [CBF535E4].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Saint Young Men OVA 01 [DVD 576p AAC] [CBF535E4].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Sakurasou no Pet na Kanojo   22 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Sakurasou no Pet na Kanojo 22 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Scan2Go 01 26 (English Dub)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws][Clannad&After Story&The MOVIE][24bit][10bit][Final Collection]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `The Legend of Heroes   Trails in The Sky DualAudio[Eng Jap] 720p H264 AAC 5.1   LaXuS`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `The Legend of Heroes Trails in The Sky DualAudio[Eng Jap] 720p H264 AAC 5.1 LaXuS`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Kamigami] Fate Zero 01 25 [BD 1920x1080 x264 Hi10P FLAC MKV Sub(CH,JP,EN)]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[philosophy raws][Angel Beats!][BDRIP][10bit][Master Collection]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Seitokai no Ichizon Lv.2   09 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Seitokai no Ichizon Lv.2 09 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Magi   22 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Magi 22 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Coalgirls] Cardcaptor Sakura (960x720 Blu ray FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[WhyNot] SaintYoung Men OVA   01 [DVD 480p AAC][CCF5ADCC].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[WhyNot] SaintYoung Men OVA 01 [DVD 480p AAC][CCF5ADCC].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero   01 13 + Specials [BD][h264 720p AC3]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[UTW] Fate Zero 01 13 + Specials [BD][h264 720p AC3]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Coalgirls] Toradora (1280x720 Blu ray FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[RUELL Raws] GUNDAM SEED HDR. BDBOX (BD 1920x1080 x264 FLAC+ENGSub)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Yu Gi Oh! Zexal I [GX ST][720p][c]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[ShaqSalazar] Bodacious Space Pirates   Complete Series + BD Extras [Blu ray][1080p][Dual Audio][Hi10]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[ShaqSalazar] Bodacious Space Pirates Complete Series + BD Extras [Blu ray][1080p][Dual Audio][Hi10]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Anime Keep] Whistle! Episodes 21 39`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Cradle][GJ][09][BIG5][720P][AVC AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `NYAA HD`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Yousei raws] Kyoukai Senjou no Horizon [BDrip 1920x1080 x264 FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Nutbladder] THERM ROM   SP [7F2F59E5].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Nutbladder] THERM ROM SP [7F2F59E5].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Ai Mai Mi   11 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Ai Mai Mi 11 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[youshikibi] Naruto Shippuden   304 (1280x720 h264 AAC) [d8b8b7a6].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[youshikibi] Naruto Shippuden 304 (1280x720 h264 AAC) [d8b8b7a6].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Ruri Saizen] Line Offline Salaryman   27 [97CE3851].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Ruri Saizen] Line Offline Salaryman 27 [97CE3851].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Ruri Saizen] Line Offline Salaryman   26 [B9DBCB14].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Ruri Saizen] Line Offline Salaryman 26 [B9DBCB14].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Ruri Saizen] Line Offline Salaryman   25 [512EF0FE].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Ruri Saizen] Line Offline Salaryman 25 [512EF0FE].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] GJ bu   10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] GJ bu 10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] Oda Nobuna no Yabou   Vol 6 (848x480 h264 BD AAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] Oda Nobuna no Yabou Vol 6 (848x480 h264 BD AAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] Oda Nobuna no Yabou   Vol 6 (1280x720 Hi10P BD AAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] Oda Nobuna no Yabou Vol 6 (1280x720 Hi10P BD AAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] Oda Nobuna no Yabou   Vol 6 (1920x1080 Hi10P BD FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] Oda Nobuna no Yabou Vol 6 (1920x1080 Hi10P BD FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[CR] Psycho Pass   21 [1280x720].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[CR] Psycho Pass 21 [1280x720].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Saint Seiya Omega   48 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Saint Seiya Omega 48 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[jhl] cardcaptors extended ep.1 [dual audio] [960p h264 aac].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Anime Koi] GJ bu   10 [h264 720p][7164F75E].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Anime Koi] GJ bu 10 [h264 720p][7164F75E].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[AnimeNOW] Plastic Nee san (BD 1280x720 10 bit x264 AAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[AnimeNOW] Plastic Nee san (BD 1920x1080 10 bit x264 FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Yama no Susume   11 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Yama no Susume 11 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Tamako Market   10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Tamako Market 10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Mangirl!   11 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Mangirl! 11 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Yama no Susume   11 [C2046AD5].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Yama no Susume 11 [C2046AD5].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Mangirl!   11 [1AFF8022].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Mangirl! 11 [1AFF8022].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[FFF] Koi to Senkyo to Chocolate   Vol.01 [BD][1080p FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[FFF] Koi to Senkyo to Chocolate Vol.01 [BD][1080p FLAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[FFF] Koi to Senkyo to Chocolate   Vol.01 [BD][720p AAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[FFF] Koi to Senkyo to Chocolate Vol.01 [BD][720p AAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Chokkyuu Hyoudai Robot Anime: Straight Title   06 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Chokkyuu Hyoudai Robot Anime: Straight Title 06 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Seitokai no Ichizon Lv.2   09 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Seitokai no Ichizon Lv.2 09 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] SaintOnii san   01   OVA [DVD][480p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] SaintOnii san 01 OVA [DVD][480p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[1080p][Minami ke][13][BDRip][X264 AAC][Hi10P]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Takara Migoto] Homeless Child Remy 25 [1F0EA11E].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Sakurasou no Pet na Kanojo   22 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Sakurasou no Pet na Kanojo 22 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Sakurasou no Pet na Kanojo   22 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Sakurasou no Pet na Kanojo 22 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Saint Seiya Omega   48 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Saint Seiya Omega 48 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Takara] Ashita No Joe 2   32 [08EE7AB3].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Takara] Ashita No Joe 2 32 [08EE7AB3].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] GJ bu   10 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] GJ bu 10 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[1080p][Kagaku na Yatsura][OAD][1][BDRip][X264 AAC][Hi10P]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] GJ bu   10 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] GJ bu 10 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[NemDiggers] Magi   22 [720p] [H264 AAC MP4].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[NemDiggers] Magi 22 [720p] [H264 AAC MP4].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Seitokai no Ichizon Lv.2   09 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Seitokai no Ichizon Lv.2 09 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Magi   22 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Magi 22 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Seitokai no Ichizon Lv.2   09 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Seitokai no Ichizon Lv.2 09 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Magi   22 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Magi 22 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Mangirl!   11 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Mangirl! 11 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Yama no Susume   11 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Yama no Susume 11 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Mangirl!   11 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Mangirl! 11 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Yama no Susume   11 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Yama no Susume 11 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Chibiki] Puchimas!   53 [360p][585A6505].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Chibiki] Puchimas! 53 [360p][585A6505].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Final8]Muv Luv Alternative   Total Eclipse   09 11 (BD 10 bit 1920x1080 x264 FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Final8]Muv Luv Alternative Total Eclipse 09 11 (BD 10 bit 1920x1080 x264 FLAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Straight Title Robot Anime   06 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Straight Title Robot Anime 06 [1080p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Straight Title Robot Anime   06 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Straight Title Robot Anime 06 [720p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Straight Title Robot Anime   06 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[HorribleSubs] Straight Title Robot Anime 06 [480p].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Final8]Muv Luv Alternative   Total Eclipse   09 11 (BD 10 bit 1280x720 x264 AAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Final8]Muv Luv Alternative Total Eclipse 09 11 (BD 10 bit 1280x720 x264 AAC)`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Jumonji Giri] [Triad] Zettai Shonen Ep26 (6837d168).mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[LittleSubbers] Little Busters!   22 [22067675].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[LittleSubbers] Little Busters! 22 [22067675].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Chihiro] Smile Precure   30 40 [1280x720 H.264 AAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Chihiro] Smile Precure 30 40 [1280x720 H.264 AAC]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] JoJo's Bizarre Adventure   20 [9A03671E].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] JoJo's Bizarre Adventure 20 [9A03671E].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Nishishi subs] Kiss x Sis OVA   08 [480p Hi10][D366D1B7].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Nishishi subs] Kiss x Sis OVA 08 [480p Hi10][D366D1B7].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Ixion Saga DT   Vol.3 [1920x1080 Hi10P BD FLAC][TenB]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Ixion Saga DT Vol.3 [1920x1080 Hi10P BD FLAC][TenB]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Ixion Saga DT   Vol.3 [1280x720 Hi10P BD AAC][TenB]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Ixion Saga DT Vol.3 [1280x720 Hi10P BD AAC][TenB]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Ixion Saga DT   Vol.3 [848x480 Hi10P BD AAC][TenB]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `Ixion Saga DT Vol.3 [848x480 Hi10P BD AAC][TenB]`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Magi   21 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Magi 21 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] DokiDoki! Precure   06 (848x480 h264 AAC) [870D9B15].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] DokiDoki! Precure 06 (848x480 h264 AAC) [870D9B15].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Amnesia   10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Amnesia 10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] DokiDoki! Precure   06 (1280x720 Hi10P AAC) [808999F4].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doki] DokiDoki! Precure 06 (1280x720 Hi10P AAC) [808999F4].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Migoto] Kaitou Reinya   02 (848x480 H264 AAC) [92531188].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Migoto] Kaitou Reinya 02 (848x480 H264 AAC) [92531188].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Migoto] Kaitou Reinya   02 (1280x720 H264 AAC) [EE1C36AE].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Migoto] Kaitou Reinya 02 (1280x720 H264 AAC) [EE1C36AE].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Aikatsu!   22 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Aikatsu! 22 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Blood C: The Last Dark   Movie [BD][720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Blood C: The Last Dark Movie [BD][720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Senran Kagura   10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[DeadFish] Senran Kagura 10 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[eraser] Arve Rezzle   Kikai jikake no Yousei tachi (Ver.0).mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[eraser] Arve Rezzle Kikai jikake no Yousei tachi (Ver.0).mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doremi Oyatsu] Ginga e Kickoff!!   36 (1280x720 8bit h264 AAC) [A72CD7DB].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Doremi Oyatsu] Ginga e Kickoff!! 36 (1280x720 8bit h264 AAC) [A72CD7DB].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Seitokai no Ichizon Lv. 2   01 [9C13EB9A].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Seitokai no Ichizon Lv. 2 01 [9C13EB9A].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] AMNESIA   10 [F7D6CFBA].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] AMNESIA 10 [F7D6CFBA].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Critter Subs] Jewelpet Kira Deco!   48 (1280x720 H264)[1C4E0D2B].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Critter Subs] Jewelpet Kira Deco! 48 (1280x720 H264)[1C4E0D2B].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Magi   21 [6718F86B].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Field `title` is now `[Commie] Magi 21 [6718F86B].mkv`
+2013-03-14 21:53 VERBOSE  manipulate    anime           Modified 160 entries.
+2013-03-14 21:53 VERBOSE  series        anime           Auto enabling exact matching for series Magi (reason Magi The Labyrinth of Magic)
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for Senyuu.. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for Magi The Labyrinth of Magic. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for Chihayafuru 2. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for OreShura. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for Zettai Karen Children The Unlimited  Hyoubu Kyousuke. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for Kiss x Sis. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for Vividred Operation. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           identified by is currently on `auto` for Hakkenden Touhou Hakken Ibun. Multiple id types may be accepted until it locks in on the appropriate type.
+2013-03-14 21:53 VERBOSE  series        anime           Title `[Hatsuyuki Tsuki] Fairy Tail the Movie Priestess of the Phoenix [DVD][1024x576 10bit x264 AC3 2ch][BFA74341].mkv` looks like series `Fairy Tail` but I cannot find a(n) `sequence` style identifier.
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Zetsuen no Tempest 22 [720p].mkv` by seen plugin because entry with title `[HorribleSubs] Zetsuen no Tempest 22 [720p].mkv` is already seen
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[CR] Psycho Pass 21 [1280x720].mkv` by seen plugin because entry with title `[CR] Psycho Pass 21 [1280x720].mkv` is already seen
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Magi 22 [1080p].mkv` by seen plugin because entry with title `[HorribleSubs] Magi 22 [1080p].mkv` is already seen
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Naruto Shippuuden 304 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `One Piece Movies and Specials` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] PSYCHO PASS 21 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Zetsuen no Tempest 22 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Kotoura san 10 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `One Piece Collection 001 557` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Bleach 1 366 + Movies + Specials` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Mazui] Tamako Market 10 [84082B73].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Nutbladder] THERMAE ROMAE SP` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Hunter X Hunter Ova 1` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[gg] Magi 22 [15098FED].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[philosophy raws][Ouran High School Host Club][01 26+SP+CD][BDRIP(JP+US)][10bit][dual Audio]` by quality plugin because bluray 10bit does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Robotics;Notes 20 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Anime Keep] Whistle 01 20` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Hatsuyuki Tsuki] Fairy Tail the Movie Priestess of the Phoenix [DVD][1024x576 10bit x264 AC3 2ch][BFA74341].mkv` by quality plugin because dvdrip 10bit ac3 does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[philosophy raws][Sengoku Basara the MOVIE: The Last Party][movie+SP][dual audio]` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Pokemon [Season 1 14][Ep.1 710]+[14 movies]+[all specials]` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Chibiki] Puchimas! 54 [360p][A2E6E431].mkv` by quality plugin because 360p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Mad Bull 34 DVD Jap/Eng Dual Audio` by quality plugin because dvdrip does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Rockman.EXE Ultimate Collection (English Subbed)` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] Tamako Market 10 [EF38329D].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Kateikyoushi Hitman REBORN! [Complete Episodes 1 203]` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[rori] Sakurasou no Pet na Kanojo 22 [A814ADA2].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Monsuno 01 26 [English Dub]` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `One Piece Ep 001 584` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Naruto Shippuuden 303 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Dragon Ball Z [Complete] 01 291 + 13Movie + 2Sp + 4OVA` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Persona 4 The Animation Dual Audio[English,Japanese]` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Detective Conan Archive (001 616) + all the Movies and OVAs` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Rizlim] Queen's Blade ~Rebellion~ Vol.1 6 [BD 848x480 H.264 AAC]` by quality plugin because h264 aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Gintama 263 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Futari wa Pretty Cure` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Hakkenden Eight Dogs of the East 10 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[AHQ] Vision of Escaflowne [1 26]+movie Dual Audio[English,Japanese]` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] Saint Young Men OVA 01 [DVD 576p AAC] [CBF535E4].mkv` by quality plugin because 576p dvdrip aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Scan2Go 01 26 (English Dub)` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[philosophy raws][Clannad&After Story&The MOVIE][24bit][10bit][Final Collection]` by quality plugin because 10bit does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[philosophy raws][Angel Beats!][BDRIP][10bit][Master Collection]` by quality plugin because bluray 10bit does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Coalgirls] Cardcaptor Sakura (960x720 Blu ray FLAC)` by quality plugin because bluray flac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[WhyNot] SaintYoung Men OVA 01 [DVD 480p AAC][CCF5ADCC].mkv` by quality plugin because 480p dvdrip aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Inuyasha All 4 Movies` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Anime Keep] Whistle! Episodes 21 39` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[BSEnc] Crest of the Stars 02 (R2 DVD Dual Audio)` by quality plugin because r5 does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `NYAA HD` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Devilman OVA Collection` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Nutbladder] THERM ROM SP [7F2F59E5].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Ai Mai Mi 11 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Ruri Saizen] Line Offline Salaryman 27 [97CE3851].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Ruri Saizen] Line Offline Salaryman 26 [B9DBCB14].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Ruri Saizen] Line Offline Salaryman 25 [512EF0FE].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Doki] Oda Nobuna no Yabou Vol 6 (848x480 h264 BD AAC)` by quality plugin because h264 aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[jhl] cardcaptors extended ep.1 [dual audio] [960p h264 aac].mkv` by quality plugin because h264 aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] Yama no Susume 11 [C2046AD5].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] Mangirl! 11 [1AFF8022].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[DeadFish] SaintOnii san 01 OVA [DVD][480p][AAC].mp4` by quality plugin because 480p dvdrip aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Takara Migoto] Homeless Child Remy 25 [1F0EA11E].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Sakurasou no Pet na Kanojo 22 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Saint Seiya Omega 48 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Takara] Ashita No Joe 2 32 [08EE7AB3].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] GJ bu 10 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Seitokai no Ichizon Lv.2 09 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Magi 22 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Mangirl! 11 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Yama no Susume 11 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[AnimeNOW] Blossom (848x480) [E83970CB].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Chibiki] Puchimas! 53 [360p][585A6505].mkv` by quality plugin because 360p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Straight Title Robot Anime 06 [480p].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Jumonji Giri] [Triad] Zettai Shonen Ep26 (6837d168).mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[LittleSubbers] Little Busters! 22 [22067675].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] JoJo's Bizarre Adventure 20 [9A03671E].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Nishishi subs] Kiss x Sis OVA 08 [480p Hi10][D366D1B7].mkv` by quality plugin because 480p does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Ixion Saga DT Vol.3 [848x480 Hi10P BD AAC][TenB]` by quality plugin because 10bit aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Doki] DokiDoki! Precure 06 (848x480 h264 AAC) [870D9B15].mkv` by quality plugin because h264 aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Migoto] Kaitou Reinya 02 (848x480 H264 AAC) [92531188].mkv` by quality plugin because h264 aac does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[eraser] Arve Rezzle Kikai jikake no Yousei tachi (Ver.0).mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `Jojo's Bizarre Adventure Bluray vol.2` by quality plugin because bluray does not match quality requirement [<Requirements(720p+)>]
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] Seitokai no Ichizon Lv. 2 01 [9C13EB9A].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] AMNESIA 10 [F7D6CFBA].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Commie] Magi 21 [6718F86B].mkv` by quality plugin because entry doesn't have a quality
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[Yousei raws] Kyoukai Senjou no Horizon [BDrip 1920x1080 x264 FLAC]` too big, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[Yousei raws] Kyoukai Senjou no Horizon [BDrip 1920x1080 x264 FLAC]`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Yousei raws] Kyoukai Senjou no Horizon [BDrip 1920x1080 x264 FLAC]` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[DeadFish] Yama no Susume 11 [720p][AAC].mp4` too small, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Yama no Susume 11 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[DeadFish] Yama no Susume 11 [720p][AAC].mp4` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[DeadFish] Mangirl! 11 [720p][AAC].mp4` too small, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Mangirl! 11 [720p][AAC].mp4`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[DeadFish] Mangirl! 11 [720p][AAC].mp4` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[FFF] Koi to Senkyo to Chocolate Vol.01 [BD][1080p FLAC]` too big, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.01 [BD][1080p FLAC]`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[FFF] Koi to Senkyo to Chocolate Vol.01 [BD][1080p FLAC]` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[1080p][Minami ke][13][BDRip][X264 AAC][Hi10P]` too big, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[1080p][Minami ke][13][BDRip][X264 AAC][Hi10P]`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[1080p][Minami ke][13][BDRip][X264 AAC][Hi10P]` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[HorribleSubs] Mangirl! 11 [720p].mkv` too small, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Mangirl! 11 [720p].mkv`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Mangirl! 11 [720p].mkv` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[HorribleSubs] Yama no Susume 11 [720p].mkv` too small, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Yama no Susume 11 [720p].mkv`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Yama no Susume 11 [720p].mkv` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[Final8]Muv Luv Alternative Total Eclipse 09 11 (BD 10 bit 1920x1080 x264 FLAC)` too big, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[Final8]Muv Luv Alternative Total Eclipse 09 11 (BD 10 bit 1920x1080 x264 FLAC)`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Final8]Muv Luv Alternative Total Eclipse 09 11 (BD 10 bit 1920x1080 x264 FLAC)` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[Chihiro] Smile Precure 30 40 [1280x720 H.264 AAC]` too big, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[Chihiro] Smile Precure 30 40 [1280x720 H.264 AAC]`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Chihiro] Smile Precure 30 40 [1280x720 H.264 AAC]` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  content_size  anime           Entry `[Migoto] Kaitou Reinya 02 (1280x720 H264 AAC) [EE1C36AE].mkv` too small, rejecting
+2013-03-14 21:53 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Kaitou Reinya 02 (1280x720 H264 AAC) [EE1C36AE].mkv`
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Migoto] Kaitou Reinya 02 (1280x720 H264 AAC) [EE1C36AE].mkv` by content_size plugin because no size info available nor file to read it from
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[DeadFish] Amnesia 10 [720p][AAC].mp4` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Sakurasou no Pet na Kanojo 22 [1080p].mkv` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Sakurasou no Pet na Kanojo 22 [720p].mkv` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] PSYCHO PASS 21 [720p].mkv` by series plugin because quality already downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[DeadFish] Magi 21 [720p][AAC].mp4` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[NemDiggers] Magi 22 [720p] [H264 AAC MP4].mp4` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Magi 22 [720p].mkv` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           ACCEPTED: `[HorribleSubs] Kotoura san 10 [1080p].mkv` by series plugin because choosing best quality
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Zetsuen no Tempest 22 [1080p].mkv` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[HorribleSubs] Robotics;Notes 20 [720p].mkv` by series plugin because episode has already been downloaded
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Kyuubi] Fairy Tail 01 48 [720p][BATCH]` by series plugin because too much in the past from latest downloaded episode 160
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Kyuubi] Fairy Tail 99 150 [720p][BATCH]` by series plugin because too much in the past from latest downloaded episode 160
+2013-03-14 21:53 VERBOSE  task          anime           REJECTED: `[Kyuubi] Fairy Tail 49 98 [720p][BATCH]` by series plugin because too much in the past from latest downloaded episode 160
+2013-03-14 21:53 VERBOSE  exists_series anime           Scanning /media/torrents/
+2013-03-14 21:53 VERBOSE  exists_series anime           Scanning /media/anime/
+2013-03-14 21:53 INFO     download      anime           Downloading: [HorribleSubs] Kotoura san 10 [1080p].mkv
+2013-03-14 21:53 VERBOSE  details       anime           Summary - Accepted: 1 (Rejected: 104 Undecided: 75 Failed: 0)
+2013-03-14 21:53 VERBOSE  make_html     anime           Writing output html to /home/edhaker13/domains/edhaker.info/public_html/flexget.html
+2013-03-14 21:53 VERBOSE  email         anime           Sending email.
+2013-03-14 21:53 VERBOSE  make_rss                      Writing output rss to /home/edhaker13/domains/edhaker.info/public_html/flexget.rss
+2013-03-15 01:00 INFO     download      anime           Downloading: [JK] Vividred Operation 10 [720p Hi10P][48C71B82].mkv
+2013-03-15 01:40 INFO     download      TV              Downloading: The Big Bang Theory S06E19 [720]
+2013-03-15 01:40 WARNING  torrent_alive                 Socket Error: [Errno 111] Connection refused
+2013-03-15 01:40 WARNING  torrent_alive                 Could not retrieve url: http://tracker.thepiratebay.org/scrape?info_hash=%D6%BF%EC%8C%7B%E2%0AO%C2%28%5C%3Cw%A1n%FD%A5.%AC%98
+2013-03-15 02:00 INFO     series        TV              identified_by has locked in to type `ep` for The Big Bang Theory
+2013-03-15 02:40 INFO     download      anime           Downloading: [AnimeNOW] Kotoura san 09 (1280x720 10 bit x264 AAC) [051BBACE].mkv
+2013-03-15 02:40 INFO     remember_rej  anime           Remembering rejection of `[AnimeNOW] Kotoura san 09 (1280x720 10 bit x264 AAC) [051BBACE].mkv` for 60 minutes
+2013-03-15 02:40 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-15 02:40 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-15 04:00 INFO     download      anime           Downloading: [AnimeNOW] Kotoura san 09 (1280x720 10 bit x264 AAC) [051BBACE].mkv
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[Yousei raws] Kyoukai Senjou no Horizon [BDrip 1920x1080 x264 FLAC]`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Yama no Susume 11 [720p][AAC].mp4`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Mangirl! 11 [720p][AAC].mp4`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.01 [BD][1080p FLAC]`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[1080p][Minami ke][13][BDRip][X264 AAC][Hi10P]`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Mangirl! 11 [720p].mkv`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Yama no Susume 11 [720p].mkv`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[Final8]Muv Luv Alternative Total Eclipse 09 11 (BD 10 bit 1920x1080 x264 FLAC)`
+2013-03-15 04:20 INFO     remember_rej  anime           Remembering rejection of `[Chihiro] Smile Precure 30 40 [1280x720 H.264 AAC]`
+2013-03-15 09:20 INFO     download      anime           Downloading: [DeadFish] Robotics;Notes 21 [720p][AAC].mp4
+2013-03-15 14:40 INFO     content_size  anime           Entry `[Kamigami] Space Battleship Yamato 2199 05 [BD 1920x1080 x264 FLAC Sub(GB,BIG5,JP,EN)].mkv` too big, rejecting
+2013-03-15 14:40 INFO     remember_rej  anime           Remembering rejection of `[Kamigami] Space Battleship Yamato 2199 05 [BD 1920x1080 x264 FLAC Sub(GB,BIG5,JP,EN)].mkv`
+2013-03-15 15:00 INFO     content_size  anime           Entry `[Nubles] Space Battleship Yamato 2199 (2012) episode 12 (1080p 10 bit FLAC).mkv` too big, rejecting
+2013-03-15 15:00 INFO     remember_rej  anime           Remembering rejection of `[Nubles] Space Battleship Yamato 2199 (2012) episode 12 (1080p 10 bit FLAC).mkv`
+2013-03-15 15:40 INFO     download      anime           Downloading: [AnimeNOW] Senyuu 10 (1280x720 10 bit x264 AAC) [0939B6D1].mkv
+2013-03-15 15:40 INFO     remember_rej  anime           Remembering rejection of `[AnimeNOW] Senyuu 10 (1280x720 10 bit x264 AAC) [0939B6D1].mkv` for 60 minutes
+2013-03-15 15:40 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-15 15:40 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-15 16:40 INFO     content_size  anime           Entry `[FFF] Accel World Vol.02 [BD][720p AAC]` too big, rejecting
+2013-03-15 16:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Accel World Vol.02 [BD][720p AAC]`
+2013-03-15 16:40 INFO     content_size  anime           Entry `[FFF] Accel World Vol.02 [BD][1080p FLAC]` too big, rejecting
+2013-03-15 16:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Accel World Vol.02 [BD][1080p FLAC]`
+2013-03-15 17:00 INFO     download      anime           Downloading: [AnimeNOW] Senyuu 10 (1280x720 10 bit x264 AAC) [0939B6D1].mkv
+2013-03-15 17:20 INFO     remember_rej  anime           Remembering rejection of `[Yousei raws] Kyoukai Senjou no Horizon [BDrip 1920x1080 x264 FLAC]`
+2013-03-15 17:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Yama no Susume 11 [720p][AAC].mp4`
+2013-03-15 17:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Mangirl! 11 [720p][AAC].mp4`
+2013-03-15 17:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.01 [BD][1080p FLAC]`
+2013-03-15 17:20 INFO     remember_rej  anime           Remembering rejection of `[1080p][Minami ke][13][BDRip][X264 AAC][Hi10P]`
+2013-03-15 17:20 INFO     download      anime           Downloading: [HorribleSubs] Maoyuu Maou Yuusha 10 [1080p].mkv
+2013-03-15 18:00 INFO     content_size  anime           Entry `[Migoto] Cyclops Shoujo Saipu 01 (1280x720 H264 AAC) [478A0AA3].mkv` too small, rejecting
+2013-03-15 18:00 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Cyclops Shoujo Saipu 01 (1280x720 H264 AAC) [478A0AA3].mkv`
+2013-03-15 20:01 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Request timed out. (timeout=60)
+2013-03-15 20:40 INFO     series        anime           identified_by has locked in to type `ep` for Kotoura san
+2013-03-15 20:40 INFO     series        anime           Title `[HorribleSubs] Kotoura san 10 [720p].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-15 20:40 INFO     series        anime           Title `[HorribleSubs] Kotoura san 10 [1080p].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-15 20:40 INFO     series        anime           Title `[HorribleSubs] Kotoura san 10 [480p].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-15 20:40 INFO     series        anime           Title `[SleepingKitties] Kotoura san 10 [C1FCAF6C].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-15 21:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Accel World Vol.02 [BD][720p AAC]`
+2013-03-15 21:40 INFO     remember_rej  anime           Remembering rejection of `[Nubles] Space Battleship Yamato 2199 (2012) episode 12 (1080p 10 bit FLAC).mkv`
+2013-03-15 21:40 INFO     download      anime           Downloading: [HorribleSubs] Chihayafuru S2 10 [1080p].mkv
+2013-03-15 22:00 INFO     content_size  anime           Entry `[1080p][AKB0048][12][BDRip][X264 AAC][Hi10P]` too big, rejecting
+2013-03-15 22:00 INFO     remember_rej  anime           Remembering rejection of `[1080p][AKB0048][12][BDRip][X264 AAC][Hi10P]`
+2013-03-15 22:40 INFO     remember_rej  anime           Remembering rejection of `[Kamigami] Space Battleship Yamato 2199 05 [BD 1920x1080 x264 FLAC Sub(GB,BIG5,JP,EN)].mkv`
+2013-03-16 00:00 INFO     content_size  anime           Entry `[DeadFish] Senyuu. 10 [720p][AAC].mp4` too small, rejecting
+2013-03-16 00:00 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Senyuu. 10 [720p][AAC].mp4`
+2013-03-16 00:40 INFO     series        anime           Title `[AnimeNOW] Kotoura san 10v2 (1280x720 10 bit x264 AAC) [E1A5D265].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-16 02:40 INFO     content_size  anime           Entry `Usagi Drop [RUELL Raws @ BD 1080p x264 FLAC ENSub(Zurako)]` too big, rejecting
+2013-03-16 02:40 INFO     remember_rej  anime           Remembering rejection of `Usagi Drop [RUELL Raws @ BD 1080p x264 FLAC ENSub(Zurako)]`
+2013-03-16 03:20 INFO     download      anime           Downloading: [UTW] Shinsekai Yori 24 [h264 720p][0834A01B].mkv
+2013-03-16 03:40 INFO     content_size  anime           Entry `[Nubles] Space Battleship Yamato 2199 (2012) episode 14 (1080p 10 bit FLAC).mkv` too big, rejecting
+2013-03-16 03:40 INFO     remember_rej  anime           Remembering rejection of `[Nubles] Space Battleship Yamato 2199 (2012) episode 14 (1080p 10 bit FLAC).mkv`
+2013-03-16 05:00 INFO     content_size  anime           Entry `[DeadFish] Cyclops Shoujo Saipu~ 01 ONA [720p][AAC].mp4` too small, rejecting
+2013-03-16 05:00 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Cyclops Shoujo Saipu~ 01 ONA [720p][AAC].mp4`
+2013-03-16 05:20 WARNING  inputs        TV              Error during input plugin rss: HTTP error 502 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
+2013-03-16 06:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Accel World Vol.02 [BD][1080p FLAC]`
+2013-03-16 09:20 INFO     content_size  anime           Entry `[HorribleSubs] Boku no Imouto wa Osaka Okan 12 [720p].mkv` too small, rejecting
+2013-03-16 09:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Boku no Imouto wa Osaka Okan 12 [720p].mkv`
+2013-03-16 16:20 INFO     download      anime           Downloading: [HorribleSubs] OreShura 11 [1080p].mkv
+2013-03-16 21:00 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /dailytvtorrents
+2013-03-16 21:01 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://feeds.feedburner.com/dailytvtorrents): HTTPConnectionPool(host='feeds.feedburner.com', port=80): Max retries exceeded with url: /dailytvtorrents (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-16 21:02 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /rss.php?user_id=118811&hd=null&proper=1
+2013-03-16 21:02 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Max retries exceeded with url: /rss.php?user_id=118811&hd=null&proper=1 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-16 21:03 WARNING  requests.packages.urllib3.connectionpool anime           Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /?page=rss&cats=1_37&filter=1&sort=3
+2013-03-16 21:04 WARNING  inputs        anime           Error during input plugin rss: Unable to download the RSS for task anime (http://www.nyaa.eu/?page=rss&cats=1_37&filter=1&sort=3): HTTPConnectionPool(host='www.nyaa.eu', port=80): Max retries exceeded with url: /?page=rss&cats=1_37&filter=1&sort=3 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-16 21:04 WARNING  requests.packages.urllib3.connectionpool anime           Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /rss.php?filter=1
+2013-03-16 21:05 WARNING  inputs        anime           Error during input plugin rss: Unable to download the RSS for task anime (http://tokyotosho.info/rss.php?filter=1): HTTPConnectionPool(host='tokyotosho.info', port=80): Max retries exceeded with url: /rss.php?filter=1 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-16 21:20 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /dailytvtorrents
+2013-03-16 21:23 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://feeds.feedburner.com/dailytvtorrents): HTTPConnectionPool(host='feeds.feedburner.com', port=80): Request timed out. (timeout=60)
+2013-03-16 21:24 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /rss.php?user_id=118811&hd=null&proper=1
+2013-03-16 21:24 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Max retries exceeded with url: /rss.php?user_id=118811&hd=null&proper=1 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-16 21:25 WARNING  requests.packages.urllib3.connectionpool anime           Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /animelist/edhaker13
+2013-03-16 21:33 ERROR    input_cache   anime           There was an error during myanimelist input (Could not retrieve list from MAL (HTTPConnectionPool(host='mal-api.com', port=80): Max retries exceeded with url: /animelist/edhaker13 (Caused by <class 'socket.error'>: [Errno 110] Connection timed out))), using cache instead.
+2013-03-16 21:35 WARNING  inputs        anime           Error during input plugin rss: IOError when connecting to server: timed out
+2013-03-17 02:00 WARNING  inputs        TV              Error during input plugin rss: HTTP error 502 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
+2013-03-17 02:00 INFO     content_size  anime           Entry `[Hybrid] Date A Live PV1 [720p][9A4573FF].mkv` too small, rejecting
+2013-03-17 02:00 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Date A Live PV1 [720p][9A4573FF].mkv`
+2013-03-17 02:20 INFO     content_size  anime           Entry `[Migoto] Kaitou Reinya 03 (1280x720 H264 AAC) [5784B2EC].mkv` too small, rejecting
+2013-03-17 02:20 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Kaitou Reinya 03 (1280x720 H264 AAC) [5784B2EC].mkv`
+2013-03-17 04:20 INFO     content_size  anime           Entry `[Coalgirls] Tari Tari (1920x1080 Blu Ray FLAC)` too big, rejecting
+2013-03-17 04:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Tari Tari (1920x1080 Blu Ray FLAC)`
+2013-03-17 04:20 INFO     content_size  anime           Entry `[Coalgirls] Tari Tari (1280x720 Blu Ray FLAC)` too big, rejecting
+2013-03-17 04:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Tari Tari (1280x720 Blu Ray FLAC)`
+2013-03-17 05:20 WARNING  inputs        TV              Error during input plugin rss: HTTP error 502 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
+2013-03-17 06:00 INFO     content_size  anime           Entry `[NemDiggers] Ponyo on the Cliff by the Sea [BD] [720p] [H264 AAC MP4].mp4` too big, rejecting
+2013-03-17 06:00 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] Ponyo on the Cliff by the Sea [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-17 14:20 INFO     content_size  anime           Entry `[HorribleSubs] Ishida to Asakura 11 [1080p].mkv` too small, rejecting
+2013-03-17 14:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Ishida to Asakura 11 [1080p].mkv`
+2013-03-17 14:20 INFO     content_size  anime           Entry `[HorribleSubs] Ishida to Asakura 11 [720p].mkv` too small, rejecting
+2013-03-17 14:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Ishida to Asakura 11 [720p].mkv`
+2013-03-17 23:00 INFO     content_size  anime           Entry `[Hybrid] Date A Live PV3 [720p][C5BD76F5].mkv` too small, rejecting
+2013-03-17 23:00 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Date A Live PV3 [720p][C5BD76F5].mkv`
+2013-03-17 23:00 INFO     content_size  anime           Entry `[Hybrid] Date A Live PV2 [720p][284B463A].mkv` too small, rejecting
+2013-03-17 23:00 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Date A Live PV2 [720p][284B463A].mkv`
+2013-03-18 01:20 INFO     content_size  anime           Entry `[Coalgirls] Nekomonogatari 01 02 (1280x720 Blu ray FLAC)` too big, rejecting
+2013-03-18 01:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nekomonogatari 01 02 (1280x720 Blu ray FLAC)`
+2013-03-18 01:20 INFO     content_size  anime           Entry `[Coalgirls] Nekomonogatari 01 02 (1920x1080 Blu ray FLAC)` too big, rejecting
+2013-03-18 01:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nekomonogatari 01 02 (1920x1080 Blu ray FLAC)`
+2013-03-18 01:20 INFO     content_size  anime           Entry `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][10bit][1920x1080]` too big, rejecting
+2013-03-18 01:20 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][10bit][1920x1080]`
+2013-03-18 01:20 INFO     content_size  anime           Entry `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][8bit][1920x1080]` too big, rejecting
+2013-03-18 01:20 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][8bit][1920x1080]`
+2013-03-18 01:40 INFO     content_size  anime           Entry `[1080p][Senki Zesshou Symphogear][13][BDRip][X264 AAC][Hi10P]` too big, rejecting
+2013-03-18 01:40 INFO     remember_rej  anime           Remembering rejection of `[1080p][Senki Zesshou Symphogear][13][BDRip][X264 AAC][Hi10P]`
+2013-03-18 02:00 INFO     download      anime           Downloading: [DeadFish] Chihayafuru 2 10 [720p][AAC].mp4
+2013-03-18 02:20 WARNING  inputs        TV              Input rss did not return anything
+2013-03-18 03:20 WARNING  inputs        TV              Input rss did not return anything
+2013-03-18 04:20 INFO     series        anime           Title `Fairy Tail The Movie The Phoenix Priestess [DVD 576p AVC AAC 5.1 EngSubs] LaXuS` looks like series `Fairy Tail` but I cannot find a(n) `sequence` style identifier.
+2013-03-18 04:40 INFO     content_size  anime           Entry `[Migoto] Ishida to Asakura 11 (1280x720 Hi10P AAC) [583AA3DE].mkv` too small, rejecting
+2013-03-18 04:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Ishida to Asakura 11 (1280x720 Hi10P AAC) [583AA3DE].mkv`
+2013-03-18 05:20 WARNING  inputs        TV              Error during input plugin rss: HTTP error 502 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
+2013-03-18 06:20 INFO     download      anime           Downloading: [Anime Koi] Hakkenden Touhou Hakken Ibun 11 [h264 720p][ABE4914E].mkv
