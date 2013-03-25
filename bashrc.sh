@@ -257,4 +257,5 @@ alias sirssi='screen -dmS ircs irssi'
 alias irc='screen -rD ircs'
 alias free="free -m"
 alias nr="sudo service nginx reload"
+alias msm='sudo -H -u minecraft msm'
 

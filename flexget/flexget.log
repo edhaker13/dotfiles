@@ -830,3 +830,309 @@
 2013-03-18 04:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Ishida to Asakura 11 (1280x720 Hi10P AAC) [583AA3DE].mkv`
 2013-03-18 05:20 WARNING  inputs        TV              Error during input plugin rss: HTTP error 502 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
 2013-03-18 06:20 INFO     download      anime           Downloading: [Anime Koi] Hakkenden Touhou Hakken Ibun 11 [h264 720p][ABE4914E].mkv
+2013-03-18 13:00 INFO     content_size  anime           Entry `[Zurako] Super Robot Wars OG Inspector 01 06 (BD 1080p AAC)` too big, rejecting
+2013-03-18 13:00 INFO     remember_rej  anime           Remembering rejection of `[Zurako] Super Robot Wars OG Inspector 01 06 (BD 1080p AAC)`
+2013-03-18 18:00 INFO     content_size  anime           Entry `[Coalgirls] Hyouka 17 18 (1920x1080 Blu Ray FLAC)` too big, rejecting
+2013-03-18 18:00 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Hyouka 17 18 (1920x1080 Blu Ray FLAC)`
+2013-03-18 18:00 INFO     download      anime           Downloading: [HorribleSubs] Zettai Karen Children THE UNLIMITED Hyoubu Kyousuke 11 [720p].mkv
+2013-03-18 19:00 INFO     content_size  anime           Entry `Basilisk Kouga Ninpou Chou [JapGerEng Dub][GerEng Sub][x264][720P][AAC]` too big, rejecting
+2013-03-18 19:00 INFO     remember_rej  anime           Remembering rejection of `Basilisk Kouga Ninpou Chou [JapGerEng Dub][GerEng Sub][x264][720P][AAC]`
+2013-03-18 20:00 INFO     content_size  anime           Entry `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][8bit]` too big, rejecting
+2013-03-18 20:00 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][8bit]`
+2013-03-18 20:00 INFO     content_size  anime           Entry `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][10bit]` too big, rejecting
+2013-03-18 20:00 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][10bit]`
+2013-03-18 21:00 INFO     content_size  anime           Entry `[FFF] Aquarion EVOL Vol.05 [BD][1080p FLAC]` too big, rejecting
+2013-03-18 21:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Aquarion EVOL Vol.05 [BD][1080p FLAC]`
+2013-03-18 21:00 INFO     content_size  anime           Entry `[FFF] Aquarion EVOL Vol.05 [BD][720p AAC]` too big, rejecting
+2013-03-18 21:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Aquarion EVOL Vol.05 [BD][720p AAC]`
+2013-03-19 00:20 INFO     content_size  anime           Entry `[NemDiggers] My Neighbor Totoro [BD] [720p] [H264 AAC MP4].mp4` too big, rejecting
+2013-03-19 00:20 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] My Neighbor Totoro [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-19 01:00 INFO     content_size  anime           Entry `[Migoto] Cyclops Shoujo Saipu 02 (1280x720 H264 AAC) [C19D6AD5].mkv` too small, rejecting
+2013-03-19 01:00 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Cyclops Shoujo Saipu 02 (1280x720 H264 AAC) [C19D6AD5].mkv`
+2013-03-19 01:40 INFO     content_size  anime           Entry `[Coalgirls] Nisemonogatari (1920x1080 Blu ray FLAC)` too big, rejecting
+2013-03-19 01:40 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nisemonogatari (1920x1080 Blu ray FLAC)`
+2013-03-19 01:40 INFO     content_size  anime           Entry `[Coalgirls] Nisemonogatari (1280x720 Blu ray FLAC)` too big, rejecting
+2013-03-19 01:40 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nisemonogatari (1280x720 Blu ray FLAC)`
+2013-03-19 02:00 WARNING  inputs        TV              Error during input plugin rss: HTTP error 502 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
+2013-03-19 02:40 INFO     download      anime           Downloading: [DeadFish] Sakurasou no Pet na Kanojo 23 [720p][AAC].mp4
+2013-03-19 05:20 WARNING  inputs        TV              Error during input plugin rss: HTTP error 504 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
+2013-03-19 08:00 INFO     content_size  anime           Entry `[DeadFish] Cyclops Shoujo Saipu~ 02 ONA [720p][AAC].mp4` too small, rejecting
+2013-03-19 08:00 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Cyclops Shoujo Saipu~ 02 ONA [720p][AAC].mp4`
+2013-03-19 13:00 INFO     download      anime           Downloading: [DeadFish] Bakuman. 3 23 [720p][AAC].mp4
+2013-03-19 14:01 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Request timed out. (timeout=60)
+2013-03-19 15:20 INFO     content_size  anime           Entry `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 720p AC3][A395CA0C].mkv` too big, rejecting
+2013-03-19 15:20 INFO     remember_rej  anime           Remembering rejection of `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 720p AC3][A395CA0C].mkv`
+2013-03-19 15:40 INFO     download      anime           Downloading: [HorribleSubs] Amnesia 11 [1080p].mkv
+2013-03-19 15:40 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Amnesia 11 [1080p].mkv` for 60 minutes
+2013-03-19 15:40 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-19 15:40 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-19 15:40 INFO     download      anime           Downloading: [HorribleSubs] Amnesia 11 [720p].mkv
+2013-03-19 15:40 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Amnesia 11 [720p].mkv` for 60 minutes
+2013-03-19 15:40 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-19 15:40 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-19 16:20 INFO     download      anime           Downloading: [NemDiggers] Magi 23 [720p] [H264 AAC MP4].mp4
+2013-03-19 16:20 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] Magi 23 [720p] [H264 AAC MP4].mp4` for 60 minutes
+2013-03-19 16:20 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-19 16:20 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-19 17:00 INFO     download      anime           Downloading: [HorribleSubs] Amnesia 11 [1080p].mkv
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 720p AC3][A395CA0C].mkv`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Cyclops Shoujo Saipu~ 02 ONA [720p][AAC].mp4`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nisemonogatari (1920x1080 Blu ray FLAC)`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nisemonogatari (1280x720 Blu ray FLAC)`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Cyclops Shoujo Saipu 02 (1280x720 H264 AAC) [C19D6AD5].mkv`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] My Neighbor Totoro [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Aquarion EVOL Vol.05 [BD][1080p FLAC]`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Aquarion EVOL Vol.05 [BD][720p AAC]`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][8bit]`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][10bit]`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Hyouka 17 18 (1920x1080 Blu Ray FLAC)`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Ishida to Asakura 11 (1280x720 Hi10P AAC) [583AA3DE].mkv`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[1080p][Senki Zesshou Symphogear][13][BDRip][X264 AAC][Hi10P]`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nekomonogatari 01 02 (1280x720 Blu ray FLAC)`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nekomonogatari 01 02 (1920x1080 Blu ray FLAC)`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][10bit][1920x1080]`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][8bit][1920x1080]`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Date A Live PV3 [720p][C5BD76F5].mkv`
+2013-03-19 17:20 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Date A Live PV2 [720p][284B463A].mkv`
+2013-03-19 17:20 INFO     download      anime           Downloading: [HorribleSubs] Senyuu 11 [1080p].mkv
+2013-03-19 17:20 INFO     download      anime           Downloading: [NemDiggers] Magi 23 [720p] [H264 AAC MP4].mp4
+2013-03-19 19:00 INFO     content_size  anime           Entry `[Nubles pure] Gj Bu Volume 1 (BD 1080p FLAC)` too big, rejecting
+2013-03-19 19:00 INFO     remember_rej  anime           Remembering rejection of `[Nubles pure] Gj Bu Volume 1 (BD 1080p FLAC)`
+2013-03-19 20:00 INFO     download      TV              Downloading: Bones S08E19 [720]
+2013-03-19 20:00 WARNING  torrent_alive                 Could not retrieve url: http://tracker.thepiratebay.org/scrape?info_hash=%3DC%A7U%88%82%BE%A3%840Q%01j%FE%01%D8%96%A0%07%9A
+2013-03-19 20:00 WARNING  torrent_alive                 Socket Error: [Errno 111] Connection refused
+2013-03-19 20:40 INFO     content_size  anime           Entry `[Nubles pure] Gj Bu Volume 1 (BD 720p AAC)` too big, rejecting
+2013-03-19 20:40 INFO     remember_rej  anime           Remembering rejection of `[Nubles pure] Gj Bu Volume 1 (BD 720p AAC)`
+2013-03-19 23:00 INFO     exists_series anime           Title `GirlsundPanzer` looks like series `Girls und Panzer` but I cannot find a(n) `sequence` style identifier.
+2013-03-19 23:00 INFO     download      anime           Downloading: [NemDiggers] Girls und Panzer 11 [720p] [H264 AAC MP4].mp4
+2013-03-19 23:00 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] Girls und Panzer 11 [720p] [H264 AAC MP4].mp4` for 60 minutes
+2013-03-19 23:00 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-19 23:00 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-20 00:20 INFO     download      anime           Downloading: [NemDiggers] Girls und Panzer 11 [720p] [H264 AAC MP4].mp4
+2013-03-20 00:40 INFO     content_size  anime           Entry `[Migoto] Boku no Imouto wa Osaka Okan 12 (1280x720 Hi10P AAC) [208D7964].mkv` too small, rejecting
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Boku no Imouto wa Osaka Okan 12 (1280x720 Hi10P AAC) [208D7964].mkv`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 720p AC3][A395CA0C].mkv`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Cyclops Shoujo Saipu~ 02 ONA [720p][AAC].mp4`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nisemonogatari (1920x1080 Blu ray FLAC)`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nisemonogatari (1280x720 Blu ray FLAC)`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Cyclops Shoujo Saipu 02 (1280x720 H264 AAC) [C19D6AD5].mkv`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] My Neighbor Totoro [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Aquarion EVOL Vol.05 [BD][720p AAC]`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][8bit]`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Hybrid] Oda Nobuna no Yabou TV Batch [720p][10bit]`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Hyouka 17 18 (1920x1080 Blu Ray FLAC)`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Ishida to Asakura 11 (1280x720 Hi10P AAC) [583AA3DE].mkv`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[1080p][Senki Zesshou Symphogear][13][BDRip][X264 AAC][Hi10P]`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nekomonogatari 01 02 (1280x720 Blu ray FLAC)`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Nekomonogatari 01 02 (1920x1080 Blu ray FLAC)`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][10bit][1920x1080]`
+2013-03-20 00:40 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki AFFTW] To Love Ru Darkness Vol 03 [BD][8bit][1920x1080]`
+2013-03-20 01:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Aquarion EVOL Vol.05 [BD][1080p FLAC]`
+2013-03-20 02:00 INFO     remember_rej  anime           Remembering rejection of `[Zurako] Super Robot Wars OG Inspector 01 06 (BD 1080p AAC)`
+2013-03-20 02:40 INFO     remember_rej  anime           Remembering rejection of `[Nubles pure] Gj Bu Volume 1 (BD 720p AAC)`
+2013-03-20 07:40 INFO     remember_rej  anime           Remembering rejection of `[Nubles pure] Gj Bu Volume 1 (BD 1080p FLAC)`
+2013-03-20 11:00 INFO     content_size  anime           Entry `Nichijou [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(DESS)]` too big, rejecting
+2013-03-20 11:00 INFO     remember_rej  anime           Remembering rejection of `Nichijou [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(DESS)]`
+2013-03-20 13:00 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] My Neighbor Totoro [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-20 15:41 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Request timed out. (timeout=60)
+2013-03-20 16:02 ERROR    rss           TV              No data recieved for rss feed.
+2013-03-20 16:02 WARNING  input_cache   TV              Input rss did not return a list, cannot cache.
+2013-03-20 16:02 WARNING  inputs        TV              Input rss did not return anything
+2013-03-20 18:20 INFO     content_size  anime           Entry `[Anxious He] Kuromajo san ga Tooru 26 [720p][9B2EB648].mkv` too small, rejecting
+2013-03-20 18:20 INFO     remember_rej  anime           Remembering rejection of `[Anxious He] Kuromajo san ga Tooru 26 [720p][9B2EB648].mkv`
+2013-03-20 18:20 INFO     content_size  anime           Entry `[HorribleSubs] Mangirl! 12 [720p].mkv` too small, rejecting
+2013-03-20 18:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Mangirl! 12 [720p].mkv`
+2013-03-20 19:40 INFO     series        anime           Title `[DeadFish] Kotoura san 10 [720p][AAC].mp4` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-21 00:00 INFO     download      TV              Downloading: Arrow S01E17 [720]
+2013-03-21 00:00 WARNING  torrent_alive                 Socket Error: [Errno 111] Connection refused
+2013-03-21 00:00 WARNING  torrent_alive                 Could not retrieve url: http://tracker.thepiratebay.org/scrape?info_hash=%5B%2AZ%7B%F9%C5%B4%88%ADC%83%D4%F3t%1D%90SOV%03
+2013-03-21 01:00 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /dailytvtorrents
+2013-03-21 01:01 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://feeds.feedburner.com/dailytvtorrents): HTTPConnectionPool(host='feeds.feedburner.com', port=80): Max retries exceeded with url: /dailytvtorrents (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-21 01:02 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /rss.php?user_id=118811&hd=null&proper=1
+2013-03-21 01:02 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Max retries exceeded with url: /rss.php?user_id=118811&hd=null&proper=1 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-21 01:03 WARNING  requests.packages.urllib3.connectionpool anime           Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /?page=rss&cats=1_37&filter=1&sort=3
+2013-03-21 01:04 WARNING  inputs        anime           Error during input plugin rss: Unable to download the RSS for task anime (http://www.nyaa.eu/?page=rss&cats=1_37&filter=1&sort=3): HTTPConnectionPool(host='www.nyaa.eu', port=80): Max retries exceeded with url: /?page=rss&cats=1_37&filter=1&sort=3 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-21 01:05 WARNING  inputs        anime           Error during input plugin rss: Unable to download the RSS for task anime (http://tokyotosho.info/rss.php?filter=1): HTTPConnectionPool(host='tokyotosho.info', port=80): Request timed out. (timeout=60)
+2013-03-21 02:00 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /dailytvtorrents
+2013-03-21 02:01 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://feeds.feedburner.com/dailytvtorrents): HTTPConnectionPool(host='feeds.feedburner.com', port=80): Max retries exceeded with url: /dailytvtorrents (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-21 02:02 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /rss.php?user_id=118811&hd=null&proper=1
+2013-03-21 02:02 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Max retries exceeded with url: /rss.php?user_id=118811&hd=null&proper=1 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-21 02:03 WARNING  requests.packages.urllib3.connectionpool anime           Retrying (1 attempts remain) after connection broken by 'gaierror(-2, 'Name or service not known')': /?page=rss&cats=1_37&filter=1&sort=3
+2013-03-21 02:04 WARNING  inputs        anime           Error during input plugin rss: Unable to download the RSS for task anime (http://www.nyaa.eu/?page=rss&cats=1_37&filter=1&sort=3): HTTPConnectionPool(host='www.nyaa.eu', port=80): Max retries exceeded with url: /?page=rss&cats=1_37&filter=1&sort=3 (Caused by <class 'socket.gaierror'>: [Errno -2] Name or service not known)
+2013-03-21 02:04 INFO     content_size  anime           Entry `[Coalgirls] Sakurasou no Pet na Kanojo 04 06 (1920x1080 Blu Ray FLAC)` too big, rejecting
+2013-03-21 02:04 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Sakurasou no Pet na Kanojo 04 06 (1920x1080 Blu Ray FLAC)`
+2013-03-21 02:04 INFO     content_size  anime           Entry `Tasogare Otome x Amnesia [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(FFF)]` too big, rejecting
+2013-03-21 02:04 INFO     remember_rej  anime           Remembering rejection of `Tasogare Otome x Amnesia [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(FFF)]`
+2013-03-21 02:04 INFO     content_size  anime           Entry `Elfen Lied [RUELL Raws @ BD 1080p x264 FLAC 5.1ch ENSub(R1)]` too big, rejecting
+2013-03-21 02:04 INFO     remember_rej  anime           Remembering rejection of `Elfen Lied [RUELL Raws @ BD 1080p x264 FLAC 5.1ch ENSub(R1)]`
+2013-03-21 02:40 INFO     content_size  anime           Entry `[Migoto] Cyclops Shoujo Saipu 03 (1280x720 H264 AAC) [AAF5FD7B].mkv` too small, rejecting
+2013-03-21 02:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Cyclops Shoujo Saipu 03 (1280x720 H264 AAC) [AAF5FD7B].mkv`
+2013-03-21 03:00 INFO     download      TV              Downloading: Supernatural S08E17 [720]
+2013-03-21 03:00 WARNING  torrent_alive                 Socket Error: [Errno 111] Connection refused
+2013-03-21 03:00 WARNING  torrent_alive                 Could not retrieve url: http://tracker.thepiratebay.org/scrape?info_hash=Jn%1A%FD%F4%03%DE%FA%13%09%9CNtZ%CE%FF%A8%90%C8%07
+2013-03-21 05:40 INFO     content_size  anime           Entry `[DeadFish] Senyuu. 11 [720p][AAC].mp4` too small, rejecting
+2013-03-21 05:40 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Senyuu. 11 [720p][AAC].mp4`
+2013-03-21 06:20 INFO     series        anime           Title `[HorribleSubs] Magical Girl Lyrical Nanoha The MOVIE 2nd [720p].mkv` looks like series `Magi` but I cannot find a(n) `sequence` style identifier.
+2013-03-21 06:20 INFO     content_size  anime           Entry `[HorribleSubs] Magical Girl Lyrical Nanoha The MOVIE 2nd [720p].mkv` too big, rejecting
+2013-03-21 06:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Magical Girl Lyrical Nanoha The MOVIE 2nd [720p].mkv`
+2013-03-21 11:00 INFO     content_size  anime           Entry `[FFF] Koi to Senkyo to Chocolate Vol.02 [BD][1080p FLAC]` too big, rejecting
+2013-03-21 11:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.02 [BD][1080p FLAC]`
+2013-03-21 12:40 INFO     content_size  anime           Entry `[Kamigami] Kidou Senshi Gundam UC Unicorn 06 [BD 1920x1080 x264 FLAC(5.1ch JP,EN) Sub(JP,EN,FR,SP,CH)].mkv` too big, rejecting
+2013-03-21 12:40 INFO     remember_rej  anime           Remembering rejection of `[Kamigami] Kidou Senshi Gundam UC Unicorn 06 [BD 1920x1080 x264 FLAC(5.1ch JP,EN) Sub(JP,EN,FR,SP,CH)].mkv`
+2013-03-21 13:40 INFO     manager                       Running database cleanup.
+2013-03-21 13:40 INFO     db_analyze                    Running ANALYZE on database to improve performance.
+2013-03-21 13:40 INFO     content_size  anime           Entry `[FFF] Koi to Senkyo to Chocolate Vol.03 [BD][1080p FLAC]` too big, rejecting
+2013-03-21 13:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.03 [BD][1080p FLAC]`
+2013-03-21 14:20 INFO     content_size  anime           Entry `[Hatsuyuki] Haiyore! Nyaruko san [720p][MP4]` too big, rejecting
+2013-03-21 14:20 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki] Haiyore! Nyaruko san [720p][MP4]`
+2013-03-21 16:40 INFO     content_size  anime           Entry `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 10bit 720p AC3][AA4F7762].mkv` too big, rejecting
+2013-03-21 16:40 INFO     remember_rej  anime           Remembering rejection of `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 10bit 720p AC3][AA4F7762].mkv`
+2013-03-21 18:20 INFO     download      anime           Downloading: [HorribleSubs] PSYCHO PASS 22 [720p].mkv
+2013-03-21 18:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] PSYCHO PASS 22 [720p].mkv` for 60 minutes
+2013-03-21 18:20 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-21 18:20 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-21 19:20 INFO     series        anime           Title `[HorribleSubs] Kotoura san 11 [480p].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-21 19:20 INFO     download      anime           Downloading: [HorribleSubs] Zetsuen no Tempest 23 [1080p].mkv
+2013-03-21 19:40 INFO     download      anime           Downloading: [HorribleSubs] PSYCHO PASS 22 [720p].mkv
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 10bit 720p AC3][AA4F7762].mkv`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki] Haiyore! Nyaruko san [720p][MP4]`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.02 [BD][1080p FLAC]`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Senyuu. 11 [720p][AAC].mp4`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Cyclops Shoujo Saipu 03 (1280x720 H264 AAC) [AAF5FD7B].mkv`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[Anxious He] Kuromajo san ga Tooru 26 [720p][9B2EB648].mkv`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Mangirl! 12 [720p].mkv`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] My Neighbor Totoro [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Boku no Imouto wa Osaka Okan 12 (1280x720 Hi10P AAC) [208D7964].mkv`
+2013-03-21 20:00 INFO     remember_rej  anime           Remembering rejection of `[Nubles pure] Gj Bu Volume 1 (BD 720p AAC)`
+2013-03-21 20:40 INFO     content_size  anime           Entry `[NemDiggers] Mahou Shoujo Lyrical Nanoha The Movie 2nd [BD] [720p] [H264 AAC MP4].mp4` too big, rejecting
+2013-03-21 20:40 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] Mahou Shoujo Lyrical Nanoha The Movie 2nd [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-21 20:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.03 [BD][1080p FLAC]`
+2013-03-21 23:20 INFO     series        anime           Title `[HorribleSubs] Kotoura san 11 [1080p].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-21 23:20 INFO     series        anime           Title `[HorribleSubs] Kotoura san 11 [720p].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-22 00:00 INFO     remember_rej  anime           Remembering rejection of `Tasogare Otome x Amnesia [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(FFF)]`
+2013-03-22 00:41 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Request timed out. (timeout=60)
+2013-03-22 01:20 INFO     remember_rej  anime           Remembering rejection of `[Coalgirls] Sakurasou no Pet na Kanojo 04 06 (1920x1080 Blu Ray FLAC)`
+2013-03-22 03:00 INFO     content_size  anime           Entry `[Kousei] Fairy Tail 001 002 [8bit][1080p][MP4]` too big, rejecting
+2013-03-22 03:00 INFO     remember_rej  anime           Remembering rejection of `[Kousei] Fairy Tail 001 002 [8bit][1080p][MP4]`
+2013-03-22 03:20 INFO     download      anime           Downloading: [JK] Vividred Operation 11 [720p Hi10P][5D410505].mkv
+2013-03-22 04:00 INFO     content_size  anime           Entry `[FFF] Koi to Senkyo to Chocolate Vol.04 [BD][1080p FLAC]` too big, rejecting
+2013-03-22 04:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.04 [BD][1080p FLAC]`
+2013-03-22 05:20 WARNING  requests.packages.urllib3.connectionpool TV              Retrying (1 attempts remain) after connection broken by 'BadStatusLine('',)': /rss.php?user_id=118811&hd=null&proper=1
+2013-03-22 05:20 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Max retries exceeded with url: /rss.php?user_id=118811&hd=null&proper=1 (Caused by <class 'socket.error'>: [Errno 104] Connection reset by peer)
+2013-03-22 05:40 INFO     download      anime           Downloading: [DeadFish] Robotics;Notes 22 [720p][AAC].mp4
+2013-03-22 07:20 INFO     content_size  anime           Entry `[DeadFish] Mangirl! 12 [720p][AAC].mp4` too small, rejecting
+2013-03-22 07:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Mangirl! 12 [720p][AAC].mp4`
+2013-03-22 08:40 INFO     series        anime           Title `[SleepingKitties] Kotoura san 11 [0374F1FA].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-22 10:20 INFO     remember_rej  anime           Remembering rejection of `Elfen Lied [RUELL Raws @ BD 1080p x264 FLAC 5.1ch ENSub(R1)]`
+2013-03-22 13:00 INFO     content_size  anime           Entry `[Doki] Lucky Star Vol 1 (1280x720 Hi10P BD FLAC)` too big, rejecting
+2013-03-22 13:00 INFO     remember_rej  anime           Remembering rejection of `[Doki] Lucky Star Vol 1 (1280x720 Hi10P BD FLAC)`
+2013-03-22 17:00 WARNING  inputs        TV              Error during input plugin rss: HTTP error 502 received from http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1
+2013-03-22 17:20 INFO     download      anime           Downloading: [HorribleSubs] Maoyuu Maou Yuusha 11 [1080p].mkv
+2013-03-22 20:00 INFO     download      anime           Downloading: [HorribleSubs] Chihayafuru S2 11 [720p].mkv
+2013-03-22 20:00 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Chihayafuru S2 11 [720p].mkv` for 60 minutes
+2013-03-22 20:00 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-22 20:00 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-22 20:40 INFO     download      anime           Downloading: [HorribleSubs] Chihayafuru S2 11 [1080p].mkv
+2013-03-22 20:40 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Chihayafuru S2 11 [1080p].mkv` for 60 minutes
+2013-03-22 20:40 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-22 20:40 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-22 21:01 WARNING  inputs        TV              Error during input plugin rss: Unable to download the RSS for task TV (http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1): HTTPConnectionPool(host='showrss.karmorra.info', port=80): Request timed out. (timeout=60)
+2013-03-22 21:01 INFO     download      anime           Downloading: [HorribleSubs] Chihayafuru S2 11 [720p].mkv
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[Doki] Lucky Star Vol 1 (1280x720 Hi10P BD FLAC)`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Mangirl! 12 [720p][AAC].mp4`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[Kousei] Fairy Tail 001 002 [8bit][1080p][MP4]`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] Mahou Shoujo Lyrical Nanoha The Movie 2nd [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 10bit 720p AC3][AA4F7762].mkv`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki] Haiyore! Nyaruko san [720p][MP4]`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.03 [BD][1080p FLAC]`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.02 [BD][1080p FLAC]`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Senyuu. 11 [720p][AAC].mp4`
+2013-03-22 21:20 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Cyclops Shoujo Saipu 03 (1280x720 H264 AAC) [AAF5FD7B].mkv`
+2013-03-22 22:40 INFO     series        anime           Title `[Commie] Magical Girl Lyrical Nanoha The Movie 1st [BD 720p AAC] [AEA45011].mkv` looks like series `Magi` but I cannot find a(n) `sequence` style identifier.
+2013-03-22 22:40 INFO     series        anime           Title `[Commie] Magical Girl Lyrical Nanoha A's The Movie 2nd [BD 720p AAC] [AD8B7CE7].mkv` looks like series `Magi` but I cannot find a(n) `sequence` style identifier.
+2013-03-22 22:40 INFO     series        anime           Title `[Commie] Magical Girl Lyrical Nanoha A's The Movie 2nd [BD 1080p AAC] [D5AF9542].mkv` looks like series `Magi` but I cannot find a(n) `sequence` style identifier.
+2013-03-22 22:40 INFO     series        anime           Title `[Commie] Magical Girl Lyrical Nanoha The Movie 1st [BD 1080p AAC] [946E6B95].mkv` looks like series `Magi` but I cannot find a(n) `sequence` style identifier.
+2013-03-22 22:40 INFO     content_size  anime           Entry `[Commie] Magical Girl Lyrical Nanoha A's The Movie 2nd [BD 1080p AAC] [D5AF9542].mkv` too big, rejecting
+2013-03-22 22:40 INFO     remember_rej  anime           Remembering rejection of `[Commie] Magical Girl Lyrical Nanoha A's The Movie 2nd [BD 1080p AAC] [D5AF9542].mkv`
+2013-03-22 22:40 INFO     content_size  anime           Entry `[Commie] Magical Girl Lyrical Nanoha The Movie 1st [BD 1080p AAC] [946E6B95].mkv` too big, rejecting
+2013-03-22 22:40 INFO     remember_rej  anime           Remembering rejection of `[Commie] Magical Girl Lyrical Nanoha The Movie 1st [BD 1080p AAC] [946E6B95].mkv`
+2013-03-22 22:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.04 [BD][1080p FLAC]`
+2013-03-23 02:00 INFO     content_size  anime           Entry `Towa no Quon [RUELL Raws @ BD 1080p x264 FLAC 5.1ch 24bit+DualDTS ENSub]` too big, rejecting
+2013-03-23 02:00 INFO     remember_rej  anime           Remembering rejection of `Towa no Quon [RUELL Raws @ BD 1080p x264 FLAC 5.1ch 24bit+DualDTS ENSub]`
+2013-03-23 03:00 INFO     content_size  anime           Entry `[MikaruSubs] Smile Precure! Movie (BD, 720p) [A074D636].mkv` too big, rejecting
+2013-03-23 03:00 INFO     remember_rej  anime           Remembering rejection of `[MikaruSubs] Smile Precure! Movie (BD, 720p) [A074D636].mkv`
+2013-03-23 03:00 INFO     download      anime           Downloading: [AnimeNOW] Senyuu 11 (1280x720 10 bit x264 AAC) [B6887672].mkv
+2013-03-23 03:00 INFO     remember_rej  anime           Remembering rejection of `[AnimeNOW] Senyuu 11 (1280x720 10 bit x264 AAC) [B6887672].mkv` for 60 minutes
+2013-03-23 03:00 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-23 03:00 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-23 03:00 INFO     series        anime           identified_by has locked in to type `ep` for Senyuu.
+2013-03-23 03:00 INFO     series        anime           Title `[DeadFish] Senyuu. 11 [720p][AAC].mp4` looks like series `Senyuu.` but I cannot find a(n) `ep` style identifier.
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[Doki] Lucky Star Vol 1 (1280x720 Hi10P BD FLAC)`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Mangirl! 12 [720p][AAC].mp4`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.04 [BD][1080p FLAC]`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[Kousei] Fairy Tail 001 002 [8bit][1080p][MP4]`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[NemDiggers] Mahou Shoujo Lyrical Nanoha The Movie 2nd [BD] [720p] [H264 AAC MP4].mp4`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[Rising Sun & AMT] Tezuka Osamu no Buddha Akai Sabaku yo! Utsukushiku [BD 10bit 720p AC3][AA4F7762].mkv`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[Hatsuyuki] Haiyore! Nyaruko san [720p][MP4]`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.03 [BD][1080p FLAC]`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.02 [BD][1080p FLAC]`
+2013-03-23 04:40 INFO     remember_rej  anime           Remembering rejection of `[DeadFish] Senyuu. 11 [720p][AAC].mp4`
+2013-03-23 05:20 INFO     series        anime           Title `[WhyNot] Robotics;Notes [TV 720p AAC]` looks like series `Robotics;Notes` but I cannot find a(n) `sequence` style identifier.
+2013-03-23 05:40 INFO     content_size  anime           Entry `[De.us] Uchuu no Stellvia (960x720 Hi10 DUAL AUDIO)` too big, rejecting
+2013-03-23 05:40 INFO     remember_rej  anime           Remembering rejection of `[De.us] Uchuu no Stellvia (960x720 Hi10 DUAL AUDIO)`
+2013-03-23 06:40 INFO     content_size  anime           Entry `[UR]K 01 03 [BD 720p Hi10P AAC]` too big, rejecting
+2013-03-23 06:40 INFO     remember_rej  anime           Remembering rejection of `[UR]K 01 03 [BD 720p Hi10P AAC]`
+2013-03-23 06:40 INFO     remember_rej  anime           Remembering rejection of `[MikaruSubs] Smile Precure! Movie (BD, 720p) [A074D636].mkv`
+2013-03-23 09:40 INFO     content_size  anime           Entry `SANKAREA [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(Eveyuu)]` too big, rejecting
+2013-03-23 09:40 INFO     remember_rej  anime           Remembering rejection of `SANKAREA [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(Eveyuu)]`
+2013-03-23 10:00 INFO     download      anime           Downloading: [UTW] Shinsekai Yori 25 [h264 720p][F280761E].mkv
+2013-03-23 10:20 INFO     content_size  anime           Entry `[FFF] Koi to Senkyo to Chocolate Vol.05 [BD][1080p FLAC]` too big, rejecting
+2013-03-23 10:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.05 [BD][1080p FLAC]`
+2013-03-23 12:20 INFO     content_size  anime           Entry `[Kamigami] Kidou Senshi Gundam UC Unicorn 06 [BD 1920x1080 x264 Hi10P FLAC(5.1ch,2.0ch,JP,EN) Sub(JP,EN,FR,SP,CH)].mkv` too big, rejecting
+2013-03-23 12:20 INFO     remember_rej  anime           Remembering rejection of `[Kamigami] Kidou Senshi Gundam UC Unicorn 06 [BD 1920x1080 x264 Hi10P FLAC(5.1ch,2.0ch,JP,EN) Sub(JP,EN,FR,SP,CH)].mkv`
+2013-03-23 12:40 INFO     download      anime           Downloading: [DeadFish] Chihayafuru 2 11 [720p][AAC].mp4
+2013-03-23 13:00 INFO     series        anime           Title `[Diogo4D Hattori] Kotoura san 04 [1B69552E].mkv` looks like series `Kotoura san` but I cannot find a(n) `ep` style identifier.
+2013-03-23 15:00 INFO     download      anime           Downloading: [Hatsuyuki] Amnesia 08 [10bit][1280x720][DD16885B].mkv
+2013-03-23 15:00 WARNING  torrent_alive                 Could not retrieve url: http://scrape.torrentsmd.com:8080/scrape?info_hash=%A0t%E7%C1s%E3q%EC%9A%B6%85%84%EF%C0ybvV%D6%BC
+2013-03-23 16:20 INFO     download      anime           Downloading: [HorribleSubs] OreShura 12 [1080p].mkv
+2013-03-23 20:00 INFO     content_size  anime           Entry `[Tenzinn] Porco Rosso [Dual] [5.1] [1280x720 H264 MKV].mkv` too big, rejecting
+2013-03-23 20:00 INFO     remember_rej  anime           Remembering rejection of `[Tenzinn] Porco Rosso [Dual] [5.1] [1280x720 H264 MKV].mkv`
+2013-03-24 03:20 INFO     content_size  anime           Entry `[Migoto] Kaitou Reinya 04 (1280x720 H264 AAC) [1D66BCDA].mkv` too small, rejecting
+2013-03-24 03:20 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Kaitou Reinya 04 (1280x720 H264 AAC) [1D66BCDA].mkv`
+2013-03-24 05:00 INFO     content_size  anime           Entry `Kannagi [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(TenB)]` too big, rejecting
+2013-03-24 05:00 INFO     remember_rej  anime           Remembering rejection of `Kannagi [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(TenB)]`
+2013-03-24 06:40 WARNING  inputs        TV              Input rss did not return anything
+2013-03-24 07:20 INFO     content_size  anime           Entry `[FFF] Koi to Senkyo to Chocolate Vol.06 [BD][1080p FLAC]` too big, rejecting
+2013-03-24 07:20 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.06 [BD][1080p FLAC]`
+2013-03-24 12:00 INFO     download      anime           Downloading: [Sigh] Hakkenden Touhou Hakken Ibun 09 [720p][71E03A20].mkv
+2013-03-24 12:00 INFO     remember_rej  anime           Remembering rejection of `[Sigh] Hakkenden Touhou Hakken Ibun 09 [720p][71E03A20].mkv` for 60 minutes
+2013-03-24 12:00 INFO     task          anime           Plugin torrent_alive has requested task to be ran again after execution has completed.
+2013-03-24 12:00 INFO     task          anime           Rerunning the task in case better resolution can be achieved.
+2013-03-24 13:20 INFO     download      anime           Downloading: [Sigh] Hakkenden Touhou Hakken Ibun 09 [720p][71E03A20].mkv
+2013-03-24 13:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Kaitou Reinya 04 (1280x720 H264 AAC) [1D66BCDA].mkv`
+2013-03-24 13:40 INFO     remember_rej  anime           Remembering rejection of `[Tenzinn] Porco Rosso [Dual] [5.1] [1280x720 H264 MKV].mkv`
+2013-03-24 13:40 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.05 [BD][1080p FLAC]`
+2013-03-24 13:40 INFO     remember_rej  anime           Remembering rejection of `[UR]K 01 03 [BD 720p Hi10P AAC]`
+2013-03-24 13:40 INFO     remember_rej  anime           Remembering rejection of `[MikaruSubs] Smile Precure! Movie (BD, 720p) [A074D636].mkv`
+2013-03-24 14:20 INFO     content_size  anime           Entry `[HorribleSubs] Ishida to Asakura 12 [1080p].mkv` too small, rejecting
+2013-03-24 14:20 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Ishida to Asakura 12 [1080p].mkv`
+2013-03-24 14:40 INFO     content_size  anime           Entry `[HorribleSubs] Ishida to Asakura 12 [720p].mkv` too small, rejecting
+2013-03-24 14:40 INFO     remember_rej  anime           Remembering rejection of `[HorribleSubs] Ishida to Asakura 12 [720p].mkv`
+2013-03-24 17:20 INFO     content_size  anime           Entry `Gundam Seed [1280x720 Hi10P BD FLAC][TenB]` too big, rejecting
+2013-03-24 17:20 INFO     remember_rej  anime           Remembering rejection of `Gundam Seed [1280x720 Hi10P BD FLAC][TenB]`
+2013-03-24 19:00 INFO     remember_rej  anime           Remembering rejection of `[FFF] Koi to Senkyo to Chocolate Vol.06 [BD][1080p FLAC]`
+2013-03-24 19:40 INFO     content_size  anime           Entry `[Migoto] Ishida to Asakura 12 (1280x720 Hi10P AAC) [BB961B0B].mkv` too small, rejecting
+2013-03-24 19:40 INFO     remember_rej  anime           Remembering rejection of `[Migoto] Ishida to Asakura 12 (1280x720 Hi10P AAC) [BB961B0B].mkv`
+2013-03-24 21:40 INFO     download      anime           Downloading: [Anime Koi] Hakkenden Touhou Hakken Ibun 12 [h264 720p][2B60EC42].mkv
+2013-03-24 22:21 INFO     content_size  anime           Entry `[Nubles] Gundam Age Volume 1 (BD 720p 10bit AAC)` too big, rejecting
+2013-03-24 22:21 INFO     remember_rej  anime           Remembering rejection of `[Nubles] Gundam Age Volume 1 (BD 720p 10bit AAC)`
+2013-03-24 22:21 INFO     content_size  anime           Entry `[Nubles] Gundam Age Volume 1 (BD 1080p 10bit FLAC)` too big, rejecting
+2013-03-24 22:21 INFO     remember_rej  anime           Remembering rejection of `[Nubles] Gundam Age Volume 1 (BD 1080p 10bit FLAC)`
+2013-03-25 04:40 INFO     content_size  anime           Entry `[Commie] The Life of Guskou Budori [BD 720p AAC] [4CCD69B2].mkv` too big, rejecting
+2013-03-25 04:40 INFO     remember_rej  anime           Remembering rejection of `[Commie] The Life of Guskou Budori [BD 720p AAC] [4CCD69B2].mkv`
+2013-03-25 04:40 INFO     content_size  anime           Entry `[Commie] The Life of Guskou Budori [BD 1080p AAC] [A0DA2BBA].mkv` too big, rejecting
+2013-03-25 04:40 INFO     remember_rej  anime           Remembering rejection of `[Commie] The Life of Guskou Budori [BD 1080p AAC] [A0DA2BBA].mkv`
+2013-03-25 05:00 WARNING  requests.packages.urllib3.connectionpool anime           Retrying (1 attempts remain) after connection broken by 'BadStatusLine('',)': /rss.php?filter=1
+2013-03-25 09:00 INFO     remember_rej  anime           Remembering rejection of `Kannagi [RUELL Raws @ BD 1080p x264 DualFLAC ENSub(TenB)]`
+2013-03-25 13:40 INFO     content_size  anime           Entry `[Doremi].Smile.Precure!.Movie.BD.[1280x720].[5CA3A58E].mkv` too big, rejecting
+2013-03-25 13:40 INFO     remember_rej  anime           Remembering rejection of `[Doremi].Smile.Precure!.Movie.BD.[1280x720].[5CA3A58E].mkv`
