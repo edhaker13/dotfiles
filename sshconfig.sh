@@ -5,7 +5,7 @@ user git
 hostname nemu.edhaker.info
 port 666
 PreferredAuthentications publickey
-identityfile ~/.ssh/key_bak
+identityfile ~/.ssh/id_rsa
 
 # For Checacorp.com
 host yuno
@@ -20,4 +20,4 @@ host github
 user git
 hostname github.com
 PreferredAuthentications publickey
-identityfile ~/.ssh/key_bak
+identityfile ~/.ssh/id_rsa

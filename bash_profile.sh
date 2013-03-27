@@ -23,7 +23,11 @@ if which fortune >/dev/null; then
           fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
           echo -en '\033[0;37m'
 fi
-#Start SSH Agent
-if which ssh-agent >/dev/null; then
-    ssh-agent bash
-fi
+#Start SSH Keychain
+#Let re-use ssh-agent and/or gpg-agent between logins
+/usr/bin/keychain $HOME/.ssh/id_rsa
+source $HOME/.keychain/$HOSTNAME-sh
+
+#Clear when not logged in
+#/usr/bin/keychain --clear $HOME/.ssh/id_rsa
+### End-Keychain ###
