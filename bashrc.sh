@@ -19,7 +19,7 @@ export COLORFGBG='default;default'
 export HISTIGNORE='&:??:[ ]*:clear:exit:logout'
 export TIMEFORMAT=$'\nreal %3R\tuser %3U\tsys %3S\tpcpu %P\n'
 export HISTTIMEFORMAT='%H:%M > '
-export HISTIGNORE='&:bg:fg:ll:h'
+export HISTIGNORE='&:bg:fg:h'
 # Sets up history length
 export HISTSIZE=10000
 export HISTFILESIZE=50000
@@ -176,16 +176,16 @@ sed -e s/addr://)
 
 function ii()   # Get current host related info.
 {
-    echo -e '\nYou are logged on ${RED}$HOST'
-    echo -e '\nAdditionnal information:$NC ' ; uname -a
-    echo -e '\n${RED}Users logged on:$NC ' ; w -h
-    echo -e '\n${RED}Current date :$NC ' ; date
-    echo -e '\n${RED}Machine stats :$NC ' ; uptime
-    echo -e '\n${RED}Memory stats :$NC ' ; free
+    echo -e "\nYou are logged on ${RED}$HOST"
+    echo -e "\nAdditionnal information:$NC " ; uname -a
+    echo -e "\n${RED}Users logged on:$NC " ; w -h
+    echo -e "\n${RED}Current date :$NC " ; date
+    echo -e "\n${RED}Machine stats :$NC " ; uptime
+    echo -e "\n${RED}Memory stats :$NC " ; free
     my_ip 2>&- ;
-    echo -e '\n${RED}Local IP Address :$NC' ; echo ${MY_IP:-'Not connected'}
-    echo -e '\n${RED}ISP Address :$NC' ; echo ${MY_ISP:-'Not connected'}
-    echo -e '\n${RED}Open connections :$NC '; netstat -pan --inet;
+    echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP:-'Not connected'}
+    echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP:-'Not connected'}
+    echo -e "\n${RED}Open connections :$NC "; netstat -pan --inet;
     echo
 }
 #-------------------------------------------------------------
