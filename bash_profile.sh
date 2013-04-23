@@ -25,8 +25,8 @@ if which fortune >/dev/null; then
 fi
 #Start SSH Keychain
 #Let re-use ssh-agent and/or gpg-agent between logins
-/usr/bin/keychain $HOME/.ssh/id_rsa
-source $HOME/.keychain/$HOSTNAME-sh
+#/usr/bin/keychain $HOME/.ssh/id_rsa
+#source $HOME/.keychain/$HOSTNAME-sh
 
 #Clear when not logged in
 #/usr/bin/keychain --clear $HOME/.ssh/id_rsa

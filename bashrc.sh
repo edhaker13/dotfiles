@@ -1,8 +1,8 @@
 # .bashrc
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+if [ -f /etc/bash.bashrc ]; then
+    . /etc/bash.bashrc
 fi
 
 # message too long fix
@@ -19,7 +19,7 @@ export COLORFGBG='default;default'
 export HISTIGNORE='&:??:[ ]*:clear:exit:logout'
 export TIMEFORMAT=$'\nreal %3R\tuser %3U\tsys %3S\tpcpu %P\n'
 export HISTTIMEFORMAT='%H:%M > '
-export HISTIGNORE='&:bg:fg:h'
+
 # Sets up history length
 export HISTSIZE=10000
 export HISTFILESIZE=50000
@@ -31,7 +31,7 @@ ulimit -S -c 0          # Don't want any coredumps.
 set -o notify
 set -o noclobber
 set -o ignoreeof
-set -o nounset
+
 
 # Enable options:
 shopt -s cdspell
@@ -95,13 +95,6 @@ export PS1
 export PS2
 export PS3
 
-# Paths
-if [ -d "$HOME/python27/bin" ]; then
-    PATH="$HOME/python27/bin:$PATH"
-fi
-if [ -d "$HOME/env/bin" ]; then
-    PATH="$HOME/env/bin:$PATH"
-fi
 #-------------------------------------------------------------
 # tailoring 'less'
 #-------------------------------------------------------------
@@ -259,3 +252,5 @@ alias free="free -m"
 alias nr="sudo service nginx reload"
 alias msm='sudo -H -u minecraft msm'
 
+#Pythonbrew
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
