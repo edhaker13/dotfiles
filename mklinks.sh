@@ -8,7 +8,7 @@
 
 dir=~/dotfiles # dotfiles directory
 olddir=~/backup/dotfiles # old dotfiles backup directory
-files="bashrc bash_profile flexget nanorc nginx screenrc irssi" # list of files/folders to symlink in homedir
+files="bashrc bash_profile flexget gitconfig nanorc screenrc irssi" # list of files/folders to symlink in homedir
 ##########
 
 # create dotfiles_old in homedir
