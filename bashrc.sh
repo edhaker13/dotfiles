@@ -88,7 +88,7 @@ CYAN="\[\033[0;36m\]"
 LCYAN="\[\033[1;36m\]"
 LGRAY="\[\033[0;37m\]"
 WHITE="\[\033[1;37m\]"
-PS1="${LGREEN}\u${LPURPLE}@${LRED}\H${CYAN}[${YELLOW}\w${CYAN}]${LGRAY}>${WHITE}"
+PS1="${CYAN}[${LGREEN}\u${LPURPLE}@${LRED}\H ${YELLOW}\w${CYAN}]${LGRAY}#${WHITE} "
 PS2="${GREEN}->"
 PS3="${LPURPLE}*?"
 export PS1
@@ -163,22 +163,20 @@ function killps()                 # Kill by process name.
 
 function my_ip() # Get IP adresses.
 {
-    MY_IP=$(/sbin/ip addr show venet0 | awk '/inet/ { print $2 } ' | \
-sed -e s/addr://)
+    MY_IP=$(/sbin/ip addr show venet0 | awk '/inet/ { print $2 } ' | \sed -e s/addr://)
 }
 
 function ii()   # Get current host related info.
 {
-    echo -e "\nYou are logged on ${RED}$HOST"
-    echo -e "\nAdditionnal information:$NC " ; uname -a
-    echo -e "\n${RED}Users logged on:$NC " ; w -h
-    echo -e "\n${RED}Current date :$NC " ; date
-    echo -e "\n${RED}Machine stats :$NC " ; uptime
-    echo -e "\n${RED}Memory stats :$NC " ; free
+    echo -e "\n${RED}You are logged on ${LPURPLE}$HOSTNAME"
+    echo -e "\n${RED}Additionnal information:${WHITE} " ; uname -a
+    echo -e "\n${RED}Users logged on:${WHITE} " ; w -h
+    echo -e "\n${RED}Current date :${WHITE} " ; date
+    echo -e "\n${RED}Machine stats :${WHITE} " ; uptime
+    echo -e "\n${RED}Memory stats :${WHITE} " ; free
     my_ip 2>&- ;
-    echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP:-'Not connected'}
-    echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP:-'Not connected'}
-    echo -e "\n${RED}Open connections :$NC "; netstat -pan --inet;
+    echo -e "\n${RED}Local IP Address :${WHITE} " ; echo ${MY_IP:-'Not connected'}
+    echo -e "\n${RED}Open connections :${WHITE} "; netstat -pan --inet;
     echo
 }
 #-------------------------------------------------------------
