@@ -113,6 +113,11 @@ chatnets = {
     type = "IRC";
     autosendcmd = "/^msg NickServ identify checacorp;wait 2000";
   };
+  AnimeBytes = {
+    type = "IRC";
+    host = "irc.animebytes.tv";
+    autosendcmd = "/^msg nickserv identify checacorp;wait 2000;/^msg Satsuki enter #animebytes,#animenews edhaker13 edhaker13";
+  };
 };
 
 channels = (
