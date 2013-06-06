@@ -88,12 +88,19 @@ CYAN="\[\033[0;36m\]"
 LCYAN="\[\033[1;36m\]"
 LGRAY="\[\033[0;37m\]"
 WHITE="\[\033[1;37m\]"
-PS1="${CYAN}[${LGREEN}\u${LPURPLE}@${LRED}\H ${YELLOW}\w${CYAN}]${LGRAY}#${WHITE} "
+case $TERM in
+	xterm* | rxvt)
+		PS1="\[\033]0;\u@\h: \w\007\]"
+		;;
+	*)
+		;;
+esac
+PS1="${CYAN}[${LGREEN}\u${LPURPLE}@${LRED}\H ${YELLOW}\w${CYAN}]${LGRAY}> ${WHITE}"
 PS2="${GREEN}->"
 PS3="${LPURPLE}*?"
-export PS1
-export PS2
-export PS3
+#export PS1
+#export PS2
+#export PS3
 
 #-------------------------------------------------------------
 # tailoring 'less'
@@ -123,11 +130,10 @@ alias kk='ll'
 # A few fun ones
 #-------------------------------------------------------------
 
-
 function xtitle()      # Adds some text in the terminal frame.
 {
     case '$TERM' in
-        *term | rxvt)
+        xterm* | rxvt)
             echo -n -e '\033]0;$*\007' ;;
         *)
             ;;
@@ -239,7 +245,7 @@ alias reinstall="sudo aptitude reinstall"
 alias upgrade="sudo aptitude safe-upgrade"
 alias remove="sudo aptitude remove"
 alias purge='sudo aptitude purge'
-#alias pip='sudo pip'
+alias sudo='sudo -E'
 
 # Server/Users specific aliases and functions
 alias flex='~/Flexget/bin/flexget'
@@ -248,6 +254,8 @@ alias sirssi='screen -dmS ircs irssi'
 alias irc='screen -rD ircs'
 alias free="free -m"
 alias nr="sudo service nginx reload"
+alias nt="sudo service nginx configtest"
+alias nrr="sudo service nginx restart"
 alias msm='sudo -H -u minecraft msm'
 
 #Pythonbrew
