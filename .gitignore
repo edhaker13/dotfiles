@@ -6,7 +6,7 @@ private
 *~
 flexget.sh/received/
 flexget.sh/temp/
-flexget.sh/flexget.log.[0-9]
+flexget.sh/flexget.log*
 
 # Compiled code
 */*/*.py[cod]

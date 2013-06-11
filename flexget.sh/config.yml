@@ -11,7 +11,7 @@ presets:
   global:
     # Make sure there's at least 5GB free space
     free_space:
-      path: /media/
+      path: /srv/
       space: 5000
     # Make filename Windows Safe (for samba)
     pathscrub: windows
@@ -23,19 +23,16 @@ presets:
     verify_ssl_certificates: no
     # Make a rss with successful entries for ease of access
     make_rss:
-      file: /home/edhaker13/domains/edhaker.info/public_html/flexget.rss
+      file: /var/www/rss/flexget.rss
       days: -1
       items: -1
       encoding: utf-8
-    # Make a html file for record keeping
-    make_html:
-      file: /home/edhaker13/domains/edhaker.info/public_html/flexget.html
     # Notifies me via email, sometime I just forget to check NMA
     email:
       from: flexget@checacorp.com
       to: edhaker13@gmail.com
       template: accepted
-      smtp_host: smtp.checacorp.com
+      smtp_host: smtp.zoho.com
       smtp_port: 465
       smtp_ssl: yes
       smtp_username: flexget@checacorp.com
@@ -48,7 +45,7 @@ presets:
     torrent_alive: 10
     # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
     # But since I'm gonna dl from Home => 720p+
-    quality: 720p+
+    quality: 720p
     # Only download mkv or mp4
     content_filter:
       require:
@@ -86,21 +83,21 @@ presets:
     notifymyandroid:
       apikey: aed0c8f91cb1c539f24f900a56c12f07e382710b958a6eec
     # Set download path to rsync from home
-    download: /media/torrents/
+    download: /srv/torrents/
     # Set the options of downloaded torrent in deluge
     set:
       filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent"
     # It was cool to have a seedbox but with no private trackers...
-      # Path results /media/anime/ShowName/
-      # movedone: >
-      #  /media/{{task}}/{{series_name}}
-      # Set label to the name of shows : fringe, fairy_tail. Makes it manageable
-      # label: "{{series_name}}"
+      # Path results /srv/anime/ShowName/
+      movedone: /srv/{{task}}/{{series_name}}
       # Output would be -> Show Name 02[720p10bit].mkv
+      content_filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}]"
+      # Set label to the name of shows : fringe, fairy_tail. Makes it manageable
+      label: "{{series_name}}"
     # Set the deluge port since I have mine changed.
-    #deluge:
+    deluge:
       # Only download the main file = >90% of total
-      #main_file_only: yes
+      main_file_only: yes
       #user: deluge
       #pass: deluge
       #port: 5555
@@ -108,15 +105,15 @@ presets:
   # This preset has all the anime related settings
   anime:
     # Remove score/underscores and multiple spaces
-    #manipulate:
-    #  - title:
-    #      replace:
-    #        regexp: '(-|_)'
-    #        format: ' '
-    #  - title:
-    #      replace:
-    #        regexp: ' {2,5}'
-    #        format: ' '
+    manipulate:
+      - title:
+          replace:
+            regexp: '(-|_|!)'
+            format: ' '
+      - title:
+          replace:
+            regexp: ' {2,5}'
+            format: ' '
     # RSS feeds for Anime, force ascii: the japanese characters can cause errors
     inputs:
       # Shows only english anime and is sorted by seeds
@@ -125,40 +122,35 @@ presets:
       #- rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
     # Prevent from downloading files that are or have been downloaded
     exists_series:
-      - '/media/torrents/'
-      - '/media/anime/'
+      - '/srv/downloads/'
+      - '/srv/anime/'
     # Filter any raws, OST , manga that may have fallen through the rss filters
     regexp:
       reject:
         -  raw | ost | manga | soundtrack | song |\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
     # List of shows I want to see, from MAL and manually set
     import_series:
+      settings:
+        identified_by: sequence
       from:
         myanimelist:
           username: 'edhaker13'
     # Watching again from PC, crunchy is horrible on linux
     series:
-      - CODE Breaker:
-          name_regexp: C(o|Ø)de( |:) ? Breaker
-      - Girls und Panzer
-      - Little Busters
-      - Magi
-      - Maoyuu Maou Yuusha
-      - OreShura
-      - Psycho Pass
-      - Robotics;Notes
-      - Sakurasou no Pet na Kanojo
-      - Zetsuen no Tempest
+      - Majestic Prince
+      - Red Data Girl
+      - Karneval
+      - Valvrave
   # Preset for all TV related settings and list of shows, just for show now
   tv:
     # List of feeds to use already filtered for shows and 720p
     inputs:
-      - rss: { url: 'http://feeds.feedburner.com/dailytvtorrents', silent: yes }
+      #- rss: { url: 'http://feeds.feedburner.com/dailytvtorrents', silent: yes }
       - rss: { url: 'http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1', silent: yes }
     # Check for downloaded or downloading
     exists_series:
-      - '/media/torrents/'
-      - '/media/TV/'
+      - '/srv/downloads/'
+      - '/srv/tv/'
     # List of shows to watch
     import_series:
       from:
@@ -172,6 +164,7 @@ presets:
       - Arrow
       - Bones
       - Big Bang Theory
+      - Defiance
       - Dexter
       - Doctor Who 2005
       - Doctor Who Confidential
@@ -182,7 +175,7 @@ tasks:
     preset: anime
     notifymyandroid:
       event: Moar Animu!!
-  TV:
+  tv:
     preset: tv
     notifymyandroid:
       event: New TV Episode
