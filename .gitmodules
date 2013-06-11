@@ -1,0 +1,3 @@
+[submodule "flexget.sh/plugins"]
+	path = flexget.sh/plugins
+	url = git@github.com:/edhaker13/myanimelist
