@@ -1,6 +1,50 @@
+
+# Custom
 *.bak
 private
-id_rsa*
-id_dsa*
 *.old
 *~
+flexget.sh/received/
+flexget.sh/temp/
+flexget.sh/flexget.log.[0-9]
+
+# Compiled code
+*/*/*.py[cod]
+*/*.py[cod]
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.rope
