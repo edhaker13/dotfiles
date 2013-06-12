@@ -1,7 +1,6 @@
 
 # Custom
 *.bak
-private
 *.old
 *~
 flexget.sh/received/
