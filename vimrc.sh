@@ -36,7 +36,6 @@ set fillchars=vert:\|           " change splitter
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
-set bg=dark                     " set dark background
 syntax on                       " syntax highlighting
 colorscheme molokai             " colour scheme
 set nospell                     " don't check for spelling errors
@@ -85,4 +84,6 @@ au FileType perl set autowrite
 au FileType c,cpp,java,php,perl,python,html,htmldjango,mason,tt2html,css au BufWritePre * :%s/\s\+$//e
 
 " Restore position in a file
-au BufReadPost * if line("'\"""'") > 0 && line("'\"""'") <= line("$") | exe "normal g'\"" | endif"
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+
+set bg=dark                     " set dark background
