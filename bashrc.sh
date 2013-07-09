@@ -58,7 +58,6 @@ alias ..='cd ..'
 alias cd..='cd ..'
 alias ...='cd ../..'
 alias back='cd $OLDPWD'
-alias su='sudo su'
 alias grep='grep --color=auto'
 alias dfh='df -h'
 alias bye='exit'
@@ -224,39 +223,54 @@ export LANGUAGE='en_GB.UTF-8'
 export EDITOR='vim'
 
 # Sudo replacement aliases
-alias svim='sudo vim'
-alias snano='sudo nano'
-alias ipt='sudo iptables'
-alias ip6t='sudo ip6tables'
-alias iptables='sudo iptables'
-alias runlevel='sudo /sbin/init'
-alias yum='sudo yum'
-alias rpm='sudo rpm'
-alias kill='sudo kill'
-alias killall='sudo killall'
-alias service='sudo service'
-alias apt-get='sudo apt-get'
-alias dpkg='sudo dpkg'
-alias aptitude='sudo aptitude'
-alias cps='sudo cp'
-alias update="sudo aptitude update"
-alias install="sudo aptitude install"
-alias reinstall="sudo aptitude reinstall"
-alias upgrade="sudo aptitude safe-upgrade"
-alias remove="sudo aptitude remove"
-alias purge='sudo aptitude purge'
-alias sudo='sudo -E'
+if [ $UID -ne 0 ]; then
+  alias svim='sudo vim'
+  alias snano='sudo nano'
+  alias ipt='sudo iptables'
+  alias ip6t='sudo ip6tables'
+  alias iptables='sudo iptables'
+  alias runlevel='sudo /sbin/init'
+  alias yum='sudo yum'
+  alias rpm='sudo rpm'
+  alias kill='sudo kill'
+  alias killall='sudo killall'
+  alias service='sudo service'
+  alias apt-get='sudo apt-get'
+  alias dpkg='sudo dpkg'
+  alias aptitude='sudo aptitude'
+  alias cps='sudo cp'
+  alias service="sudo service"
+  alias su='sudo su'
+  alias sudo="sudo -E "
+fi  
 
+alias update="aptitude update"
+alias install="aptitude install"
+alias reinstall="aptitude reinstall"
+alias upgrade="aptitude safe-upgrade"
+alias remove="aptitude remove"
+alias purge='aptitude purge'
 # Server/Users specific aliases and functions
 alias flex='~/Flexget/bin/flexget'
 alias res='screen -dr tty'
 alias sirssi='screen -dmS ircs irssi'
 alias irc='screen -rD ircs'
 alias free="free -m"
-alias nr="sudo service nginx reload"
-alias nt="sudo service nginx configtest"
-alias nrr="sudo service nginx restart"
-alias msm='sudo -H -u minecraft msm'
+alias nr="service nginx reload"
+alias nt="service nginx configtest"
+alias nrr="service nginx restart"
+if which msm > /dev/null; then
+  alias msm='sudo -H -u minecraft msm'
+  alias mc='sudo -H -u minecraft '
+  alias mcl='\sudo su minecraft'
+fi
 
 #Pythonbrew
-[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+if [[ -s $HOME/.pythonbrew/etc/bashrc ]];then
+  source $HOME/.pythonbrew/etc/bashrc
+fi
+
+# PowerLine
+if [[ -a $HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh ]]; then
+  source $HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+fi
