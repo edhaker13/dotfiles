@@ -37,6 +37,14 @@ servers = (
     port = "6667";
     use_ssl = "no";
     ssl_verify = "no";
+  },
+  {
+    address = "irc.animebytes.tv";
+    chatnet = "AnimeBytes";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
   }
 );
 
@@ -115,7 +123,6 @@ chatnets = {
   };
   AnimeBytes = {
     type = "IRC";
-    host = "irc.animebytes.tv";
     autosendcmd = "/^msg nickserv identify checacorp;wait 2000;/^msg Satsuki enter #animebytes,#animenews edhaker13 edhaker13";
   };
 };
@@ -328,7 +335,7 @@ settings = {
   };
   proxy = {
     irssiproxy_password = "checacorp";
-    irssiproxy_ports = "Rizon=1111 freenode=1112";
+    irssiproxy_ports = "Rizon=1111 freenode=1112 AnimeBytes=1113";
   };
 };
 hilights = ( { text = "edhaker13"; nick = "no"; word = "yes"; } );

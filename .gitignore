@@ -1,7 +1,6 @@
 
 # Custom
 *.bak
-private
 *.old
 *~
 flexget.sh/received/
@@ -34,7 +33,7 @@ __pycache__
 
 # logs
 pip-log.txt
-
+irssi.sh/*.log
 # Unit test / coverage reports
 .coverage
 .tox
