@@ -241,7 +241,6 @@ if [ $UID -ne 0 ]; then
   alias cps='sudo cp'
   alias service="sudo service"
   alias su='sudo su'
-  alias sudo="sudo -E "
 fi  
 
 alias update="aptitude update"
