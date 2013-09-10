@@ -257,6 +257,8 @@ alias nr="sudo service nginx reload"
 alias nt="sudo service nginx configtest"
 alias nrr="sudo service nginx restart"
 alias msm='sudo -H -u minecraft msm'
+alias tord='screen -dmS rtord rtorrent'
+alias torr='screen -r rtord'
 
 #Pythonbrew
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
