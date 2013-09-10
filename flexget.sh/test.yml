@@ -1,7 +1,0 @@
-tasks:
-  test: 
-    # we can omit url if we do not care about it, in this case mock will add random url
-    myanimelist:
-      username: edhaker13
-      list: plan to watch   
-      # our plugin
