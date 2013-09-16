@@ -9,7 +9,9 @@ peer_exchange = yes
 dht = auto
 
 # Watch a directory for new torrents and set the download target path
-schedule = watch_directory_1,10,10,"load_start=/srv/torrents/*.torrent,d.set_custom1=/srv/downloads,d.set_custom2=1"
+schedule = watch_directory_1,10,10,"load_start=/srv/torrents/*.torrent,d.set_custom1=/srv/downloads,d.set_custom2=1,view.set_visible=downloads"
+schedule = watch_directoy_anime,5,10,"load_start=/srv/torrents/anime/*.torrent,d.set_custom3=/srv/anime,view.set_visible=anime"
+schedule = watch_directory_tv,10,10,"load_start=/srv/torrents/tv/*.torrent,d.set_custom4=/srv/tv,view.set_visible=tv"
 # Restart torrents that have been copied back
 schedule = tied_directory,10,10,start_tied=
 # Stop torrents which have been deleted from watch directory
@@ -52,4 +54,8 @@ execute = {chmod,og=rwx,/srv/incoming/rtorrent.sock}
 method.insert = view.label.add, simple, "view.add=\"$cat=label_,$argument.0=\" ;view.persistent=\"$cat=label_,$argument.0=\""
 method.insert = view.label.next, simple, "execute.nothrow.bg=~/bin/rt-nextlabel,~/.rtorrent.rc,$ui.current_view="
 # branch=pyro.extended=,"schedule = bind_nextlabel,0,0,\"ui.bind_key=download_list,L,view.label.next=\""
+# Set the labels
+view.label.add = downloads
+view.label.add = anime
+view.label.add = tv
 
