@@ -17,8 +17,8 @@ presets:
     pathscrub: windows
     # Reject magnets since they don't allow scraping, size or content filtering
     magnets: no
-    # Converts magnets to real torrent files
-    rtorrent_magnet: /srv/torrents    
+    # # Converts magnets to real torrent files
+    # rtorrent_magnet: /srv/torrents    
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
     # Some torrents links are invalid https
@@ -75,11 +75,11 @@ presets:
       nyaa.eu: 15 seconds
       kamorra.info: 15 seconds
     # Set download path to watch folder[, and to rsync from home]
-    download: /srv/torrents/
+    download: yes
     # Set the options of downloaded torrent in deluge
     set:
+      path: "/srv/torrents/{{task}}/"
       filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent"
-    # It was cool to have a seedbox but with no private trackers...
       # Path results /srv/anime/ShowName/
       movedone: /srv/{{task}}/{{series_name}}
       # Output would be -> Show Name 02[720p10bit].mkv
