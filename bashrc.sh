@@ -280,9 +280,9 @@ if which msm > /dev/null; then
 fi
 
 # PyEnv
-if [[ -s $HOME/.pyenv ]];then
+if [[ -a $HOME/.pyenv ]];then
   export PYENV_ROOT="$HOME/.pyenv"
-  export $PATH="$PYENV_ROOT/bin:$PATH"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
@@ -292,5 +292,5 @@ if [[ -a "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh" ]]; 
 fi
 # if $STY is not set...
 if [ -z "$STY" ]; then
-  exec screen -AXRRS ssh
+  exec screen -AXRS ssh
 fi
