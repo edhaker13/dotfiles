@@ -17,34 +17,30 @@ presets:
     pathscrub: windows
     # Reject magnets since they don't allow scraping, size or content filtering
     magnets: no
+    # # Converts magnets to real torrent files
+    # rtorrent_magnet: /srv/torrents    
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
     # Some torrents links are invalid https
-    verify_ssl_certificates: no
+    # verify_ssl_certificates: no
+    # Scrub the torrent for any data that'll prevent rtorrent from working
+    torrent_scrub: rtorrent
     # Make a rss with successful entries for ease of access
     make_rss:
       file: /var/www/rss/flexget.rss
       days: -1
       items: -1
       encoding: utf-8
-    # Notifies me via email, sometime I just forget to check NMA
-    email:
-      from: flexget@checacorp.com
-      to: edhaker13@gmail.com
-      template: accepted
-      smtp_host: smtp.zoho.com
-      smtp_port: 465
-      smtp_ssl: yes
-      smtp_username: flexget@checacorp.com
-      smtp_password: PQELbr6Arv4gLcdZCFF8
+    # Notifies using Notify My Android, already paid for premium so not changing.
+    include:
+      - ~/.private/nma.yml
+    # Notifies me via email, sometimes I just forget or it doesn't show up on NMA
+      - ~/.private/email.yml
     # Set some reasonable size limits also ensures no packs
     content_size:
       max: 1500
       min: 50
-    # Minimum seeds to consider.
-    torrent_alive: 10
     # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
-    # But since I'm gonna dl from Home => 720p+
     quality: 720p
     # Only download mkv or mp4
     content_filter:
@@ -78,48 +74,27 @@ presets:
       tokyotosho.info: 15 seconds
       nyaa.eu: 15 seconds
       kamorra.info: 15 seconds
-      feedburner.info: 15 seconds
-    # Set api key and app name for NMA http://www.notifymyandroid.com/
-    notifymyandroid:
-      apikey: aed0c8f91cb1c539f24f900a56c12f07e382710b958a6eec
-    # Set download path to rsync from home
-    download: /srv/torrents/
+    # Set download path to watch folder[, and to rsync from home]
+    download: yes
     # Set the options of downloaded torrent in deluge
     set:
+      path: "/srv/torrents/{{task}}/"
       filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent"
-    # It was cool to have a seedbox but with no private trackers...
       # Path results /srv/anime/ShowName/
       movedone: /srv/{{task}}/{{series_name}}
       # Output would be -> Show Name 02[720p10bit].mkv
       content_filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}]"
       # Set label to the name of shows : fringe, fairy_tail. Makes it manageable
       label: "{{series_name}}"
-    # Set the deluge port since I have mine changed.
-    deluge:
-      # Only download the main file = >90% of total
-      main_file_only: yes
-      #user: deluge
-      #pass: deluge
-      #port: 5555
 
   # This preset has all the anime related settings
   anime:
-    # Remove score/underscores and multiple spaces
-    manipulate:
-      - title:
-          replace:
-            regexp: '(-|_|!)'
-            format: ' '
-      - title:
-          replace:
-            regexp: ' {2,5}'
-            format: ' '
     # RSS feeds for Anime, force ascii: the japanese characters can cause errors
     inputs:
       # Shows only english anime and is sorted by seeds
       - rss: { url: 'http://www.nyaa.eu/?page=rss&cats=1_37&filter=2', silent: yes, ascii: yes }
       # Filtered for anime only
-      #- rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
+      - rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
     # Prevent from downloading files that are or have been downloaded
     exists_series:
       - '/srv/downloads/'
@@ -135,30 +110,20 @@ presets:
       from:
         myanimelist:
           username: 'edhaker13'
-    # Watching again from PC, crunchy is horrible on linux
-    series:
-      - Majestic Prince
-      - Red Data Girl
-      - Karneval
-      - Valvrave
+    # Mixed PC - Crunchy since I've been using Windows lately
+    # series:
   # Preset for all TV related settings and list of shows, just for show now
   tv:
     # List of feeds to use already filtered for shows and 720p
     inputs:
-      #- rss: { url: 'http://feeds.feedburner.com/dailytvtorrents', silent: yes }
-      - rss: { url: 'http://showrss.karmorra.info/rss.php?user_id=118811&hd=null&proper=1', silent: yes }
+      - rss: { url: 'http://showrss.karmorra.info/rss.php?user_id=118811&hd=1&proper=0', silent: yes }
     # Check for downloaded or downloading
     exists_series:
       - '/srv/downloads/'
       - '/srv/tv/'
     # List of shows to watch
-    import_series:
-      from:
-        trakt_list:
-          username: edhaker13
-          api_key: 5da393943021a1fef3c9ea151a4b16fc
-          series: watchlist
-          strip_dates: yes
+    include:
+      - ~/.private/trakt_list.yml 
     series:
       - 2 Broke Girls
       - Arrow
@@ -179,11 +144,9 @@ tasks:
     preset: tv
     notifymyandroid:
       event: New TV Episode
-    trakt_acquired:
-      username: edhaker13
-      password: ARsuIc%'xO-3wO`z7Mk
-      api_key: 5da393943021a1fef3c9ea151a4b16fc
-      type: series
+    # Mark all downloaded episodes as acquired
+    include:
+      - ~/.private/trakt.yml
   search_anime:
     interval: 2 hours
     preset: anime
