@@ -260,20 +260,20 @@ alias free="free -m"
 if [[ -a "$HOME/Flexget/bin/flexget" ]];then
   alias flex='~/Flexget/bin/flexget'
 fi
-if which irssi > /dev/null; then
+if hash irssi 2> /dev/null; then
   alias sirssi='screen -dmS ircs irssi'
   alias irc='screen -rD ircs'
 fi
-if which nginx > /dev/null; then
+if hash nginx 2> /dev/null; then
   alias nr="service nginx reload"
   alias nt="service nginx configtest"
   alias nrr="service nginx restart"
 fi
-if which rtorrent > /dev/null; then
+if hash rtorrent 2> /dev/null; then
   alias tord='screen -dmS rtord rtorrent'
   alias torr='screen -rD rtord'
 fi
-if which msm > /dev/null; then
+if hash msm 2> /dev/null; then
   alias msm='sudo -H -u minecraft msm'
   alias mc='sudo -H -u minecraft'
   alias mcl='\sudo su minecraft'

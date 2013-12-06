@@ -6,7 +6,7 @@ fi
 echo -e "Welcome $USER... We've been expecting you!"
 date
 # Print awesomeness
-if which fortune >/dev/null; then
+if hash fortune 2>/dev/null; then
   echo -en '\033[0;36m'
   fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
   echo -en '\033[0;37m'
