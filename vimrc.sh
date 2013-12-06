@@ -3,6 +3,9 @@ let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'py
 let g:spf13_use_powerline=1
 
 " Powerline
+" Remove airline if installed"
+UnBundle 'bling/vim-airline'
+
 if has('statusline')
   let g:Powerline_symbols='fancy'
   set laststatus=2 " Always display the statusline in all windows
@@ -44,11 +47,10 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
 endif
-" Use CSApprox converted colours if no gui
 if has('gui_running')
-  colorscheme ir_black
+  colorscheme molokai
   set bg=dark
 else
-  colorscheme ir_black-256
+  colorscheme molokai
   set bg=dark
 endif
