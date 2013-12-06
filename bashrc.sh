@@ -292,5 +292,5 @@ if [[ -a "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh" ]]; 
 fi
 # if $STY is not set...
 if [ -z "$STY" ]; then
-  exec screen -AXRRS ssh
+  exec screen -AXRS ssh
 fi
