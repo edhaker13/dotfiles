@@ -287,7 +287,7 @@ fi
 
 # PowerLine
 if [[ -a "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh" ]]; then
-  . $HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+  . "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh"
 fi
 # if $STY is not set...
 if [ -z "$STY" ]; then
