@@ -255,34 +255,33 @@ alias upgrade="aptitude safe-upgrade"
 alias remove="aptitude remove"
 alias purge='aptitude purge'
 # Server/Users specific aliases and functions
-alias ses='screen -dr tty'
 alias free="free -m"
 if [[ -a "$HOME/Flexget/bin/flexget" ]];then
   alias flex='~/Flexget/bin/flexget'
 fi
-if which irssi > /dev/null; then
+if hash irssi 2> /dev/null; then
   alias sirssi='screen -dmS ircs irssi'
   alias irc='screen -rD ircs'
 fi
-if which nginx > /dev/null; then
+if hash nginx 2> /dev/null; then
   alias nr="service nginx reload"
   alias nt="service nginx configtest"
   alias nrr="service nginx restart"
 fi
-if which rtorrent > /dev/null; then
+if hash rtorrent 2> /dev/null; then
   alias tord='screen -dmS rtord rtorrent'
   alias torr='screen -rD rtord'
 fi
-if which msm > /dev/null; then
+if hash msm 2> /dev/null; then
   alias msm='sudo -H -u minecraft msm'
   alias mc='sudo -H -u minecraft'
   alias mcl='\sudo su minecraft'
 fi
 
 # PyEnv
-if [[ -s $HOME/.pyenv ]];then
+if [[ -a $HOME/.pyenv ]];then
   export PYENV_ROOT="$HOME/.pyenv"
-  export $PATH="$PYENV_ROOT/bin:$PATH"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
@@ -292,5 +291,5 @@ if [[ -a "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh" ]]; 
 fi
 # if $STY is not set...
 if [ -z "$STY" ]; then
-  exec screen -AXRS ssh
+  exec screen -xARS ssh
 fi

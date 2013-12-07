@@ -76,6 +76,9 @@ presets:
       kamorra.info: 15 seconds
     # Set download path to watch folder[, and to rsync from home]
     download: yes
+    # Enable deluge output
+    deluge:
+      main_file_only: yes
     # Set the options of downloaded torrent in deluge
     set:
       path: "/srv/torrents/{{task}}/"
