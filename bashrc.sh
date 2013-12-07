@@ -255,7 +255,6 @@ alias upgrade="aptitude safe-upgrade"
 alias remove="aptitude remove"
 alias purge='aptitude purge'
 # Server/Users specific aliases and functions
-alias ses='screen -dr tty'
 alias free="free -m"
 if [[ -a "$HOME/Flexget/bin/flexget" ]];then
   alias flex='~/Flexget/bin/flexget'
