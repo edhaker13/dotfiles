@@ -286,10 +286,10 @@ if [[ -a $HOME/.pyenv ]];then
 fi
 
 # PowerLine
-if [[ -a "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh" ]]; then
+if [[ -f "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh" ]]; then
   . $HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
 fi
 # if $STY is not set...
 if [ -z "$STY" ]; then
-  exec screen -xARS ssh
+  exec screen -ARRS ssh
 fi
