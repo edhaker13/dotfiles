@@ -1,3 +1,3 @@
 [user]
-	name = edhaker13
-	email = edhaker13@checacorp.com
+  name = edhaker13
+  email = luis@checacorp.com
