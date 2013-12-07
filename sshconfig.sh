@@ -1,23 +1,21 @@
 # Specify different options so they don't need to go in cmd
-# For edhaker.info Git server
-host edhaker
-user git
-hostname nemu.edhaker.info
-port 666
-PreferredAuthentications publickey
-identityfile ~/.ssh/id_rsa
+host nana
+  user edhaker13
+  hostname nana.edvps.com
+  preferredauthentications publickey
+  forwardagent yes
 
-# For Checacorp.com
-host yuno
-user edhaker13
-hostname yuno.checacorp.com
-port 666
-PreferredAuthentications publickey
-identityfile ~/.ssh/id_rsa
+host yuki
+  user edhaker13
+  hostname yuki.edvps.com
+  preferredauthentications publickey
+  forwardagent yes
 
-# For github.com
-host github
-user git
-hostname github.com
-PreferredAuthentications publickey
-identityfile ~/.ssh/id_rsa
+host aki
+  user edhaker13
+  hostname aki.edvps.com
+  preferredauthentications publickey
+  forwardagent yes
+
+host github.com
+  forwardagent yes
