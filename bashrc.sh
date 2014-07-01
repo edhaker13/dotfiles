@@ -6,12 +6,67 @@ if [ -f /etc/bash.bashrc ]; then
 fi
 
 # message too long fix
-if [ ${TERM} != "dumb" ]; then
+if [ "$TERM" != "dumb" ]; then
  test -s ~/.bashrc-local && . ~/.bashrc-local
 fi
+# if not running interactively exit
 [ -z '$PS1' ] && return
+[[ $- != *i* ]] && return
 
+#-------------------------------------------------------------
+# Process/system related functions:
+#-------------------------------------------------------------
+
+function my_ip()
+{ # Get IP adresses.
+  MY_IP=$(/sbin/ip addr show venet0 | awk '/inet/ { print $2 } ' | \sed -e s/addr://)
+}
+
+function ii()
+{ # Get current host related info.
+  echo "\n${RED}You are logged on ${LPURPLE}$HOSTNAME"
+  echo "\n${RED}Additionnal information:${WHITE} " ; uname -a
+  echo "\n${RED}Users logged on:${WHITE} " ; w -h
+  echo "\n${RED}Current date :${WHITE} " ; date
+  echo "\n${RED}Machine stats :${WHITE} " ; uptime
+  echo "\n${RED}Memory stats :${WHITE} " ; free
+  my_ip 2>&- ;
+  echo "\n${RED}Local IP Address :${WHITE} " ; echo ${MY_IP:-'Not connected'}
+  echo "\n${RED}Open connections :${WHITE} "; netstat -pan --inet;
+  echo
+}
+
+#-------------------------------------------------------------
+# Misc utilities:
+#-------------------------------------------------------------
+
+function repeat()
+{ # Repeat n times command.
+  local i max
+  max=$1; shift;
+  for ((i=1; i <= max ; i++)); do  # --> C-like syntax
+    eval "$@";
+  done
+}
+
+function ask()
+{ # Ask a yes or no question.
+  echo -n "$@" '[y/n] ' ; read ans
+  case "$ans" in
+    y*|Y*) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+function is_installed()
+{
+  # Check if a program is in PATH
+  hash "$@" 2> /dev/null
+  return $?;
+}
+#-------------------------------------------------------------
 # Basic options
+#-------------------------------------------------------------
 export HISTCONTROL=ignoredups:ignorespace:ignoreboth
 export COLORFGBG='default;default'
 # leave some commands out of history log
@@ -22,11 +77,16 @@ export HISTTIMEFORMAT='%H:%M > '
 # Sets up history length
 export HISTSIZE=10000
 export HISTFILESIZE=50000
+
+# Locale and editor
+export LANG='en_GB.UTF-8'
+export LANGUAGE='en_GB.UTF-8'
+export EDITOR='vim'
+
 #-------------------------------------------------------------
 # Some settings
 #-------------------------------------------------------------
 
-ulimit -S -c 0          # Don't want any coredumps.
 set -o notify
 set -o noclobber
 set -o ignoreeof
@@ -46,7 +106,7 @@ shopt -s mailwarn
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxCxegedabagacad
 
-# Aliases
+# Option aliases
 alias ls='ls -h --color=auto'
 alias ll='ls -la'
 alias la='ls -A'
@@ -59,6 +119,7 @@ alias back='cd $OLDPWD'
 alias grep='grep --color=auto'
 alias dfh='df -h'
 alias bye='exit'
+alias free="free -m"
 # Automatically determines filename
 alias wget="wget --content-disposition"
 
@@ -111,7 +172,6 @@ export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
 export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
 
-
 #-------------------------------------------------------------
 # spelling typos - highly personnal and keyboard-dependent :-)
 #-------------------------------------------------------------
@@ -124,110 +184,8 @@ alias moew='more'
 alias kk='ll'
 
 #-------------------------------------------------------------
-# A few fun ones
-#-------------------------------------------------------------
-
-function xtitle()
-{ # Adds some text in the terminal frame.
-  case '$TERM' in
-    xterm* | rxvt)
-      echo -n -e '\033]0;$*\007' ;;
-    *)
-      ;;
-  esac
-}
-# aliases that use xtitle
-alias top='xtitle Processes on ${HOSTNAME} && top'
-alias make='xtitle Making $(basename $PWD) ; make'
-alias ncftp='xtitle ncFTP ; ncftp'
-
-#-------------------------------------------------------------
-# Process/system related functions:
-#-------------------------------------------------------------
-
-function my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ; }
-function pp() { my_ps f | awk '!/awk/ && $0~var' var=${1:-'.*'} ; }
-function killps()
-{ # Kill by process name.
-  local pid pname sig='-TERM'   # Default signal.
-  if [ '$#' -lt 1 ] || [ '$#' -gt 2 ]; then
-    echo 'Usage: killps [-SIGNAL] pattern'
-    return;
-  fi
-  if [ $# = 2 ]; then sig=$1 ; fi
-  for pid in $(my_ps| awk '!/awk/ && $0~pat { print $1 }' pat=${!#} ) ; do
-    pname=$(my_ps | awk '$1~var { print $5 }' var=$pid )
-    if ask 'Kill process $pid <$pname> with signal $sig?'
-      then kill $sig $pid
-    fi
-  done
-}
-
-function my_ip()
-{ # Get IP adresses.
-  MY_IP=$(/sbin/ip addr show venet0 | awk '/inet/ { print $2 } ' | \sed -e s/addr://)
-}
-
-function ii()
-{ # Get current host related info.
-  echo "\n${RED}You are logged on ${LPURPLE}$HOSTNAME"
-  echo "\n${RED}Additionnal information:${WHITE} " ; uname -a
-  echo "\n${RED}Users logged on:${WHITE} " ; w -h
-  echo "\n${RED}Current date :${WHITE} " ; date
-  echo "\n${RED}Machine stats :${WHITE} " ; uptime
-  echo "\n${RED}Memory stats :${WHITE} " ; free
-  my_ip 2>&- ;
-  echo "\n${RED}Local IP Address :${WHITE} " ; echo ${MY_IP:-'Not connected'}
-  echo "\n${RED}Open connections :${WHITE} "; netstat -pan --inet;
-  echo
-}
-#-------------------------------------------------------------
-# Misc utilities:
-#-------------------------------------------------------------
-
-function repeat()
-{ # Repeat n times command.
-  local i max
-  max=$1; shift;
-  for ((i=1; i <= max ; i++)); do  # --> C-like syntax
-    eval '$@';
-  done
-}
-function ask()
-{ # See 'killps' for example of use.
-  echo -n '$@' '[y/n] ' ; read ans
-  case '$ans' in
-    y*|Y*) return 0 ;;
-    *) return 1 ;;
-  esac
-}
-function corename()
-{  # Get name of app that created a corefile.
-  for file ; do
-    echo -n $file : ; gdb --core=$file --batch | head -1
-  done
-}
-
-function get()
-{
-  printf "\033]0;__pw:"`pwd`"\007"
-  for file in $* ; do
-    printf "\033]0;__rv:"${file}"\007"
-  done
-  printf "\033]0;__ti\007"
-}
-
-function winscp()
-{
-  echo -ne \"\\033];__ws:${PWD}\\007\";
-}
-
-# Locale and editor
-export LANG='en_GB.UTF-8'
-export LANGUAGE='en_GB.UTF-8'
-export EDITOR='vim'
-
 # Sudo replacement aliases
+#-------------------------------------------------------------
 if [ $UID -ne 0 ]; then
   alias svim='sudo vim'
   alias snano='sudo nano'
@@ -248,31 +206,35 @@ if [ $UID -ne 0 ]; then
   alias su='sudo su'
 fi
 
-alias update="aptitude update"
-alias install="aptitude install"
-alias reinstall="aptitude reinstall"
-alias upgrade="aptitude safe-upgrade"
-alias remove="aptitude remove"
-alias purge='aptitude purge'
-# Server/Users specific aliases and functions
-alias free="free -m"
+if is_installed aptitude; then
+  alias update="aptitude update"
+  alias install="aptitude install"
+  alias reinstall="aptitude reinstall"
+  alias upgrade="aptitude safe-upgrade"
+  alias remove="aptitude remove"
+  alias purge='aptitude purge'
+fi
+
+#-------------------------------------------------------------
+# Server specific aliases and functions
+#-------------------------------------------------------------
 if [[ -a "$HOME/Flexget/bin/flexget" ]];then
   alias flex='~/Flexget/bin/flexget'
 fi
-if hash irssi 2> /dev/null; then
+if is_installed irssi; then
   alias sirssi='screen -dmS ircs irssi'
   alias irc='screen -rD ircs'
 fi
-if hash nginx 2> /dev/null; then
+if is_installed nginx; then
   alias nr="service nginx reload"
   alias nt="service nginx configtest"
   alias nrr="service nginx restart"
 fi
-if hash rtorrent 2> /dev/null; then
+if is_installed rtorrent; then
   alias tord='screen -dmS rtord rtorrent'
   alias torr='screen -rD rtord'
 fi
-if hash msm 2> /dev/null; then
+if is_installed msm; then
   alias msm='sudo -H -u minecraft msm'
   alias mc='sudo -H -u minecraft'
   alias mcl='\sudo su minecraft'
@@ -285,11 +247,24 @@ if [[ -a $HOME/.pyenv ]];then
   eval "$(pyenv init -)"
 fi
 
-# PowerLine
-if [[ -f "$HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh" ]]; then
-  . $HOME/.vim/bundle/powerline/powerline/bindings/bash/powerline.sh
+# Promptline
+if [[ -f "$HOME/dotfiles/promptline.sh" ]]; then
+  . "$HOME/dotfiles/promptline.sh"
 fi
-# if $STY is not set...
-if [ -z "$STY" ]; then
-  exec screen -ARRS ssh
+
+# Print awesomeness
+if is_installed fortune && is_installed cowsay; then
+  echo -en ${WHITE:2:10}
+  fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
+fi
+
+# Start tmux on login
+if is_installed tmux; then
+  if [[ -z "$TMUX" ]]; then
+    if tmux has-session; then
+      exec tmux attach-session
+    else
+      exec tmux new-session
+    fi
+  fi
 fi
