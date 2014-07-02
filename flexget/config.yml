@@ -1,0 +1,169 @@
+﻿# Flexget Configuration File
+# http://www.flexget.com
+# Created by: Luis Checa <edhaker13@gmail.com>
+# Inspired by the configuration file from atlanta800's git
+# https://github.com/atlanta800/dotfiles/blob/master/flexget/config.yml
+# and other examples/information from the wiki
+# http://flexget.com/wiki/Plugins
+
+presets:
+# This preset will be applied to all tasks unless no_global preset is included
+  global:
+    # Make sure there's at least 5GB free space
+    free_space:
+      path: /srv/
+      space: 5000
+    # Make filename Windows Safe (for samba)
+    pathscrub: windows
+    # Reject magnets since they don't allow scraping, size or content filtering
+    magnets: no
+    # # Converts magnets to real torrent files
+    # rtorrent_magnet: /srv/torrents    
+    # Reject private torrents since I'm not on any private trackers for now
+    private_torrents: no
+    # Some torrents links are invalid https
+    # verify_ssl_certificates: no
+    # Scrub the torrent for any data that'll prevent rtorrent from working
+    torrent_scrub: rtorrent
+    # Make a rss with successful entries for ease of access
+    make_rss:
+      file: /var/www/rss/flexget.rss
+      days: -1
+      items: -1
+      encoding: utf-8
+    # Notifies using Notify My Android, already paid for premium so not changing.
+    include:
+      - ~/.private/nma.yml
+    # Notifies me via email, sometimes I just forget or it doesn't show up on NMA
+      - ~/.private/email.yml
+    # Set some reasonable size limits also ensures no packs
+    content_size:
+      max: 1500
+      min: 50
+    # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
+    quality: 720p
+    # Only download mkv or mp4
+    content_filter:
+      require:
+        - '*.mkv'
+        - '*.mp4'
+    # Reject common torrent trash
+    regexp:
+      reject:
+        # Block any subbed/dubbed/etc videos
+       # - (s|d)ub(s|bed)?\b: {from: title}
+        # Block series, only accept one at a time
+        - \b(duo|tri|quadri|tetra|penta)logy\b: {from: title}
+        # I don't have any 3D displays
+        - \b3-?D\b: {from: title}
+        # I've gotten a few trailers that matched as movies. VERY annoying
+        - \btrailer\b: {from: title}
+        # The following are poor quality types that somehow got through the quality
+        - \bR5\b: {from: title}
+        # usually due to the title including a keyword like "720p" as well
+        - \bWEBSCR\b: {from: title}
+        # bad quality sources, just in case
+        - \bscreener\b: {from: title}
+        - \bTS\b: {from: title}
+        - \bCam\b: {from: title}
+        - \bRAW\b: {from: title}
+        # Reject rar/packs/password
+        - \.rar|\.r\d\d|password.txt|\.zip
+    # Limit the frequency of requests to domains so they don't complain about using a bot
+    domain_delay:
+      tokyotosho.info: 15 seconds
+      nyaa.eu: 15 seconds
+      kamorra.info: 15 seconds
+    # Set download path to watch folder[, and to rsync from home]
+    download: yes
+    # Enable deluge output
+    deluge:
+      main_file_only: yes
+    # Set the options of downloaded torrent in deluge
+    set:
+      path: "/srv/torrents/{{task}}/"
+      filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}].torrent"
+      # Path results /srv/anime/ShowName/
+      movedone: /srv/{{task}}/{{series_name}}
+      # Output would be -> Show Name 02[720p10bit].mkv
+      content_filename: "{{series_name}}.{{series_id|pad(2)}}[{{quality|replace('unknown','720p')}}]"
+      # Set label to the name of shows : fringe, fairy_tail. Makes it manageable
+      label: "{{series_name}}"
+
+  # This preset has all the anime related settings
+  anime:
+    # RSS feeds for Anime, force ascii: the japanese characters can cause errors
+    inputs:
+      # Shows only english anime and is sorted by seeds
+      - rss: { url: 'http://www.nyaa.eu/?page=rss&cats=1_37&filter=2', silent: yes, ascii: yes }
+      # Filtered for anime only
+      - rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
+    # Prevent from downloading files that are or have been downloaded
+    exists_series:
+      - '/srv/downloads/'
+      - '/srv/anime/'
+    # Filter any raws, OST , manga that may have fallen through the rss filters
+    regexp:
+      reject:
+        -  raw | ost | manga | soundtrack | song |\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
+    # List of shows I want to see, from MAL and manually set
+    import_series:
+      settings:
+        identified_by: sequence
+      from:
+        myanimelist:
+          username: 'edhaker13'
+    # Mixed PC - Crunchy since I've been using Windows lately
+    # series:
+  # Preset for all TV related settings and list of shows, just for show now
+  tv:
+    # List of feeds to use already filtered for shows and 720p
+    inputs:
+      - rss: { url: 'http://showrss.karmorra.info/rss.php?user_id=118811&hd=1&proper=0', silent: yes }
+    # Check for downloaded or downloading
+    exists_series:
+      - '/srv/downloads/'
+      - '/srv/tv/'
+    # List of shows to watch
+    include:
+      - ~/.private/trakt_list.yml 
+    series:
+      - 2 Broke Girls
+      - Arrow
+      - Bones
+      - Big Bang Theory
+      - Defiance
+      - Dexter
+      - Doctor Who 2005
+      - Doctor Who Confidential
+      - How I Met Your Mother
+      - Supernatural
+tasks:
+  anime:
+    preset: anime
+    notifymyandroid:
+      event: Moar Animu!!
+  tv:
+    preset: tv
+    notifymyandroid:
+      event: New TV Episode
+    # Mark all downloaded episodes as acquired
+    include:
+      - ~/.private/trakt.yml
+  search_anime:
+    interval: 2 hours
+    preset: anime
+    urlrewrite_search:
+      - nyaa:
+          filter: trusted only
+    notifymyandroid:
+      event: Found Anime!
+  search_tv:
+    interval: 2 hours
+    preset: tv
+    urlrewrite_search:
+      - piratebay:
+          category: 208
+          sort_by: seeds
+    notifymyandroid:
+      event: Found Shows!
