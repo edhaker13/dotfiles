@@ -1,15 +1,21 @@
 # .bashrc
-
+#-------------------------------------------------------------
 # Source global definitions
+#-------------------------------------------------------------
+
 if [ -f /etc/bash.bashrc ]; then
   . /etc/bash.bashrc
 fi
 
-# message too long fix
+#-------------------------------------------------------------
+# Safe checks
+#-------------------------------------------------------------
+
+# Message too long fix
 if [ "$TERM" != "dumb" ]; then
  test -s ~/.bashrc-local && . ~/.bashrc-local
 fi
-# if not running interactively exit
+# If not running interactively exit
 [ -z '$PS1' ] && return
 [[ $- != *i* ]] && return
 
@@ -58,12 +64,19 @@ function ask()
   esac
 }
 
-function is_installed()
-{
-  # Check if a program is in PATH
-  hash "$@" 2> /dev/null
-  return $?;
+function exists()
+{ # Check if a program exists in PATH, preload if true
+  hash "$@" &>/dev/null;
 }
+
+function dlzip()
+{ # Download, extract and remove zip from url. dlzip <url> [unzip args*]
+  exists unzip || (echo 'unzip not found'; return 1);
+  wget  $1 -qO $tmp;
+  unzip $tmp ${@:2};
+  rm $tmp;
+}
+
 #-------------------------------------------------------------
 # Basic options
 #-------------------------------------------------------------
@@ -81,12 +94,13 @@ export HISTFILESIZE=50000
 # Locale and editor
 export LANG='en_GB.UTF-8'
 export LANGUAGE='en_GB.UTF-8'
-export EDITOR='vim'
+exists vim && export EDITOR='vim' && export EDITOR='vi'
 
 #-------------------------------------------------------------
 # Some settings
 #-------------------------------------------------------------
 
+# Disable options:
 set -o notify
 set -o noclobber
 set -o ignoreeof
@@ -101,34 +115,48 @@ shopt -s no_empty_cmd_completion
 shopt -s cmdhist
 shopt -s histappend histreedit histverify
 shopt -s mailwarn
+complete -cf sudo  # Enable sudo tab completion
 
-# put some colors in ls
+# Put some colors in ls
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxCxegedabagacad
 
-# Option aliases
+#-------------------------------------------------------------
+# Default program option aliases
+#-------------------------------------------------------------
+
+alias df='df -h'
+alias free='free -m'
 alias ls='ls -h --color=auto'
 alias ll='ls -la'
 alias la='ls -A'
 alias l='ls -CF'
+alias wget='wget --content-disposition'
+alias back='cd $OLDPWD'
+alias grep='grep --color=auto'
+
+#-------------------------------------------------------------
+# Handy aliases
+#-------------------------------------------------------------
+
 alias h='cd'
 alias ..='cd ..'
 alias cd..='cd ..'
 alias ...='cd ../..'
-alias back='cd $OLDPWD'
-alias grep='grep --color=auto'
-alias dfh='df -h'
 alias bye='exit'
-alias free="free -m"
-# Automatically determines filename
-alias wget="wget --content-disposition"
 
-# handy file conversion tools
-alias dos2unix="perl -pi -e 's/\r\n/\n/;'"
-alias unix2dos="perl -pi -e 's/\n/\r\n/;'"
-alias bomstrip="sed -i -s -e '1s/^\xef\xbb\xbf//'"
+#-------------------------------------------------------------
+# Handy file conversion aliases
+#-------------------------------------------------------------
 
+exists dos2unix || alias dos2unix="perl -pi -e 's/\r\n/\n/;'"
+exists unix2dos || alias unix2dos="perl -pi -e 's/\n/\r\n/;'"
+exists bomstrip || alias bomstrip="sed -i -s -e '1s/^\xef\xbb\xbf//'"
+
+#-------------------------------------------------------------
 # Prompt
+#-------------------------------------------------------------
+
 NORMAL="\[\033[00m\]"
 BLACK="\[\033[0;30m\]"
 DGRAY="\[033[1;30m\]"
@@ -153,27 +181,12 @@ case $TERM in
   *)
     ;;
 esac
-PS1="${CYAN}[${LGREEN}\u${LPURPLE}@${LRED}\H ${YELLOW}\w${CYAN}]${LGRAY}> ${WHITE}"
-PS2="${GREEN}->"
-PS3="${LPURPLE}*?"
-#export PS1
-#export PS2
-#export PS3
+export PS1="${CYAN}[${LGREEN}\u${LPURPLE}@${LRED}\H ${YELLOW}\w${CYAN}]${LGRAY}> ${WHITE}"
+export PS2="${GREEN}->"
+export PS3="${LPURPLE}*?"
 
 #-------------------------------------------------------------
-# tailoring 'less'
-#-------------------------------------------------------------
-
-alias more='less'
-export PAGER=less
-export LESSCHARSET='latin1'
-export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
-# Use this if lesspipe.sh exists
-export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
-:stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
-
-#-------------------------------------------------------------
-# spelling typos - highly personnal and keyboard-dependent :-)
+# Spelling typos - highly personnal and keyboard-dependent :-)
 #-------------------------------------------------------------
 
 alias cs='cd'
@@ -182,89 +195,133 @@ alias vd='cd'
 alias moer='more'
 alias moew='more'
 alias kk='ll'
+alias sduo='sudo'
 
 #-------------------------------------------------------------
 # Sudo replacement aliases
 #-------------------------------------------------------------
+
 if [ $UID -ne 0 ]; then
-  alias svim='sudo vim'
-  alias snano='sudo nano'
   alias ipt='sudo iptables'
   alias ip6t='sudo ip6tables'
   alias iptables='sudo iptables'
-  alias runlevel='sudo /sbin/init'
-  alias yum='sudo yum'
-  alias rpm='sudo rpm'
   alias kill='sudo kill'
   alias killall='sudo killall'
-  alias service='sudo service'
-  alias apt-get='sudo apt-get'
-  alias dpkg='sudo dpkg'
-  alias aptitude='sudo aptitude'
-  alias cps='sudo cp'
-  alias service="sudo service"
-  alias su='sudo su'
+  exists dpkg && alias dpkg='sudo dpkg'
+  exists yum  && alias yum='sudo yum'
+  exists rpm  && alias rpm='sudo rpm'
+  exists apt-get && alias apt-get='sudo apt-get'
+  exists aptitude && alias aptitude='sudo aptitude'
+  exists service  && alias service='sudo service' || alias service='sudo /etc/init.d/$1 ${@:2}'
+  exists vim  && alias svim='sudo vim'
+  exists nano && alias snano='sudo nano'
 fi
 
-if is_installed aptitude; then
-  alias update="aptitude update"
-  alias install="aptitude install"
-  alias reinstall="aptitude reinstall"
-  alias upgrade="aptitude safe-upgrade"
-  alias remove="aptitude remove"
+#-------------------------------------------------------------
+# Apt-get/Aptitude shorteners. Apt-get has preference
+#-------------------------------------------------------------
+
+if exists aptitude; then
+  alias update='aptitude update'
+  alias install='aptitude install'
+  alias reinstall='aptitude reinstall'
+  alias upgrade='aptitude safe-upgrade'
+  alias remove='aptitude remove'
   alias purge='aptitude purge'
+fi
+
+if exists apt-get; then
+  alias update='apt-get update'
+  alias install='apt-get install'
+  alias reinstall='apt-get install --reinstall'
+  alias upgrade='apt-get dist-upgrade'
+  alias remove='apt-get remove'
+  alias purge='apt-get purge'
 fi
 
 #-------------------------------------------------------------
 # Server specific aliases and functions
 #-------------------------------------------------------------
+
 if [[ -a "$HOME/Flexget/bin/flexget" ]];then
   alias flex='~/Flexget/bin/flexget'
 fi
-if is_installed irssi; then
-  alias sirssi='screen -dmS ircs irssi'
-  alias irc='screen -rD ircs'
+
+if exists irssi; then
+  if exists tmux; then
+    alias irc='tmux attach-session -t irc || tmux new-session -s irc'
+    alias sirssi='irc'
+  elif exists screen; then
+    alias sirssi='screen -dmS ircs irssi'
+    alias irc='screen -rD ircs'
+  fi
 fi
-if is_installed nginx; then
-  alias nr="service nginx reload"
-  alias nt="service nginx configtest"
-  alias nrr="service nginx restart"
+
+if exists nginx; then
+  alias nr='service nginx reload'
+  alias nt='service nginx configtest'
+  alias nrr='service nginx restart'
 fi
-if is_installed rtorrent; then
-  alias tord='screen -dmS rtord rtorrent'
-  alias torr='screen -rD rtord'
+
+if exists rtorrent; then
+  if exists tmux; then
+    alias torr='tmux attach-session -t rtord || tmux new-session -s rtord'
+    alias tord='torr'
+  elif exists screen; then
+    alias tord='screen -dmS rtord rtorrent'
+    alias torr='screen -rD rtord'
+  fi
 fi
-if is_installed msm; then
+
+if exists msm; then
   alias msm='sudo -H -u minecraft msm'
   alias mc='sudo -H -u minecraft'
   alias mcl='\sudo su minecraft'
 fi
 
+#-------------------------------------------------------------
 # PyEnv
-if [[ -a $HOME/.pyenv ]];then
+#-------------------------------------------------------------
+
+if [[ -a "$HOME/.pyenv" ]];then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
+#-------------------------------------------------------------
 # Promptline
+#-------------------------------------------------------------
+
 if [[ -f "$HOME/dotfiles/promptline.sh" ]]; then
   . "$HOME/dotfiles/promptline.sh"
 fi
 
-# Print awesomeness
-if is_installed fortune && is_installed cowsay; then
+#-------------------------------------------------------------
+# Print (mis)fortune
+#-------------------------------------------------------------
+
+if exists fortune; then
   echo -en ${WHITE:2:10}
-  fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
+  if exists cowsay; then
+    fortune -a -s | cowsay -f $(ls /usr/share/cowsay/cows/ | shuf | head -n1)
+  else
+    fortune -a -s
+  fi
 fi
 
+#-------------------------------------------------------------
 # Start tmux on login
-if is_installed tmux; then
+#-------------------------------------------------------------
+
+if exists tmux; then
   if [[ -z "$TMUX" ]]; then
     if tmux has-session; then
-      exec tmux attach-session
+      exec tmux attach-session -t ssh
     else
-      exec tmux new-session
+      exec tmux new-session -s ssh
     fi
   fi
 fi
+
+#-------------------------------------------------------------
