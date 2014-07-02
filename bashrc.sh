@@ -25,20 +25,28 @@ fi
 
 function my_ip()
 { # Get IP adresses.
-  MY_IP=$(/sbin/ip addr show venet0 | awk '/inet/ { print $2 } ' | \sed -e s/addr://)
+  if /sbin/ifconfig|grep 'venet0' &>/dev/null; then
+    LAN_NAME='venet0'
+  elif /sbin/ifconfig|grep 'eth0' &>/dev/null; then
+    LAN_NAME='eth0'
+  fi
+  MY_IP=$(/sbin/ip addr show $LAN_NAME| awk '/inet/ { print $2 } '| sed -e 's/addr://')
 }
 
 function ii()
 { # Get current host related info.
-  echo "\n${RED}You are logged on ${LPURPLE}$HOSTNAME"
-  echo "\n${RED}Additionnal information:${WHITE} " ; uname -a
-  echo "\n${RED}Users logged on:${WHITE} " ; w -h
-  echo "\n${RED}Current date :${WHITE} " ; date
-  echo "\n${RED}Machine stats :${WHITE} " ; uptime
-  echo "\n${RED}Memory stats :${WHITE} " ; free
+  [[ -z eRED ]] || eRLED="${RED:2:-2}"
+  [[ -z eWHITE ]] || eWHITE="${WHITE:2:-2}"
+  [[ -z ePURPLE ]] || eLPURPLE="${LPURPLE:2:-2}"
+  echo -e "${eRED}You are logged on ${ePURPLE}$HOSTNAME"
+  echo -e "\n${eRED}Additionnal information:${eWHITE} " ; uname -a
+  echo -e "\n${eRED}Users logged on:${eWHITE} " ; w -h
+  echo -e "\n${eRED}Current date :${eWHITE} " ; date
+  echo -e "\n${eRED}Machine stats :${eWHITE} " ; uptime
+  echo -e "\n${eRED}Memory stats :${eWHITE} " ; free
   my_ip 2>&- ;
-  echo "\n${RED}Local IP Address :${WHITE} " ; echo ${MY_IP:-'Not connected'}
-  echo "\n${RED}Open connections :${WHITE} "; netstat -pan --inet;
+  echo -e "\n${eRED}Local IP Address :${eWHITE} " ; echo ${MY_IP:-'Not connected'}
+  echo -e "\n${eRED}Open connections :${eWHITE} "; netstat -tulpan;
   echo
 }
 
@@ -157,23 +165,23 @@ exists bomstrip || alias bomstrip="sed -i -s -e '1s/^\xef\xbb\xbf//'"
 # Prompt
 #-------------------------------------------------------------
 
-NORMAL="\[\033[00m\]"
-BLACK="\[\033[0;30m\]"
-DGRAY="\[033[1;30m\]"
-RED="\[\033[0;31m\]"
-LRED="\[\033[1;31m\]"
-GREEN="\[\033[0;32m\]"
-LGREEN="\[\033[1;32m\]"
-BROWN="\[\033[0;33m\]"
-YELLOW="\[\033[1;33m\]"
-BLUE="\[\033[0;34m\]"
-LBLUE="\[\033[1;34m\]"
-PURPLE="\[\033[0,35m\]"
-LPURPLE="\[\033[1;35m\]"
-CYAN="\[\033[0;36m\]"
-LCYAN="\[\033[1;36m\]"
-LGRAY="\[\033[0;37m\]"
-WHITE="\[\033[1;37m\]"
+NORMAL='\[\033[00m\]'
+BLACK='\[\033[0;30m\]'
+DGRAY='\[033[1;30m\]'
+RED='\[\033[0;31m\]'
+LRED='\[\033[1;31m\]'
+GREEN='\[\033[0;32m\]'
+LGREEN='\[\033[1;32m\]'
+BROWN='\[\033[0;33m\]'
+YELLOW='\[\033[1;33m\]'
+BLUE='\[\033[0;34m\]'
+LBLUE='\[\033[1;34m\]'
+PURPLE='\[\033[0,35m\]'
+LPURPLE='\[\033[1;35m\]'
+CYAN='\[\033[0;36m\]'
+LCYAN='\[\033[1;36m\]'
+LGRAY='\[\033[0;37m\]'
+WHITE='\[\033[1;37m\]'
 case $TERM in
   xterm* | rxvt)
     PS1="\[\033]0;\u@\h: \w\007\]"
@@ -207,6 +215,7 @@ if [ $UID -ne 0 ]; then
   alias iptables='sudo iptables'
   alias kill='sudo kill'
   alias killall='sudo killall'
+  alias netstat='sudo netstat'
   exists dpkg && alias dpkg='sudo dpkg'
   exists yum  && alias yum='sudo yum'
   exists rpm  && alias rpm='sudo rpm'
