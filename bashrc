@@ -73,16 +73,17 @@ function ask()
 }
 
 function exists()
-{ # Check if a program exists in PATH, preload if true
+{ # Check if a program exists in PATH, pre-load if true
   hash "$@" &>/dev/null;
 }
 
 function dlzip()
 { # Download, extract and remove zip from url. dlzip <url> [unzip args*]
   exists unzip || (echo 'unzip not found'; return 1);
-  wget  $1 -qO $tmp;
-  unzip $tmp ${@:2};
-  rm $tmp;
+  tmpf=$(tempfile);
+  wget -qO "$tmpf" $1;
+  unzip "$tmpf" ${@:2};
+  rm "$tmpf";
 }
 
 #-------------------------------------------------------------
@@ -125,7 +126,7 @@ shopt -s histappend histreedit histverify
 shopt -s mailwarn
 complete -cf sudo  # Enable sudo tab completion
 
-# Put some colors in ls
+# Put some colours in ls
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxCxegedabagacad
 
@@ -194,7 +195,7 @@ export PS2="${GREEN}->"
 export PS3="${LPURPLE}*?"
 
 #-------------------------------------------------------------
-# Spelling typos - highly personnal and keyboard-dependent :-)
+# Spelling typos - highly personal and keyboard-dependent :-)
 #-------------------------------------------------------------
 
 alias cs='cd'
@@ -213,8 +214,6 @@ if [ $UID -ne 0 ]; then
   alias ipt='sudo iptables'
   alias ip6t='sudo ip6tables'
   alias iptables='sudo iptables'
-  alias kill='sudo kill'
-  alias killall='sudo killall'
   alias netstat='sudo netstat'
   exists dpkg && alias dpkg='sudo dpkg'
   exists yum  && alias yum='sudo yum'
@@ -227,25 +226,25 @@ if [ $UID -ne 0 ]; then
 fi
 
 #-------------------------------------------------------------
-# Apt-get/Aptitude shorteners. Apt-get has preference
+# Apt-get/Aptitude short-cuts. Apt-get has preference
 #-------------------------------------------------------------
-
-if exists aptitude; then
-  alias update='aptitude update'
-  alias install='aptitude install'
-  alias reinstall='aptitude reinstall'
-  alias upgrade='aptitude safe-upgrade'
-  alias remove='aptitude remove'
-  alias purge='aptitude purge'
-fi
 
 if exists apt-get; then
   alias update='apt-get update'
   alias install='apt-get install'
   alias reinstall='apt-get install --reinstall'
-  alias upgrade='apt-get dist-upgrade'
+  alias upgrade='apt-get upgrade'
+  alias dist-upgrade='apt-get dist-upgrade'
   alias remove='apt-get remove'
   alias purge='apt-get purge'
+elif exists aptitude; then
+  alias update='aptitude update'
+  alias install='aptitude install'
+  alias reinstall='aptitude reinstall'
+  alias upgrade='aptitude safe-upgrade'
+  alias dist-upgrade='aptitude upgrade'
+  alias remove='aptitude remove'
+  alias purge='aptitude purge'
 fi
 
 #-------------------------------------------------------------
@@ -296,6 +295,7 @@ if [[ -a "$HOME/.pyenv" ]];then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 #-------------------------------------------------------------
