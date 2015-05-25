@@ -277,13 +277,13 @@ fi
 
 # If Git is not installed, install it (Ubuntu only, since Git comes standard
 # with recent XCode or CLT)
-if [[ ! exists git ]] && [ is_ubuntu || is_debian ]; then
+if ! exists git && (is_ubuntu || is_debian); then
   e_header "Installing Git"
   sudo apt-get -qq install git-core
 fi
 
 # If Git isn't installed by now, something exploded. We gots to quit!
-if [[ ! exists git ]]; then
+if ! exists git; then
   e_error "Git should be installed. It isn't. Aborting."
   exit 1
 fi
