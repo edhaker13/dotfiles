@@ -1,5 +1,5 @@
 # Debian/Ubuntu-only stuff. Abort if not Debian/Ubuntu.
-[ is_ubuntu || is_debian ] || return 1
+(is_ubuntu || is_debian) || return 1
 # Update APT.
 e_header "Updating APT"
 sudo apt-get -qq update

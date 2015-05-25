@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 [[ "$1" == "source" ]] || \
-
 echo 'Dotfiles - "Cowboy" Ben Alman - http://benalman.com/'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
@@ -40,7 +39,7 @@ function assert() {
 
 # Check if a program exists in PATH, pre-load if true
 function exists() {
-  hash "$@" &>/dev/null
+  hash "$1" &>/dev/null;
 }
 
 # OS detection
