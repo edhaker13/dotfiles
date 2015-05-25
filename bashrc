@@ -20,80 +20,12 @@ fi
 [[ $- != *i* ]] && return
 
 #-------------------------------------------------------------
-# Process/system related functions:
-#-------------------------------------------------------------
-
-function my_ip()
-{ # Get IP adresses.
-  if /sbin/ifconfig|grep 'venet0' &>/dev/null; then
-    LAN_NAME='venet0'
-  elif /sbin/ifconfig|grep 'eth0' &>/dev/null; then
-    LAN_NAME='eth0'
-  fi
-  MY_IP=$(/sbin/ip addr show $LAN_NAME| awk '/inet/ { print $2 } '| sed -e 's/addr://')
-}
-
-function ii()
-{ # Get current host related info.
-  [[ -z eRED ]] || eRLED="${RED:2:-2}"
-  [[ -z eWHITE ]] || eWHITE="${WHITE:2:-2}"
-  [[ -z ePURPLE ]] || eLPURPLE="${LPURPLE:2:-2}"
-  echo -e "${eRED}You are logged on ${ePURPLE}$HOSTNAME"
-  echo -e "\n${eRED}Additionnal information:${eWHITE} " ; uname -a
-  echo -e "\n${eRED}Users logged on:${eWHITE} " ; w -h
-  echo -e "\n${eRED}Current date :${eWHITE} " ; date
-  echo -e "\n${eRED}Machine stats :${eWHITE} " ; uptime
-  echo -e "\n${eRED}Memory stats :${eWHITE} " ; free
-  my_ip 2>&- ;
-  echo -e "\n${eRED}Local IP Address :${eWHITE} " ; echo ${MY_IP:-'Not connected'}
-  echo -e "\n${eRED}Open connections :${eWHITE} "; netstat -tulpan;
-  echo
-}
-
-#-------------------------------------------------------------
-# Misc utilities:
-#-------------------------------------------------------------
-
-function repeat()
-{ # Repeat n times command.
-  local i max
-  max=$1; shift;
-  for ((i=1; i <= max ; i++)); do  # --> C-like syntax
-    eval "$@";
-  done
-}
-
-function ask()
-{ # Ask a yes or no question.
-  echo -n "$@" '[y/n] ' ; read ans
-  case "$ans" in
-    y*|Y*) return 0 ;;
-    *) return 1 ;;
-  esac
-}
-
-function exists()
-{ # Check if a program exists in PATH, pre-load if true
-  hash "$@" &>/dev/null;
-}
-
-function dlzip()
-{ # Download, extract and remove zip from url. dlzip <url> [unzip args*]
-  exists unzip || (echo 'unzip not found'; return 1);
-  tmpf=$(tempfile);
-  wget -qO "$tmpf" $1;
-  unzip "$tmpf" ${@:2};
-  rm "$tmpf";
-}
-
-#-------------------------------------------------------------
 # Basic options
 #-------------------------------------------------------------
 export HISTCONTROL=ignoredups:ignorespace:ignoreboth
 export COLORFGBG='default;default'
 # leave some commands out of history log
 export HISTIGNORE='&:??:[ ]*:clear:exit:logout'
-export TIMEFORMAT=$'\nreal %3R\tuser %3U\tsys %3S\tpcpu %P\n'
 export HISTTIMEFORMAT='%H:%M > '
 
 # Sets up history length
@@ -129,101 +61,6 @@ complete -cf sudo  # Enable sudo tab completion
 # Put some colours in ls
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxCxegedabagacad
-
-#-------------------------------------------------------------
-# Default program option aliases
-#-------------------------------------------------------------
-
-alias df='df -h'
-alias free='free -m'
-alias ls='ls -h --color=auto'
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -CF'
-alias wget='wget --content-disposition'
-alias back='cd $OLDPWD'
-alias grep='grep --color=auto'
-
-#-------------------------------------------------------------
-# Handy aliases
-#-------------------------------------------------------------
-
-alias h='cd'
-alias ..='cd ..'
-alias cd..='cd ..'
-alias ...='cd ../..'
-alias bye='exit'
-
-#-------------------------------------------------------------
-# Handy file conversion aliases
-#-------------------------------------------------------------
-
-exists dos2unix || alias dos2unix="perl -pi -e 's/\r\n/\n/;'"
-exists unix2dos || alias unix2dos="perl -pi -e 's/\n/\r\n/;'"
-exists bomstrip || alias bomstrip="sed -i -s -e '1s/^\xef\xbb\xbf//'"
-
-#-------------------------------------------------------------
-# Prompt
-#-------------------------------------------------------------
-
-NORMAL='\[\033[00m\]'
-BLACK='\[\033[0;30m\]'
-DGRAY='\[033[1;30m\]'
-RED='\[\033[0;31m\]'
-LRED='\[\033[1;31m\]'
-GREEN='\[\033[0;32m\]'
-LGREEN='\[\033[1;32m\]'
-BROWN='\[\033[0;33m\]'
-YELLOW='\[\033[1;33m\]'
-BLUE='\[\033[0;34m\]'
-LBLUE='\[\033[1;34m\]'
-PURPLE='\[\033[0,35m\]'
-LPURPLE='\[\033[1;35m\]'
-CYAN='\[\033[0;36m\]'
-LCYAN='\[\033[1;36m\]'
-LGRAY='\[\033[0;37m\]'
-WHITE='\[\033[1;37m\]'
-case $TERM in
-  xterm* | rxvt)
-    PS1="\[\033]0;\u@\h: \w\007\]"
-    ;;
-  *)
-    ;;
-esac
-export PS1="${CYAN}[${LGREEN}\u${LPURPLE}@${LRED}\H ${YELLOW}\w${CYAN}]${LGRAY}> ${WHITE}"
-export PS2="${GREEN}->"
-export PS3="${LPURPLE}*?"
-
-#-------------------------------------------------------------
-# Spelling typos - highly personal and keyboard-dependent :-)
-#-------------------------------------------------------------
-
-alias cs='cd'
-alias vf='cd'
-alias vd='cd'
-alias moer='more'
-alias moew='more'
-alias kk='ll'
-alias sduo='sudo'
-
-#-------------------------------------------------------------
-# Sudo replacement aliases
-#-------------------------------------------------------------
-
-if [ $UID -ne 0 ]; then
-  alias ipt='sudo iptables'
-  alias ip6t='sudo ip6tables'
-  alias iptables='sudo iptables'
-  alias netstat='sudo netstat'
-  exists dpkg && alias dpkg='sudo dpkg'
-  exists yum  && alias yum='sudo yum'
-  exists rpm  && alias rpm='sudo rpm'
-  exists apt-get && alias apt-get='sudo apt-get'
-  exists aptitude && alias aptitude='sudo aptitude'
-  exists service  && alias service='sudo service' || alias service='sudo /etc/init.d/$1 ${@:2}'
-  exists vim  && alias svim='sudo vim'
-  exists nano && alias snano='sudo nano'
-fi
 
 #-------------------------------------------------------------
 # Apt-get/Aptitude short-cuts. Apt-get has preference

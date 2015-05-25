@@ -1,55 +1,118 @@
-Dotfiles
-========
-This repository includes all of my custom configs and dotfiles.  They should be cloned to
-your home directory so that the path is `~/dotfiles/`.  The included setup
-script creates symlinks from your home directory to the files which are located
-in `~/dotfiles/`. There are also some other files from nginx and flexget which I dont know if they work.
+# Dotfiles
 
-The setup script is smart enough to back up your existing dotfiles into a
-`~/dotfiles_old/` directory if you already have any dotfiles of the same name as
-the dotfile symlinks being created in your home directory.
+My dotfiles.
 
-It will also symlink any other file configured in the script such as flexget. 
-But really it doesnt like going to another user's folder.
+## About this project
 
-So, to recap, the install script will:
+I've been using bash on-and-off for a long time. In all that time, every time I've set up a new Linux, I've copied over my `.bashrc` file and my `~/bin` folder to each machine manually. And I've never done a very good job of actually maintaining these files. It's been a total mess.
 
-1. Back up any existing dotfiles in your home directory to `~/dotfiles_old/`
-2. Create symlinks to the dotfiles in `~/dotfiles/` in your home directory.
+I finally decided that I wanted to be able to execute a single command to "bootstrap" a new system to pull down all of my dotfiles and configs, as well as install all the tools I commonly use. In addition, I wanted to be able to re-execute that command at any time to synchronize anything that might have changed. Finally, I wanted to make it easy to re-integrate changes back in, so that other machines could be updated.
 
+That command is [dotfiles][dotfiles], and this is my "dotfiles" Git repo.
 
-Installation
-------------
+[dotfiles]: bin/dotfiles
 
-``` bash
-# clone repo, place it in home
-git clone git@github.com:edhaker13/dotfiles.git ~/dotfiles
-# change into repo
-cd dotfiles
-# make executables and run
-chmod a+x mklinks.sh
-./mklinks.sh
-# to update an already existing repo do
-cd ~/dotfiles && git pull origin master
-# if you want it to pull update every so often just make a cronjob or 
-# use post-receive hook (this I don't know how in github)
-crontab -e
-# Paste this line, the */5 means every five mins, change this to what you want
-*/5 * * * * cd ~/dotfiles && git -q pull origin master
+## How the "dotfiles" command works
+
+When [dotfiles][dotfiles] is run for the first time, it does a few things:
+
+1. In Ubuntu, Git is installed if necessary via APT (it's already there in OSX).
+1. This repo is cloned into your user directory, under `~/.dotfiles`.
+1. Files in `/copy` are copied into `~/`. ([read more](#the-copy-step))
+1. Files in `/link` are symlinked into `~/`. ([read more](#the-link-step))
+1. You are prompted to choose scripts in `/init` to be executed. The installer attempts to only select relevant scripts, based on the detected OS and the script filename.
+1. Your chosen init scripts are executed (in alphanumeric order, hence the funky names). ([read more](#the-init-step))
+
+On subsequent runs, step 1 is skipped, step 2 just updates the already-existing repo, and step 5 remembers what you selected the last time. The other steps are the same.
+
+### Other subdirectories
+
+* The `/backups` directory gets created when necessary. Any files in `~/` that would have been overwritten by files in `/copy` or `/link` get backed up there.
+* The `/bin` directory contains executable shell scripts (including the [dotfiles][dotfiles] script) and symlinks to executable shell scripts. This directory is added to the path.
+* The `/caches` directory contains cached files, used by some scripts or functions.
+* The `/conf` directory just exists. If a config file doesn't **need** to go in `~/`, reference it from the `/conf` directory.
+* The `/bash.d` directory contains files that are sourced whenever a new shell is opened (in alphanumeric order, hence the funky names).
+* The `/test` directory contains unit tests for especially complicated bash functions.
+* The `/vendor` directory contains third-party libraries.
+
+### The "copy" step
+Any file in the `/copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [copy/.gitconfig](copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
+
+### The "link" step
+Any file in the `/link` subdirectory gets symlinked into `~/` with `ln -s`. Edit one or the other, and you change the file in both places. Don't link files containing sensitive data, or you might accidentally commit that data! If you're linking a directory that might contain sensitive data (like `~/.ssh`) add the sensitive files to your [.gitignore](.gitignore) file!
+
+### The "init" step
+Scripts in the `/init` subdirectory will be executed. A bunch of things will be installed, but _only_ if they aren't already.
+
+#### Debian/Ubuntu
+* Updated APT packages and git-extras via the [init/21_debian_extras.sh](init/21_debian_extras.sh) script
+
+#### Both
+* Vim plugins via the [init/50_vim.sh](init/50_vim.sh) script
+
+## Hacking my dotfiles
+
+Because the [dotfiles][dotfiles] script is completely self-contained, you should be able to delete everything else from your dotfiles repo fork, and it will still work. The only thing it really cares about are the `/copy`, `/link` and `/init` subdirectories, which will be ignored if they are empty or don't exist.
+
+If you modify things and notice a bug or an improvement, [file an issue](https://github.com/cowboy/dotfiles/issues) or [a pull request](https://github.com/cowboy/dotfiles/pulls) and let me know.
+
+Also, before installing, be sure to [read my gently-worded note](#heed-this-critically-important-warning-before-you-install).
+
+## Installation
+
+### Ubuntu Notes
+
+You might want to set up your ubuntu server [like I do it](https://github.com/cowboy/dotfiles/wiki/ubuntu-setup), but then again, you might not.
+
+Either way, you should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
+
+_Tested in Ubuntu 14.04 LTS_
+
+### Heed this critically important warning before you install
+
+**If you're not me, please _do not_ install dotfiles directly from this repo!**
+
+Why? Because I often completely break this repo while updating. Which means that if I do that and you run the `dotfiles` command, your home directory will burst into flames, and you'll have to go buy a new computer. No, not really, but it will be very messy.
+
+### Actual installation (for you)
+
+1. [Read my gently-worded note](#heed-this-critically-important-warning-before-you-install)
+1. Fork this repo
+1. Open a terminal/shell and do this:
+
+```sh
+export github_user=YOUR_GITHUB_USER_NAME
+
+bash -c "$(curl -fsSL https://raw.github.com/$github_user/dotfiles/master/bin/dotfiles)" && source ~/.bashrc
 ```
-Configurations for...
----------------------
-I have configuration files for different programs like nano, bash or irssi.
 
-Here is a full list:
+Since you'll be using the [dotfiles][dotfiles] command on subsequent runs, you'll only have to export the `github_user` variable for the initial install.
 
-1. IRSSI: scripts, themes, and settings.
-2. Bash: user configuration, functions, aliases, etc.
-3. Flexget: config file, additional plugins. Files need to be manually linked.
-4. Lighttpd: server config, vhosts, mime types, included configs.
-5. Nano: settings, aliases, active sintax highlighting.
-6. Nginx: server config, vhosts, active vhosts, etc. Droppped.
-7. Screen: settings, mainly utf-8 on and support scrolling.
-8. SSH: config for different servers, key to use, aliases.
-9. Vim: same as nano, keep it just in case. I don't use vim.
+There's a lot of stuff that requires admin access via `sudo`, so be warned that you might need to enter your password here or there.
 
+### Actual installation (for me)
+
+```sh
+bash -c "$(curl -fsSL https://bit.ly/cowboy-dotfiles)" && source ~/.bashrc
+```
+
+## Aliases and Functions
+To keep things easy, the `~/.bashrc` and `~/.bash_profile` files are extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](bash.d). I even have a [fancy prompt](bash.d/50_promptline.sh) that shows the current directory, time and current git/svn repo status.
+
+## Scripts
+In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [bin scripts](bin).
+
+* [dotfiles][dotfiles] - (re)initialize dotfiles. It might ask for your password (for `sudo`).
+* [src](link/.bashrc#L8-18) - (re)source all files in `/bash.d` directory
+* Look through the [bin](bin) subdirectory for a few more.
+
+## Inspiration
+<https://github.com/cowboy/dotfiles>
+<https://github.com/gf3/dotfiles>
+<https://github.com/mathiasbynens/dotfiles>
+(and 5+ years of accumulated crap)
+
+## License
+Copyright (c) 2014 "Cowboy" Ben Alman
+Licensed under the MIT license.
+<http://benalman.com/about/license/>

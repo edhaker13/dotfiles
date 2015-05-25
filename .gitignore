@@ -1,49 +1,23 @@
-
-# Custom
+# Temp files
 *.bak
 *.old
 *~
-flexget.sh/received/
-flexget.sh/temp/
-flexget.sh/flexget.log*
-
-# Compiled code
-*/*/*.py[cod]
-*/*.py[cod]
-*.py[cod]
-
-# C extensions
-*.so
-
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
-__pycache__
+/link/.flexget/received/
+/link/.flexget/temp/
 
 # logs
 pip-log.txt
-irssi.sh/*.log
-# Unit test / coverage reports
-.coverage
-.tox
-nosetests.xml
+*.log
+flexget.log*
 
-# Translations
-*.mo
+# Lots of junk goes in here.
+/caches/
+/backups/
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
-.rope
+# Top secret stuff!
+/link/.ssh/authorized_keys
+/link/.ssh/id_*
+/link/.ssh/known_hosts
+
+# Ignore any file with LOCAL in the name (good for per-machine vars/functions)
+*LOCAL*
