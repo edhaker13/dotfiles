@@ -3,7 +3,7 @@
 	url = git@github.com:edhaker13/myanimelist.git
 [submodule "private"]
 	path = private
-	url = git@github.com:edhaker13/private.git
+	url = git@bitbucket.org:edhaker13/private.git
 [submodule "git-extras"]
 	path = vendor/git-extras
 	url = git@github.com:visionmedia/git-extras.git
