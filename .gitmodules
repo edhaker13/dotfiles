@@ -6,7 +6,7 @@
 	url = git@github.com:edhaker13/private.git
 [submodule "git-extras"]
 	path = vendor/git-extras
-	url = git://github.com/visionmedia/git-extras.git
+	url = git@github.com:visionmedia/git-extras.git
 [submodule "z"]
 	path = vendor/z
-	url = git://github.com/rupa/z.git
+	url = git@github.com:rupa/z.git
