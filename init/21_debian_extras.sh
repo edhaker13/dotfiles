@@ -12,13 +12,7 @@ packages=(
   cowsay
   git-core
   htop
-  id3tool
   libssl-dev
-  mercurial
-  nmap
-  silversearcher-ag
-  sl
-  telnet
   tree
 )
 
@@ -32,7 +26,7 @@ if (( ${#packages[@]} > 0 )); then
 fi
 
 # Install Git Extras
-if [[ ! exists git-extras ]]; then
+if ! exists git-extras; then
   e_header "Installing Git Extras"
   (
     cd $DOTFILES/vendor/git-extras &&
