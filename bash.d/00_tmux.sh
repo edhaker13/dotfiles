@@ -1,17 +1,4 @@
 #-------------------------------------------------------------
-# Safe checks
-#-------------------------------------------------------------
-
-# Message too long fix
-if [ "$TERM" != "dumb" ]; then
- test -s ~/.bashrc-local && . ~/.bashrc-local
-fi
-
-# If not running interactively exit
-[ -z '$PS1' ] && return
-[[ $- != *i* ]] && return
-
-#-------------------------------------------------------------
 # Start tmux on login. Unnecessary if shell is tmux
 #-------------------------------------------------------------
 
