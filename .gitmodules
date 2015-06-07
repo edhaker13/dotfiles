@@ -1,8 +1,8 @@
-[submodule "myanimelist"]
+[submodule "link/.flexget/plugins"]
 	path = link/.flexget/plugins
 	url = git@github.com:edhaker13/myanimelist.git
-[submodule "private"]
-	path = private
+[submodule "link/.private"]
+	path = link/.private
 	url = git@bitbucket.org:edhaker13/private.git
 [submodule "git-extras"]
 	path = vendor/git-extras
@@ -10,3 +10,9 @@
 [submodule "z"]
 	path = vendor/z
 	url = git@github.com:rupa/z.git
+[submodule "vendor/spf13-vim"]
+	path = vendor/spf13-vim
+	url = git@github.com:spf13/spf13-vim.git
+[submodule "vendor/chromecastize"]
+	path = vendor/chromecastize
+	url = git@github.com:bc-petrkotek/chromecastize.git
