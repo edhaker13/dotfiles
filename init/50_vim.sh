@@ -2,6 +2,6 @@
 mkdir -p $DOTFILES/caches/vim
 
 # Download Vim plugins.
-if exists vim; then
-  #vim +PlugUpgrade +PlugUpdate +qall
+if hash vim &>/dev/null; then
+  export APP_PAT=H"$DOTFILES/vendor/spf13-vim" && $DOTFILES/vendor/spf13-vim/bootstrap.sh
 fi
