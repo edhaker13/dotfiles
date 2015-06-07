@@ -1,13 +1,13 @@
-"remove bundles"
+"Remove bundles"
 UnBundle 'bling/vim-bufferline'
 
-"statusline settings"
+"Statusline settings"
 if has('statusline')
   set laststatus=2 "always display the statusline in all windows
   set noshowmode "hide mode text (e.g. -- INSERT -- below the statusline)
 endif
 
-"set default file encoding"
+"Set default file encoding"
 set encoding=utf-8
 set fileencoding=utf-8
 set termencoding=utf-8
@@ -16,7 +16,7 @@ set vb                          " use visual bell instead of beeping
 set title                       " change the terminal's title
 set nospell                     " don't check spelling, it's annoying
 
-"toggle line numbers and fold column for easy copying:
+"Toggle line numbers and fold column for easy copying"
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
 set autoindent                  " Indent at the same level of the previous line
@@ -26,14 +26,23 @@ set tabstop=2                   " An indentation every four columns
 set softtabstop=2               " Let backspace delete indent
 set wrap                        " Wrap long lines into multiple lines
 
-"sets colorcolumn to 80 if exists
+"Sets colorcolumn to 80 if exists"
 if exists('+colorcolumn')
   set colorcolumn=80
   highlight ColorColumn ctermbg=grey guibg=grey
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%80v.\+', -1)
 endif
-"color settings"
+
+"Color settings"
 color molokai
 set bg=dark
 set t_Co=256
+
+"Local dirs"
+if !has('win32')
+  set backupdir=$DOTFILES/caches/vim
+  set directory=$DOTFILES/caches/vim
+  set undodir=$DOTFILES/caches/vim
+  let g:netrw_home = expand('$DOTFILES/caches/vim')
+endif
