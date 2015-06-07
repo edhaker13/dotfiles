@@ -5,7 +5,7 @@
 /link/.flexget/received/
 /link/.flexget/temp/
 
-# logs
+# Logs
 pip-log.txt
 *.log
 flexget.log*
@@ -13,6 +13,7 @@ flexget.log*
 # Lots of junk goes in here.
 /caches/
 /backups/
+*.sqlite
 
 # Top secret stuff!
 /link/.ssh/authorized_keys
