@@ -4,6 +4,7 @@
 *~
 /link/.flexget/received/
 /link/.flexget/temp/
+/link/.flexget/.*
 
 # Logs
 pip-log.txt

@@ -9,8 +9,8 @@
 # password, api keys others sensitive info. {{ secrets.example.password }}
 secrets: secrets.yml
 
-presets:
-  # This preset will be applied to all tasks unless no_global preset is included
+templates:
+  # This template will be applied to all tasks unless no_global preset is included
   global:
     # Make sure there's at least 5GB free space
     free_space:
@@ -28,21 +28,17 @@ presets:
     torrent_scrub: on
     # Make a rss with successful entries for ease of access
     make_rss:
-      file: /www/flexget.rss
+      file: /mnt/usb/flexget.rss
       days: -1
       items: -1
       encoding: utf-8
-    # Notifies using Notify My Android, already paid for premium so not changing.
-    # Set api key and app name for NMA http://www.notifymyandroid.com/
-    notifymyandroid:
-      apikey: '{{ secrets.nma_apikey }}'
     # Notifies me via email, sometimes I just forget or it doesn't show up on NMA
     email:
       from: '{{ secrets.email.from }}'
       to: '{{ secrets.email.to }}'
-      template: accepted
+      template: cifs_server
       smtp_host: '{{ secrets.email.host }}'
-      smtp_port: '{{ secrets.email.port }}'
+      smtp_port: 465
       smtp_ssl: yes
       smtp_username: '{{ secrets.email.username }}'
       smtp_password: '{{ secrets.email.password }}'
@@ -50,7 +46,7 @@ presets:
     # Set some reasonable size limits also ensures no packs
     content_size:
       max: 5000
-      min: 50
+      min: 20
     # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
     quality: 720p
     # Reject common torrent trash
@@ -84,15 +80,17 @@ presets:
     transmission:
       username: '{{ secrets.transmission.username }}'
       password: '{{ secrets.transmission.password }}'
-      # Path results /mnt/usb/anime/ShowName/
-      path: /mnt/usb/{{task}}/{{series_name}}
-      # Output would be -> Show Name 02[720p10bit].mkv
-      content_filename: '{{ series_name }}.{{ series_id|pad(2) }}[{{ quality }}]'
+      host: '{{ secrets.transmission.host }}'
       # main_file_only: yes
       include_subs: yes
       rename_like_files: yes
+    set:
+      # Path results /mnt/usb/anime/ShowName/
+      path: /mnt/usb/{{task}}/{{series_name}}
+      # Output would be -> Show Name 02 [720p10bit].mkv
+      content_filename: '{{ series_name }} {{ series_id|pad(2) }} [{{ quality }}]'
 
-  # This preset has all the anime related settings
+  # This template has all the anime related settings
   anime:
     # RSS feeds for Anime, force ascii: the japanese characters can cause errors
     inputs:
@@ -101,23 +99,23 @@ presets:
       # Filtered for anime only
       - rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
     # Some groups don't put qualities in their filename (yes you, horriblesubs)
-    assume_quality: 720p h264 8bit
+    assume_quality: 720p
     # Prevent from downloading files that are downloading(ed)
     exists_series:
-      - '/mnt/usb/transmission/'
+      - '/mnt/usb/downloads/'
       - '/mnt/usb/anime/'
     # Filter any raws, OST , manga that may have fallen through the rss filters
     regexp:
       reject:
         -  raw | ost | manga | soundtrack | song |\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
-    # List of shows I want to see, from MAL and manually set
-    import_series:
+    # List of shows I want to see, from MAL
+    configure_series:
       settings:
         identified_by: sequence
       from:
         myanimelist:
           username: '{{ secrets.mal_username }}'
-  # Preset for all TV related settings and list of shows, just for show now
+  # template for all TV related settings and list of shows, just for show now
   tv:
     # List of feeds to use already filtered for shows and 720p
     inputs:
@@ -126,41 +124,60 @@ presets:
     accept_all: yes
     # Check for already downloaded or downloading
     exists_series:
-      - '/mnt/usb/transmission/'
+      - '/mnt/usb/downloads/'
       - '/mnt/usb/tv/'
     # Add show to subtitle download queue
     subtitle_queue:
       action: add
       path: '{{ path }}'
+    # List of shows I want to see, from trakt
+    #configure_series:
+      #from:
+        #trakt_list:
+          #username: '{{ secrets.trakt.username }}'
+          #password: '{{ secrets.trakt.password }}'
+          #list: watchlist
+          #type: shows
+          #strip_dates: yes
+    # Mark accepted entries to trakt collection
+    trakt_add:
+      username: '{{ secrets.trakt.username }}'
+      password: '{{ secrets.trakt.password }}'
+      list: collection
 tasks:
   anime:
-    preset: anime
+    template: anime
     notifymyandroid:
+      apikey: '{{ secrets.nma_apikey }}'
       event: Moar Animu!!
   tv:
-    preset: tv
+    template: tv
+    # Notifies using Notify My Android, already paid for premium so not changing.
     notifymyandroid:
+      apikey: '{{ secrets.nma_apikey }}'
       event: New TV Episode
   search_anime:
     interval: 2 hours
-    preset: anime
+    template: anime
     urlrewrite_search:
       - nyaa:
           filter: trusted only
     notifymyandroid:
+      apikey: '{{ secrets.nma_apikey }}'
       event: Found Animu!
   search_tv:
     interval: 2 hours
-    preset: tv
+    template: tv
     urlrewrite_search:
       - piratebay:
           category: 208
           sort_by: seeds
     notifymyandroid:
+      apikey: '{{ secrets.nma_apikey }}'
       event: Found Shows!
   tv_subs:
     template: no_global
-    disable_builtins: [retry_failed]
+    disable: [retry_failed]
     seen: local
     subtitle_queue: emit
     subliminal:
