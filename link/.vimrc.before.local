@@ -1,5 +1,14 @@
-let g:spf13_bundle_groups = ['general', 'neocomplcache', 'programming', 'html', 'misc']
+let g:spf13_bundle_groups = ['general', 'programming', 'misc']
 let g:spf13_noninvasive_completion = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 1
+
+"Local dirs"
+if !has('win32')
+  set backupdir=$DOTFILES/caches/vim
+  set directory=$DOTFILES/caches/vim
+  set undodir=$DOTFILES/caches/vim
+  set viewdir=$DOTFILES/caches/vim
+  let g:netrw_home = expand('$DOTFILES/caches/vim')
+endif
