@@ -16,112 +16,88 @@ templates:
     free_space:
       path: /mnt/usb/
       space: 5000
-    # Make filename Windows Safe (for samba)
+    # Make filename Windows safe (for samba)
     pathscrub: windows
-    # Reject magnets since they don't allow scraping, size or content filtering
-    magnets: no
     # Reject private torrents since I'm not on any private trackers for now
     private_torrents: no
-    # Some torrents links are invalid https
-    # verify_ssl_certificates: no
     # Scrub the torrent for any data that'll prevent the torrent from working
     torrent_scrub: on
     # Make a rss with successful entries for ease of access
     make_rss:
       file: /mnt/usb/flexget.rss
-      days: -1
-      items: -1
       encoding: utf-8
-    # Notifies me via email, sometimes I just forget or it doesn't show up on NMA
+    # Notifies me via email, always avaible on some device
     email:
       from: '{{ secrets.email.from }}'
       to: '{{ secrets.email.to }}'
-      template: cifs_server
+      template: failed
       smtp_host: '{{ secrets.email.host }}'
       smtp_port: 465
       smtp_ssl: yes
       smtp_username: '{{ secrets.email.username }}'
       smtp_password: '{{ secrets.email.password }}'
-
-    # Set some reasonable size limits also ensures no packs
-    content_size:
-      max: 5000
-      min: 20
     # 1080p is a waste of bandwitdh, most releases aren't good quality 1080p
     quality: 720p
-    # Reject common torrent trash
-    regexp:
-      reject:
-        # Block any subbed/dubbed/etc videos
-       # - (s|d)ub(s|bed)?\b: {from: title}
-        # Block series, only accept one at a time
-        - \b(duo|tri|quadri|tetra|penta)logy\b: {from: title}
-        # I don't have any 3D displays
-        - \b3-?D\b: {from: title}
-        # I've gotten a few trailers that matched as movies. VERY annoying
-        - \btrailer\b: {from: title}
-        # The following are poor quality types that somehow got through the quality
-        - \bR5\b: {from: title}
-        # usually due to the title including a keyword like "720p" as well
-        - \bWEBSCR\b: {from: title}
-        # bad quality sources, just in case
-        - \bscreener\b: {from: title}
-        - \bTS\b: {from: title}
-        - \bCam\b: {from: title}
-        - \bRAW\b: {from: title}
-        # Reject rar/packs/password
-        - \.rar|\.r\d\d|password.txt|\.zip
-    # Limit the frequency of requests to domains so they don't complain about using a bot
-    domain_delay:
-      tokyotosho.info: 15 seconds
-      nyaa.se: 15 seconds
-      showrss.info: 15 seconds
-    # Enable deluge output
+    # Enable torrent output
     transmission:
       username: '{{ secrets.transmission.username }}'
       password: '{{ secrets.transmission.password }}'
       host: '{{ secrets.transmission.host }}'
-      # main_file_only: yes
-      include_subs: yes
+      main_file_only: yes
+      magnetization_timeout: 20
+      #include_subs: yes
       rename_like_files: yes
     set:
-      # Path results /mnt/usb/anime/ShowName/
-      path: /mnt/usb/{{task}}/{{series_name}}
-      # Output would be -> Show Name 02 [720p10bit].mkv
-      content_filename: '{{ series_name }} {{ series_id|pad(2) }} [{{ quality }}]'
+      # Series name without non-ascii characters
+      series_name: '{{ series_name|re_replace("[^\x00-\x7F]"," ") }}'
+      # Path results /mnt/usb/anime/SeriesName/
+      path: '/mnt/usb/{{ task|replace("search_","") }}/{{ series_name }}'
 
   # This template has all the anime related settings
   anime:
-    # RSS feeds for Anime, force ascii: the japanese characters can cause errors
-    inputs:
-      # Shows only english anime and is sorted by seeds
-      - rss: { url: 'http://www.nyaa.se/?page=rss&cats=1_37&filter=2', silent: yes, ascii: yes }
-      # Filtered for anime only
-      - rss: { url: 'http://tokyotosho.info/rss.php?filter=1', silent: yes, ascii: yes }
-    # Some groups don't put qualities in their filename (yes you, horriblesubs)
+    # RSS feeds for anime, shows only english anime and non remakes
+    rss:
+      url: 'http://www.nyaa.se/?page=rss&cats=1_37&filter=2'
+      all_entries: no
     assume_quality: 720p
-    # Prevent from downloading files that are downloading(ed)
+    # Set filename, output would be Series Name 01.mkv
+    set:
+      content_filename: '{{ series_name }} {{ series_id|pad(2) }}'
+    # Set some reasonable size limits also ensures no packs
+    content_size:
+      max: 1000
+      min: 20
+   # Prevent from downloading files that are downloading(ed)
     exists_series:
       - '/mnt/usb/downloads/'
       - '/mnt/usb/anime/'
     # Filter any raws, OST , manga that may have fallen through the rss filters
     regexp:
       reject:
-        -  raw | ost | manga | soundtrack | song |\[ED\]|\[OP\]|(4|7)00(p|x): {from: title}
+        -  raw|ost|manga|soundtrack|song|\[ED\]|\[OP\]|patch: { from: title }
     # List of shows I want to see, from MAL
     configure_series:
-      settings:
-        identified_by: sequence
       from:
         myanimelist:
           username: '{{ secrets.mal_username }}'
-  # template for all TV related settings and list of shows, just for show now
+    # Add alternate names
+    series:
+      - 'Diamond no Ace: Second Season':
+          alternate_name:
+            - Ace of the Diamond ~Second Season~
+            - Ace of Diamond S2
+      - 'Gate: Jieitai Kanochi nite, Kaku Tatakaeri 2nd Season':
+          alternate_name: GATE
+      - Haikyuu!! Second Season:
+          alternate_name: Haikyuu!! S2
+  # Template for all TV related settings and list of shows
   tv:
     # List of feeds to use already filtered for shows and 720p
-    inputs:
-      - rss: { url: 'http://showrss.info/rss.php?user_id=118811&hd=1&proper=0', silent: yes }
+    rss:
+      url: 'http://showrss.info/rss.php?user_id=118811'
+      all_entries: no
     # Feed already filtered at creation
-    accept_all: yes
+    all_series: yes
     # Check for already downloaded or downloading
     exists_series:
       - '/mnt/usb/downloads/'
@@ -130,15 +106,7 @@ templates:
     subtitle_queue:
       action: add
       path: '{{ path }}'
-    # List of shows I want to see, from trakt
-    #configure_series:
-      #from:
-        #trakt_list:
-          #username: '{{ secrets.trakt.username }}'
-          #password: '{{ secrets.trakt.password }}'
-          #list: watchlist
-          #type: shows
-          #strip_dates: yes
+      alternate_path: '{{ path }}/{{ content_filename }}'
     # Mark accepted entries to trakt collection
     trakt_add:
       username: '{{ secrets.trakt.username }}'
@@ -157,17 +125,17 @@ tasks:
       apikey: '{{ secrets.nma_apikey }}'
       event: New TV Episode
   search_anime:
-    interval: 2 hours
     template: anime
+    no_entries_ok: yes
     urlrewrite_search:
       - nyaa:
-          filter: trusted only
+          filter: filter remakes
     notifymyandroid:
       apikey: '{{ secrets.nma_apikey }}'
       event: Found Animu!
   search_tv:
-    interval: 2 hours
     template: tv
+    no_entries_ok: yes
     urlrewrite_search:
       - piratebay:
           category: 208
@@ -175,11 +143,44 @@ tasks:
     notifymyandroid:
       apikey: '{{ secrets.nma_apikey }}'
       event: Found Shows!
-  tv_subs:
+  search_subs:
     template: no_global
+    no_entries_ok: yes
+    inputs:
+      - subtitle_queue: emit
+      - find:
+          path:
+            - '/mnt/usb/tv'
+          regexp: '.*\.(mkv|mp4)$'
+          recursive: yes
     disable: [retry_failed]
     seen: local
-    subtitle_queue: emit
+    all_series: yes
     subliminal:
       languages:
         - eng
+  maintenance:
+    template: no_global
+    no_entries_ok: yes
+    disable: [details]
+    # Clean completed torrents
+    clean_transmission:
+      username: '{{ secrets.transmission.username }}'
+      password: '{{ secrets.transmission.password }}'
+      host: '{{ secrets.transmission.host }}'
+      finished_for: 12 hours
+
+schedules:
+  - tasks: [anime]
+    interval: { minutes: 30 }
+
+  - tasks: [tv]
+    schedule:
+      minute: 15,25,45
+      hour: 1,4,5,7,18,23
+
+  - tasks: [search_anime, search_tv, search_subs]
+    interval: { hours: 6 }
+
+  - tasks: [maintenance]
+    interval: { hours: 24 }
