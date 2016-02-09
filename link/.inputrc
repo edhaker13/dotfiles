@@ -9,3 +9,6 @@ set keymap vi-insert
 # Up/down arrows search history
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+# Stop tilde expansion
+set expand-tilde off
