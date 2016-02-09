@@ -54,19 +54,11 @@ Scripts in the `/init` subdirectory will be executed. A bunch of things will be 
 
 Because the [dotfiles][dotfiles] script is completely self-contained, you should be able to delete everything else from your dotfiles repo fork, and it will still work. The only thing it really cares about are the `/copy`, `/link` and `/init` subdirectories, which will be ignored if they are empty or don't exist.
 
-If you modify things and notice a bug or an improvement, [file an issue](https://github.com/cowboy/dotfiles/issues) or [a pull request](https://github.com/cowboy/dotfiles/pulls) and let me know.
+If you modify things and notice a bug or an improvement, [file an issue](https://github.com/edhaker13/dotfiles/issues) or [a pull request](https://github.com/edhaker13/dotfiles/pulls) and let me know.
 
 Also, before installing, be sure to [read my gently-worded note](#heed-this-critically-important-warning-before-you-install).
 
 ## Installation
-
-### Ubuntu Notes
-
-You might want to set up your ubuntu server [like I do it](https://github.com/cowboy/dotfiles/wiki/ubuntu-setup), but then again, you might not.
-
-Either way, you should at least update/upgrade APT with `sudo apt-get -qq update && sudo apt-get -qq dist-upgrade` first.
-
-_Tested in Ubuntu 14.04 LTS_
 
 ### Heed this critically important warning before you install
 
@@ -93,7 +85,7 @@ There's a lot of stuff that requires admin access via `sudo`, so be warned that 
 ### Actual installation (for me)
 
 ```sh
-bash -c "$(curl -fsSL https://bit.ly/cowboy-dotfiles)" && source ~/.bashrc
+bash -c "$(curl -fsSL https://bit.ly/edhaker13-dotfiles)" && source ~/.bashrc
 ```
 
 ## Aliases and Functions
