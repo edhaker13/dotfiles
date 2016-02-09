@@ -2,18 +2,16 @@
 is_debian || return 1
 
 #-------------------------------------------------------------
-# Apt-get/Aptitude short-cuts. Apt-get has preference
+# Check if $1 exists. Preload if it does
 #-------------------------------------------------------------
 
-if exists apt-get; then
-  alias update='apt-get update'
-  alias install='apt-get install'
-  alias reinstall='apt-get install --reinstall'
-  alias upgrade='apt-get upgrade'
-  alias dist-upgrade='apt-get dist-upgrade'
-  alias remove='apt-get remove'
-  alias purge='apt-get purge'
-elif exists aptitude; then
+function exists() { hash "$1" &>/dev/null; }
+
+#-------------------------------------------------------------
+# Apt-get/Aptitude short-cuts. Aptidude has preference
+#-------------------------------------------------------------
+
+if exists aptitude; then
   alias update='aptitude update'
   alias install='aptitude install'
   alias reinstall='aptitude reinstall'
@@ -21,6 +19,14 @@ elif exists aptitude; then
   alias dist-upgrade='aptitude upgrade'
   alias remove='aptitude remove'
   alias purge='aptitude purge'
+elif exists apt-get; then
+  alias update='apt-get update'
+  alias install='apt-get install'
+  alias reinstall='apt-get install --reinstall'
+  alias upgrade='apt-get upgrade'
+  alias dist-upgrade='apt-get dist-upgrade'
+  alias remove='apt-get remove'
+  alias purge='apt-get purge'
 fi
 
 #-------------------------------------------------------------
@@ -62,3 +68,4 @@ if exists msm; then
   alias mc='sudo -H -u minecraft'
   alias mcl='\sudo su minecraft'
 fi
+

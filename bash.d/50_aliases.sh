@@ -1,16 +1,25 @@
 #-------------------------------------------------------------
+# Check if $1 exists and preload it if it does
+#-------------------------------------------------------------
+
+function exists()
+{
+    hash "$1" &> /dev/null;
+}
+
+#-------------------------------------------------------------
 # Default program option aliases
 #-------------------------------------------------------------
 
 alias df='df -h'
 alias free='free -m'
-alias ls='ls -h --color=auto'
-alias ll='ls -la'
+alias ls='ls --color'
+alias ll='ls -lA'
 alias la='ls -A'
 alias l='ls -CF'
 alias wget='wget --content-disposition'
 alias back='cd $OLDPWD'
-alias grep='grep --color=auto'
+alias grep='grep --color'
 
 #-------------------------------------------------------------
 # Handy aliases

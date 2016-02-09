@@ -12,7 +12,7 @@ else
 fi
 
 # Directory listing
-if exists tree; then
+if hash tree &>/dev/null; then
   alias ll='tree --dirsfirst -aLpughDFiC 1'
   alias lsd='ll -d'
 else
@@ -42,7 +42,7 @@ function md() {
 
 # Download, extract and remove zip from url. dlzi <url> [unzip args*]
 function dlzip() {
-  exists unzip || (echo 'unzip not found'; return 1);
+  hash unzip &>/dev/null || (echo 'unzip not found'; return 1);
   tmpf=$(tempfile);
   wget -qO "$tmpf" $1;
   unzip "$tmpf" ${@:2};
