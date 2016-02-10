@@ -66,6 +66,4 @@ if [ $UID -ne 0 ]; then
   exists apt-get && alias apt-get='sudo apt-get'
   exists aptitude && alias aptitude='sudo aptitude'
   exists service  && alias service='sudo service' || alias service='sudo /etc/init.d/$1 ${@:2}'
-  exists vim  && alias svim='sudo vim'
-  exists nano && alias snano='sudo nano'
 fi
