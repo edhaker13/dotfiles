@@ -18,7 +18,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias wget='wget --content-disposition'
-alias back='cd $OLDPWD'
+alias back='cd "$OLDPWD"'
 alias grep='grep --color'
 
 #-------------------------------------------------------------
