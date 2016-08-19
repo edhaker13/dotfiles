@@ -94,7 +94,7 @@ templates:
   tv:
     # List of feeds to use already filtered for shows and 720p
     rss:
-      url: 'http://showrss.info/rss.php?user_id=118811'
+      url: 'http://showrss.info/user/26814.rss'
       all_entries: no
     # Feed already filtered at creation
     all_series: yes
@@ -109,8 +109,7 @@ templates:
       alternate_path: '{{ path }}/{{ content_filename }}'
     # Mark accepted entries to trakt collection
     trakt_add:
-      username: '{{ secrets.trakt.username }}'
-      password: '{{ secrets.trakt.password }}'
+      account: '{{ secrets.trakt.account }}'
       list: collection
 tasks:
   anime:
@@ -148,7 +147,7 @@ tasks:
     no_entries_ok: yes
     inputs:
       - subtitle_queue: emit
-      - find:
+      - filesystem:
           path:
             - '/mnt/usb/tv'
           regexp: '.*\.(mkv|mp4)$'
