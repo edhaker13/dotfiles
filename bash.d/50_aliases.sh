@@ -13,8 +13,8 @@ function exists()
 
 alias df='df -h'
 alias free='free -m'
-alias ls='ls --color'
-alias ll='ls -lA'
+alias ls='ls --color -Fh'
+alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias wget='wget --content-disposition'
