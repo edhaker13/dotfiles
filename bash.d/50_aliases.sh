@@ -65,5 +65,7 @@ if [ $UID -ne 0 ]; then
   exists rpm  && alias rpm='sudo rpm'
   exists apt-get && alias apt-get='sudo apt-get'
   exists aptitude && alias aptitude='sudo aptitude'
-  exists service  && alias service='sudo service' || alias service='sudo /etc/init.d/$1 ${@:2}'
+  exists service  && alias service='sudo service'
+  exists systemctl && alias systemctl='sudo systemctl'
+  exists journalctl && alias journalctl='sudo journalctl'
 fi
