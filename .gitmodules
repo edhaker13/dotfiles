@@ -6,13 +6,13 @@
 	url = git@bitbucket.org:edhaker13/private.git
 [submodule "git-extras"]
 	path = vendor/git-extras
-	url = git@github.com:visionmedia/git-extras.git
+	url = https://github.com/visionmedia/git-extras
 [submodule "z"]
 	path = vendor/z
-	url = git@github.com:rupa/z.git
+	url = https://github.com/rupa/z
 [submodule "vendor/spf13-vim"]
 	path = vendor/spf13-vim
-	url = git@github.com:spf13/spf13-vim.git
+	url = https://github.com/spf13/spf13-vim
 [submodule "vendor/chromecastize"]
 	path = vendor/chromecastize
-	url = git@github.com:bc-petrkotek/chromecastize.git
+	url = https://github.com/petrkotek/chromecastize
